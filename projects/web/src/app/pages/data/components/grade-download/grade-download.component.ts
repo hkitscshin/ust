@@ -186,7 +186,6 @@ export class GradeDownloadComponent extends SubscriptionBaseComponent {
     this.activeFormIndex = 0;
   }
 
-
   join() {
     const joinForm = this.joinForm.value;
     const params = new HttpParams()
