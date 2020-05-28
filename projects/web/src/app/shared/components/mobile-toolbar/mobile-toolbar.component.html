@@ -1,0 +1,118 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" class="mobile-toolbar" fxHide.lg>
+  <h1 routerLink="/"><img dnlSrc="/assets/images/logo-color.png" alt="logo"></h1>
+
+  <div (click)="openMobileMenu()"><img dnlSrc="/assets/images/icons/mobile-menu.png" alt="icon"></div>
+</div>
+
+<div fxLayout="column" class="mobile-nav-box" [class.active]="!isMobileMenuClosed" fxHide.lg>
+  <div class="welcome-box">
+    <p>Ur Solution for Tomorrow, UST.</p>
+    <p class="sub">{{ 'MAIN.SECTION1' | translate }}</p>
+
+    <div (click)="closeMobileMenu()" class="btn-close"><img dnlSrc="/assets/images/icons/mobile-menu-close.png" alt="icon"></div>
+  </div>
+
+  <ul class="language-list">
+    <li class="language-item" (click)="toggleLanguage()">
+      {{ language === 'ko-KR' ? 'English' : 'Korean' }}
+    </li>
+  </ul>
+
+  <ul class="main-menu-box">
+    <li class="main-menu-item">
+      <a (click)="isOpened[0] = !isOpened[0]">{{ 'TOOLBAR.MENU.NAV1' | translate }}<i [class.opened]="isOpened[0]">
+        <img dnlSrc="/assets/images/icons/arrow-down-gray.png" alt="icon"></i>
+      </a>
+
+      <ul class="sub-menu-box" [class.opened]="isOpened[0]">
+        <li routerLink="/about/story" class="sub-menu-item" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV1.SUB1' | translate }}</li>
+        <li routerLink="/about/group" class="sub-menu-item" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV1.SUB2' | translate }}</li>
+        <li routerLink="/about/location" class="sub-menu-item" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV1.SUB3' | translate }}</li>
+      </ul>
+    </li>
+
+    <li class="main-menu-item">
+      <a (click)="isOpened[1] = !isOpened[1]">{{ 'TOOLBAR.MENU.NAV2' | translate }}
+        <i [class.opened]="isOpened[1]"><img dnlSrc="/assets/images/icons/arrow-down-gray.png" alt="icon"></i>
+      </a>
+
+      <ul class="sub-menu-box" [class.opened]="isOpened[1]">
+        <li class="sub-menu-item" routerLink="/product/summary" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV2.SUB1' | translate }}</li>
+        <li class="sub-menu-item" routerLink="/product/introduce" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV2.SUB2' | translate }}</li>
+        <li class="sub-menu-item" routerLink="/product/certification" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV2.SUB3' | translate }}</li>
+        <li class="sub-menu-item" routerLink="/product/system" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV2.SUB4' | translate }}</li>
+      </ul>
+    </li>
+
+    <li class="main-menu-item">
+      <a (click)="isOpened[2] = !isOpened[2]">{{ 'TOOLBAR.MENU.NAV3' | translate }}
+        <i [class.opened]="isOpened[2]"><img dnlSrc="/assets/images/icons/arrow-down-gray.png" alt="icon"></i>
+      </a>
+
+      <ul class="sub-menu-box" [class.opened]="isOpened[2]">
+        <li class="sub-menu-item" routerLink="/research" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV3.SUB1' | translate }}</li>
+      </ul>
+    </li>
+
+    <li class="main-menu-item">
+      <a (click)="isOpened[3] = !isOpened[3]">{{ 'TOOLBAR.MENU.NAV4' | translate }}
+        <i [class.opened]="isOpened[3]"><img dnlSrc="/assets/images/icons/arrow-down-gray.png" alt="icon"></i>
+      </a>
+
+      <ul class="sub-menu-box" [class.opened]="isOpened[3]">
+        <li class="sub-menu-item" routerLink="/investment/finance" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV4.SUB1' | translate }}</li>
+        <li class="sub-menu-item" routerLink="/investment/stock" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV4.SUB2' | translate }}</li>
+      </ul>
+    </li>
+
+    <li class="main-menu-item">
+      <a (click)="isOpened[4] = !isOpened[4]">{{ 'TOOLBAR.MENU.NAV5' | translate }}
+        <i [class.opened]="isOpened[4]"><img dnlSrc="/assets/images/icons/arrow-down-gray.png" alt="icon"></i>
+      </a>
+
+      <ul class="sub-menu-box" [class.opened]="isOpened[4]">
+        <li class="sub-menu-item" routerLink="/data/board" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV5.SUB1' | translate }}</li>
+        <li class="sub-menu-item" routerLink="/data/download" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV5.SUB2' | translate }}</li>
+        <li class="sub-menu-item" routerLink="/data/grade" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV5.SUB3' | translate }}</li>
+        <li class="sub-menu-item" routerLink="/data/estimate" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV5.SUB4' | translate }}</li>
+        <li class="sub-menu-item" routerLink="/data/inspect" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV5.SUB5' | translate }}</li>
+      </ul>
+    </li>
+
+    <li class="main-menu-item">
+      <a (click)="isOpened[5] = !isOpened[5]">{{ 'TOOLBAR.MENU.NAV6' | translate }}
+        <i [class.opened]="isOpened[5]"><img dnlSrc="/assets/images/icons/arrow-down-gray.png" alt="icon"></i>
+      </a>
+
+      <ul class="sub-menu-box" [class.opened]="isOpened[5]">
+        <li class="sub-menu-item" routerLink="/recruit" (click)="closeMobileMenu()">{{ 'TOOLBAR.NAV6.SUB1' | translate }}</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="nav-footer">
+    <p>
+      {{ 'FOOTER.COMPANY.TITLE' | translate }} : {{ 'FOOTER.COMPANY.CONTENT' | translate }} {{ 'FOOTER.ADDRESS.TITLE' | translate }} : {{ 'FOOTER.ADDRESS.CONTENT' | translate }}<br><br>
+      {{ 'FOOTER.PHONE.TITLE' | translate }} : 054 -278 - 0011 / {{ 'FOOTER.FAX.TITLE' | translate }} : 054 -278 - 0015<br>
+      {{ 'FOOTER.BUSINESS_NUMBER.TITLE' | translate }} : 274 - 88 - 00730  {{ 'FOOTER.NAME.TITLE' | translate }} : {{ 'FOOTER.NAME.CONTENT' | translate }}<br>
+      Copyright {{ 'FOOTER.COMPANY.CONTENT' | translate }} All rights reserved<br>
+    </p>
+
+    <div class="sns-icon">
+      <a href="https://www.facebook.com/titamax4u" target="_blank">
+        <img dnlSrc="/assets/images/icons/sns-facebook.png" alt="facebook">
+      </a>
+      <a href="https://www.instagram.com/titamax_official/" target="_blank">
+        <img dnlSrc="/assets/images/icons/sns-instagram.png" alt="instagram">
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<div
+  class="mobile-backdrop"
+  [class.active]="!isMobileMenuClosed"
+  (click)="closeMobileMenu()"
+  fxHide.lg
+></div>

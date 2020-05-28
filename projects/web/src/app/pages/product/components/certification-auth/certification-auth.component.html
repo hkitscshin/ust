@@ -1,0 +1,46 @@
+<div class="certification-auth-box">
+  <ul fxLayout="row" class="tab-menu" [class.sub-fixed]="navFixed">
+    <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+      {{ 'PRODUCT.CERTIFICATION.CATEGORY.CATEGORY1' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+      {{ 'PRODUCT.CERTIFICATION.CATEGORY.CATEGORY2.NAME' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 2" (click)="changeIndex(2)">
+      {{ 'PRODUCT.CERTIFICATION.CATEGORY.CATEGORY3.NAME' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 3" (click)="changeIndex(3)">
+      {{ 'PRODUCT.CERTIFICATION.CATEGORY.CATEGORY4.NAME' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 4" (click)="changeIndex(4)">
+      {{ 'PRODUCT.CERTIFICATION.CATEGORY.CATEGORY5.NAME' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 5" (click)="changeIndex(5)">
+      {{ 'PRODUCT.CERTIFICATION.CATEGORY.CATEGORY6.NAME' | translate }}
+    </li>
+  </ul>
+
+  <div class="tab-content" [class.active]="activeIndex === 0">
+    <ust-certification-auth-list [tabIndex]="activeIndex"></ust-certification-auth-list>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 1">
+    <ust-certification-auth-list [tabIndex]="activeIndex"></ust-certification-auth-list>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 2">
+    <ust-certification-auth-list [tabIndex]="activeIndex"></ust-certification-auth-list>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 3">
+    <ust-certification-auth-list [tabIndex]="activeIndex"></ust-certification-auth-list>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 4">
+    <ust-certification-auth-list [tabIndex]="activeIndex"></ust-certification-auth-list>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 5">
+    <ust-certification-auth-list [tabIndex]="activeIndex"></ust-certification-auth-list>
+  </div>
+</div>

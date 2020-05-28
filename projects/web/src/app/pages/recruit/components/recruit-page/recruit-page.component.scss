@@ -1,0 +1,198 @@
+@import "core";
+
+.recruit-page-box {
+  padding-bottom: 50px;
+
+  .title {
+    width: 956px;
+    margin: 0 auto;
+    padding-top: 37px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+
+    @include lt-lg {
+      width: 100%;
+      padding: 23px 24px 25px 24px;
+      font-size: 15px;
+      line-height: 1.47;
+      letter-spacing: -0.75px;
+    }
+
+    img {
+      margin-top: -3px;
+      margin-right: 15px;
+    }
+  }
+
+  .sub-title {
+    margin-bottom: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+  }
+
+  .recruit-step-box-wrap {
+    padding: 34px 0;
+    background-color: #f6f6f6;
+
+    @include lt-lg {
+      padding: 34px 24px;
+      box-sizing: border-box;
+    }
+
+    @include sm {
+      padding: 34px 16px;
+    }
+
+    .recruit-step-box {
+      width: 956px;
+      margin: 0 auto;
+
+      @include lt-lg {
+        width: 100%;
+      }
+
+      .recruit-step-list {
+        li {
+          position: relative;
+          text-align: center;
+
+          @include md {
+            width: 25%;
+          }
+
+          @include sm {
+            width: 50%;
+          }
+
+          img {
+            width: 100%;
+            max-width: 183px;
+          }
+
+          &::after {
+            @include background-image-magnification("/assets/images/icons/recruit-step-icon.png");
+            content: '';
+            position: absolute;
+            top: 62px;
+            right: -65px;
+            width: 49px;
+            height: 49px;
+
+            @include lt-lg {
+              display: none;
+            }
+          }
+
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .board-list-box {
+    width: 956px;
+    margin: 0 auto;
+    padding-top: 11px;
+    box-sizing: border-box;
+
+    @include lt-lg {
+      width: 100%;
+      padding: 0 24px;
+    }
+
+    @include sm {
+      padding: 0 16px;
+    }
+
+    .total {
+      margin-bottom: 8px;
+      font-weight: 300;
+      line-height: 1.43;
+      letter-spacing: -0.7px;
+      color: #7a7a7a;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-top: 1px solid  #dddddd;
+
+      th, td {
+        text-align: center;
+        border-bottom: 1px solid  #dddddd;
+
+        &.date {
+          @include lt-lg {
+            display: none;
+          }
+        }
+
+        &.state {
+          @include sm {
+            display: none;
+          }
+        }
+      }
+
+      th {
+        padding: 16px 0;
+        background-color: #f2f2f2;
+        border-bottom: 2px solid  #dddddd;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.43;
+        letter-spacing: -0.7px;
+        color: #7a7a7a;
+      }
+
+      td {
+        padding: 7px 0;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.47;
+        letter-spacing: -0.75px;
+
+        &.subject {
+          padding-left: 20px;
+          text-align: left;
+        }
+
+        button {
+          width: 116px;
+          height: 40px;
+          border: 1px solid #dddddd;
+          background-color: #dddddd;
+          color: #fff;
+        }
+
+        &.progress {
+          color: #ea4d07;
+
+          button {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+            border: 1px solid #dddddd;
+            background-color: #ffffff;
+            color: #000;
+          }
+        }
+
+        &.empty {
+          text-align: center;
+          color: inherit;
+          padding: 40px 0;
+        }
+      }
+    }
+  }
+}

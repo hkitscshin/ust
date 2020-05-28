@@ -1,0 +1,38 @@
+@import "core";
+
+.story-location-box {
+  margin: 44px auto 70px auto;
+
+  @include lt-lg {
+    margin: 23px auto 43px auto;
+  }
+
+  h2 {
+    margin-bottom: 46px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    text-align: left;
+    color: #000000;
+    transform: translate(0,100px);
+    opacity: 0;
+
+    &.visible {
+      transform: translate(0,0);
+      opacity: 1;
+      transition: transform 1s, opacity 1s;
+    }
+
+    @include lt-lg {
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    img {
+      display: inline-block;
+      margin-top: -3px;
+      margin-right: 16px;
+    }
+  }
+}

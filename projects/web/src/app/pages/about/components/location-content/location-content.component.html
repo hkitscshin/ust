@@ -1,0 +1,297 @@
+<div class="location-content-box" [ngSwitch]="tabIndex">
+
+  <ng-container *ngSwitchCase="0">
+    <div fxLayout="row"
+         fxLayout.lt-lg="column-reverse"
+         fxLayoutAlign="space-between center"
+         fxLayoutAlign.lt-lg="space-between"
+         class="location-info-box">
+
+      <div class="text">
+        <p class="name">{{ 'ABOUT.LOCATION.LOCATION1.NAME' | translate }}</p>
+
+        <div class="location-info-list">
+          <label class="label">{{ 'ABOUT.LOCATION.SUBTITLE.ADDRESS' | translate }}</label>
+          <p class="value">{{ 'ABOUT.LOCATION.LOCATION1.ADDRESS' | translate }}</p>
+        </div>
+
+        <div class="location-info-list">
+          <label class="label">TEL</label>
+          <p class="value">02) 6121-6770</p>
+          <span class="bar">|</span>
+          <label class="label">FAX</label>
+          <p class="value">02) 6121-6779</p>
+        </div>
+      </div>
+
+      <img dnlSrc="/assets/images/map-seoul-tower.png" alt="company">
+    </div>
+
+    <div fxLayout="row"
+         fxLayout.lt-lg="column"
+         fxLayoutAlign="space-between"
+         fxLayoutAlign.lt-lg="space-between"
+         class="location-map-box">
+
+      <img dnlSrc="/assets/images/map-seoul.png" alt="map">
+
+      <div class="location-map-view">
+        <p class="name">{{ 'ABOUT.LOCATION.SUBTITLE.MAP' | translate }}</p>
+        <ul class="map-view-list" fxLayout.md="row" fxLayout.sm="column">
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.KAKAO' | translate }}</p>
+            <a href="http://kko.to/m7jx9lI0H" target="_blank"><img dnlSrc="/assets/images/map-banner-kakao.png" alt="kakao map"></a>
+          </li>
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.GOOGLE' | translate }}</p>
+            <a href="https://goo.gl/maps/iSV5JpUPuNNwfoYq6" target="_blank"><img dnlSrc="/assets/images/map-banner-google.png" alt="google map"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="1">
+    <div fxLayout="row"
+         fxLayout.lt-lg="column-reverse"
+         fxLayoutAlign="space-between center"
+         fxLayoutAlign.lt-lg="space-between"
+         class="location-info-box">
+
+      <div class="text">
+        <p class="name">{{ 'ABOUT.LOCATION.LOCATION2.NAME' | translate }}</p>
+        <div class="location-info-list">
+          <label class="label">{{ 'ABOUT.LOCATION.SUBTITLE.ADDRESS' | translate }}</label>
+          <p class="value">{{ 'ABOUT.LOCATION.LOCATION2.ADDRESS' | translate }}</p>
+        </div>
+        <div class="location-info-list">
+          <label class="label">TEL</label>
+          <p class="value">042) 936-8703</p>
+          <span class="bar">|</span>
+          <label class="label">FAX</label>
+          <p class="value">042) 936-8705</p>
+        </div>
+      </div>
+
+      <img dnlSrc="/assets/images/map-daejeon-tower.png" alt="company">
+
+    </div>
+
+    <div fxLayout="row"
+         fxLayout.lt-lg="column"
+         fxLayoutAlign="space-between"
+         class="location-map-box" data-scroll>
+
+      <img dnlSrc="/assets/images/map-daejeon.png" alt="map">
+
+      <div class="location-map-view">
+        <p class="name">{{ 'ABOUT.LOCATION.SUBTITLE.MAP' | translate }}</p>
+        <ul class="map-view-list" fxLayout.md="row" fxLayout.sm="column">
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.KAKAO' | translate }}</p>
+            <a href="http://kko.to/P0VLMFq00" target="_blank"><img dnlSrc="/assets/images/map-banner-kakao.png" alt="kakao map"></a>
+          </li>
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.GOOGLE' | translate }}</p>
+            <a href="https://goo.gl/maps/a77k5ZK6zqpm7zKZA" target="_blank"><img dnlSrc="/assets/images/map-banner-google.png" alt="google map"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="2">
+    <div fxLayout="row"
+         fxLayout.lt-lg="column-reverse"
+         fxLayoutAlign="space-between center"
+         fxLayoutAlign.lt-lg="space-between"
+         class="location-info-box">
+
+      <div class="text">
+        <p class="name">{{ 'ABOUT.LOCATION.LOCATION3.NAME' | translate }}</p>
+        <div class="location-info-list">
+          <label class="label">{{ 'ABOUT.LOCATION.SUBTITLE.ADDRESS' | translate }}</label>
+          <p class="value">{{ 'ABOUT.LOCATION.LOCATION3.ADDRESS' | translate }}</p>
+        </div>
+        <div class="location-info-list">
+          <label class="label">TEL</label>
+          <p class="value">053) 356-0879</p>
+          <span class="bar">|</span>
+          <label class="label">FAX</label>
+          <p class="value">053) 356-0880</p>
+        </div>
+      </div>
+
+      <img dnlSrc="/assets/images/map-daegu-tower.png" alt="company">
+    </div>
+
+    <div
+      fxLayout="row"
+      fxLayout.lt-lg="column"
+      fxLayoutAlign="space-between"
+      class="location-map-box">
+
+      <img dnlSrc="/assets/images/map-daegu.png" alt="map">
+
+      <div class="location-map-view">
+        <p class="name">{{ 'ABOUT.LOCATION.SUBTITLE.MAP' | translate }}</p>
+        <ul class="map-view-list" fxLayout.md="row" fxLayout.sm="column">
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.KAKAO' | translate }}</p>
+            <a href="http://kko.to/vCttHFujH" target="_blank"><img dnlSrc="/assets/images/map-banner-kakao.png" alt="kakao map"></a>
+          </li>
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.GOOGLE' | translate }}</p>
+            <a href="https://goo.gl/maps/3DKSe4DP23vmHGvA8" target="_blank"><img dnlSrc="/assets/images/map-banner-google.png" alt="google map"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="3">
+    <div fxLayout="row"
+         fxLayout.lt-lg="column-reverse"
+         fxLayoutAlign="space-between center"
+         fxLayoutAlign.lt-lg="space-between"
+         class="location-info-box">
+
+      <div class="text">
+        <p class="name">{{ 'ABOUT.LOCATION.LOCATION4.NAME' | translate }}</p>
+        <div class="location-info-list">
+          <label class="label">{{ 'ABOUT.LOCATION.SUBTITLE.ADDRESS' | translate }}</label>
+          <p class="value">{{ 'ABOUT.LOCATION.LOCATION4.ADDRESS' | translate }}</p>
+        </div>
+        <div class="location-info-list">
+          <label class="label">TEL</label>
+          <p class="value">051) 710-2015</p>
+          <span class="bar">|</span>
+          <label class="label">FAX</label>
+          <p class="value">051) 323-2015</p>
+        </div>
+      </div>
+
+      <img dnlSrc="/assets/images/map-busan-tower.png" alt="company">
+    </div>
+
+    <div
+      fxLayout="row"
+      fxLayout.lt-lg="column"
+      fxLayoutAlign="space-between"
+      class="location-map-box">
+
+      <img dnlSrc="/assets/images/map-busan.png" alt="map">
+
+      <div class="location-map-view">
+        <p class="name">{{ 'ABOUT.LOCATION.SUBTITLE.MAP' | translate }}</p>
+        <ul class="map-view-list" fxLayout.md="row" fxLayout.sm="column">
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.KAKAO' | translate }}</p>
+            <a href="http://kko.to/hYbZH3ujH" target="_blank"><img dnlSrc="/assets/images/map-banner-kakao.png" alt="kakao map"></a>
+          </li>
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.GOOGLE' | translate }}</p>
+            <a href="https://goo.gl/maps/3zshMQhzhSAMZ6FF9" target="_blank"><img dnlSrc="/assets/images/map-banner-google.png" alt="google map"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="4">
+    <div fxLayout="row"
+         fxLayout.lt-lg="column-reverse"
+         fxLayoutAlign="space-between center"
+         fxLayoutAlign.lt-lg="space-between"
+         class="location-info-box">
+
+      <div class="text">
+        <p class="name">{{ 'ABOUT.LOCATION.LOCATION5.NAME' | translate }}</p>
+        <div class="location-info-list">
+          <label class="label">{{ 'ABOUT.LOCATION.SUBTITLE.ADDRESS' | translate }}</label>
+          <p class="value">{{ 'ABOUT.LOCATION.LOCATION5.ADDRESS' | translate }}</p>
+        </div>
+        <div class="location-info-list">
+          <label class="label">TEL</label>
+          <p class="value">054) 278-0011</p>
+          <span class="bar">|</span>
+          <label class="label">FAX</label>
+          <p class="value">054) 278-0015</p>
+        </div>
+      </div>
+
+      <img dnlSrc="/assets/images/map-pohang-tower.png" alt="company">
+    </div>
+
+    <div fxLayout="row"
+         fxLayout.lt-lg="column-reverse"
+         fxLayoutAlign="space-between"
+         class="location-map-box">
+
+      <img dnlSrc="/assets/images/map-pohang.png" alt="company">
+
+      <div class="location-map-view">
+        <p class="name">{{ 'ABOUT.LOCATION.SUBTITLE.MAP' | translate }}</p>
+        <ul fxLayout.md="row" fxLayout.sm="column" class="map-view-list">
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.KAKAO' | translate }}</p>
+            <a href="http://kko.to/bes3HFqjT" target="_blank"><img dnlSrc="/assets/images/map-banner-kakao.png" alt="kakao map"></a>
+          </li>
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.GOOGLE' | translate }}</p>
+            <a href="https://goo.gl/maps/1zFAZcM3M1maVxhr6" target="_blank"><img dnlSrc="/assets/images/map-banner-google.png" alt="google map"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="5">
+    <div
+      fxLayout="row"
+      fxLayout.lt-lg="column"
+      fxLayoutAlign="space-between center"
+      class="location-info-box">
+
+      <div class="text">
+        <p class="name">{{ 'ABOUT.LOCATION.LOCATION6.NAME' | translate }}</p>
+        <div class="location-info-list">
+          <label class="label">{{ 'ABOUT.LOCATION.SUBTITLE.ADDRESS' | translate }}</label>
+          <p class="value">{{ 'ABOUT.LOCATION.LOCATION6.ADDRESS' | translate }}</p>
+        </div>
+        <div class="location-info-list">
+          <label class="label">TEL</label>
+          <p class="value">031) 363-8050</p>
+          <span class="bar">|</span>
+          <label class="label">FAX</label>
+          <p class="value">031) 363-8099</p>
+        </div>
+      </div>
+
+      <img dnlSrc="/assets/images/map-sihwa-tower.png" alt="company">
+    </div>
+
+    <div
+      fxLayout="row"
+      fxLayout.lt-lg="column"
+      fxLayoutAlign="space-between"
+      class="location-map-box">
+
+      <img dnlSrc="/assets/images/map-sihwa.png" alt="company">
+
+      <div class="location-map-view">
+        <p class="name">{{ 'ABOUT.LOCATION.SUBTITLE.MAP' | translate }}</p>
+        <ul class="map-view-list">
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.KAKAO' | translate }}</p>
+            <a href="http://kko.to/yyRXH3ujB" target="_blank"><img dnlSrc="/assets/images/map-banner-kakao.png" alt="kakao map"></a>
+          </li>
+          <li>
+            <p>{{ 'ABOUT.LOCATION.SUBTITLE.GOOGLE' | translate }}</p>
+            <a href="https://goo.gl/maps/pJGHH1fe4VWCnskf6" target="_blank"><img dnlSrc="/assets/images/map-banner-google.png" alt="google map"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+</div>

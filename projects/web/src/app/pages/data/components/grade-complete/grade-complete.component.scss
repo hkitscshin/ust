@@ -1,0 +1,65 @@
+@import "core";
+
+.grade-page-box {
+  .title {
+    width: 956px;
+    margin: 0 auto;
+    padding-top: 37px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+
+    @include lt-lg {
+      width: 100%;
+      padding: 23px 24px 25px 24px;
+      font-size: 15px;
+      line-height: 1.47;
+      letter-spacing: -0.75px;
+    }
+
+    img {
+      margin-top: -3px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.grade-complete-box {
+  padding-top: 74px;
+  height: 492px;
+  background-color: #f6f6f6;
+  text-align: center;
+
+  .note {
+    padding: 34px 0 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ea4d07;
+  }
+
+  .note-sub {
+    padding-bottom: 40px;
+    font-size: 15px;
+    line-height: 30px;
+    color: #7a7a7a;
+  }
+
+  .btn-group {
+    button {
+      width: 130px;
+      height: 40px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+      border: solid 1px #ddd;
+      background-color: #fff;
+      font-size: 14px;
+      color: #757575;
+    }
+
+    button + button {
+      margin-left: 20px;
+    }
+  }
+}

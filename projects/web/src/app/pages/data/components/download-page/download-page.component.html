@@ -1,0 +1,69 @@
+<div class="download-page-box">
+  <p class="title"><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon">{{ 'DATA.DOWNLOAD.TITLE' | translate }}</p>
+
+  <div class="adobe-reader" fxHide.lt-lg>
+    <p>{{ 'DATA.DOWNLOAD.PDF' | translate }}
+      <a href="https://get.adobe.com/kr/reader" target="_blank">
+        <img dnlSrc="/assets/images/adobe-reader-down.png" alt="adobe reader">
+      </a>
+    </p>
+  </div>
+
+  <ul fxLayout="row" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px" class="download-list">
+    <li *ngIf="brochure && brochure.file">
+      <p class="name">{{ 'DATA.DOWNLOAD.BROCHURE' | translate }}</p>
+
+      <div class="image">
+        <img dnlSrc="/assets/images/data-download-brochure.png" alt="UST 브로슈어">
+
+        <div class="over" fxHide.lt-lg>
+          <div class="btn-group">
+            <button type="button" class="btn-view">
+              <a [href]="brochure.file?.url" target="_blank">{{ 'DATA.DOWNLOAD.BUTTONS.BUTTON1' | translate }}</a>
+            </button>
+            <button type="button" class="btn-down" (click)="download(brochure.file)">
+              {{ 'DATA.DOWNLOAD.BUTTONS.BUTTON2' | translate }}
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-btn-group" fxHide.lg>
+          <button type="button" class="btn-view">
+            <a [href]="brochure.file?.url" target="_blank">{{ 'DATA.DOWNLOAD.BUTTONS.BUTTON1' | translate }}</a>
+          </button>
+          <button type="button" class="btn-down" (click)="download(brochure.file)">
+            {{ 'DATA.DOWNLOAD.BUTTONS.BUTTON2' | translate }}
+          </button>
+        </div>
+      </div>
+    </li>
+
+    <li *ngIf="application && application.file">
+      <p class="name">{{ 'DATA.DOWNLOAD.FORM' | translate }}</p>
+
+      <div class="image">
+        <img dnlSrc="/assets/images/data-download-application.png" alt="UST 자재승인신청서">
+
+        <div class="over" fxHide.lt-lg>
+          <div class="btn-group">
+            <button type="button" class="btn-view">
+              <a [href]="application.file?.url" target="_blank">{{ 'DATA.DOWNLOAD.BUTTONS.BUTTON1' | translate }}</a>
+            </button>
+            <button type="button" class="btn-down" (click)="download(application.file)">
+              {{ 'DATA.DOWNLOAD.BUTTONS.BUTTON2' | translate }}
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-btn-group" fxHide.lg>
+          <button type="button" class="btn-view">
+            <a [href]="application.file?.url" target="_blank">{{ 'DATA.DOWNLOAD.BUTTONS.BUTTON1' | translate }}</a>
+          </button>
+          <button type="button" class="btn-down" (click)="download(application.file)">
+            {{ 'DATA.DOWNLOAD.BUTTONS.BUTTON2' | translate }}
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

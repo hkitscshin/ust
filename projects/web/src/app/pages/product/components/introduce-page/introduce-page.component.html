@@ -1,0 +1,60 @@
+<div class="product-introduce-box">
+  <img dnlSrc="/assets/images/product-introduce-banner.png" alt="banner" class="banner">
+
+  <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign.lt-lg="center center" class="product-introduce-top">
+    <p class="title" fxHide.lg>{{ 'PRODUCT.INTRODUCE.HEADER.TITLE' | translate }}</p>
+
+    <div class="icons">
+      <div fxLayout.sm="row" fxLayoutAlign.sm="space-between">
+        <img dnlSrc="/assets/images/icons/product-introduce-icon1.png" alt="icon">
+        <img dnlSrc="/assets/images/icons/product-introduce-icon2.png" alt="icon">
+        <img dnlSrc="/assets/images/icons/product-introduce-icon3.png" alt="icon">
+        <img dnlSrc="/assets/images/icons/product-introduce-icon4.png" alt="icon">
+      </div>
+
+      <div fxLayout.sm="row" fxLayoutAlign.sm="space-between">
+        <img dnlSrc="/assets/images/icons/product-introduce-icon5.png" alt="icon">
+        <img dnlSrc="/assets/images/icons/product-introduce-icon6.png" alt="icon">
+        <img dnlSrc="/assets/images/icons/product-introduce-icon7.png" alt="icon">
+        <img dnlSrc="/assets/images/icons/product-introduce-icon8.png" alt="icon">
+
+      </div>
+    </div>
+
+    <div class="text">
+      <p class="title" fxHide.md fxHide.sm>{{ 'PRODUCT.INTRODUCE.HEADER.TITLE' | translate }}</p>
+      <p class="description" [innerHtml]="'PRODUCT.INTRODUCE.HEADER.CONTENT' | translate"></p>
+    </div>
+  </div>
+
+  <ul fxLayout="row" class="tab-menu">
+    <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+      <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.TAB' | translate }}</p>
+    </li>
+    <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+      <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT2.TAB' | translate }}</p>
+    </li>
+    <li fxFlex [class.active]="activeIndex === 2" (click)="changeIndex(2)">
+      <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT3.TAB' | translate }}</p>
+    </li>
+    <li fxFlex [class.active]="activeIndex === 3" (click)="changeIndex(3)">
+      <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT4.TAB' | translate }}</p>
+    </li>
+  </ul>
+
+  <div class="tab-content" *ngIf="activeIndex === 0" [class.active]="activeIndex === 0">
+    <ust-introduce-pipe ></ust-introduce-pipe>
+  </div>
+
+  <div class="tab-content" *ngIf="activeIndex === 1" [class.active]="activeIndex === 1">
+    <ust-introduce-pipe-big></ust-introduce-pipe-big>
+  </div>
+
+  <div class="tab-content" *ngIf="activeIndex === 2" [class.active]="activeIndex === 2">
+    <ust-introduce-pipe-basic></ust-introduce-pipe-basic>
+  </div>
+
+  <div class="tab-content" *ngIf="activeIndex === 3" [class.active]="activeIndex === 3">
+    <ust-introduce-pipe-boiler></ust-introduce-pipe-boiler>
+  </div>
+</div>

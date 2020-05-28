@@ -1,0 +1,15 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="16px" class="pagination-box">
+  <button type="button" class="prev-button" [disabled]="currentPage <= 1" (click)="changePage(currentPage - 1)">
+    <img dnlSrc="/assets/images/icons/slide-arrow-left.png" alt="prev-button">
+  </button>
+
+  <div>
+    <li class="page-item" *ngFor="let p of currentBlock" (click)="changePage(p)">
+      <a class="page-link" [class.active]="p === currentPage">{{ p }}</a>
+    </li>
+  </div>
+
+  <button type="button" class="next-button" [disabled]="currentPage >= totalPage" (click)="changePage(currentPage + 1)">
+    <img dnlSrc="/assets/images/icons/slide-arrow-right.png" alt="next-button">
+  </button>
+</div>

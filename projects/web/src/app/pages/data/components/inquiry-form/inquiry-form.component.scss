@@ -1,0 +1,38 @@
+@import "core";
+
+.textarea {
+  margin-bottom: 12px;
+  height: 211px;
+  border: solid 2px #bebebe;
+  vertical-align: bottom;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.form-field {
+  .value.box {
+    display: inline-block;
+    padding: 23px 0;
+  }
+}
+
+.delete-array-button {
+  color: #ccc;
+  background-color: $color-white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.add-array-button {
+  margin-top: 10px;
+  color: $color-primary;
+  background-color: $color-white;
+  border: 1px solid $color-primary;
+  cursor: pointer;
+
+  &:disabled {
+    color: #999;
+    border: 1px solid #999;
+  }
+}

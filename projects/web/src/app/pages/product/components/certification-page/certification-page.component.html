@@ -1,0 +1,17 @@
+
+<ul fxLayout="row" class="tab-menu story certification" [class.fixed]="navFixed">
+  <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+    {{ 'PRODUCT.CERTIFICATION.TAB.TAB1' | translate }}
+  </li>
+  <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+    {{ 'PRODUCT.CERTIFICATION.TAB.TAB2' | translate }}
+  </li>
+</ul>
+
+<div class="tab-content" [class.active]="activeIndex === 0">
+  <ust-certification-grade-list></ust-certification-grade-list>
+</div>
+
+<div class="tab-content" [class.active]="activeIndex === 1">
+  <ust-certification-auth></ust-certification-auth>
+</div>

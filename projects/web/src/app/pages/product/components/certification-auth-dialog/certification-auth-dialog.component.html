@@ -1,0 +1,9 @@
+<div class="close-btn">
+  <button mat-dialog-close>
+    <img dnlSrc="/assets/images/icons/mobile-menu-close-black.png" alt="close">
+  </button>
+</div>
+
+<mat-dialog-content class="mat-typography" *ngIf="filePath">
+  <img [src]="filePath" alt="인증서">
+</mat-dialog-content>

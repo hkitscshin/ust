@@ -1,0 +1,21 @@
+{
+  "name": "ust",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  },
+  "main": "bundles/ust.umd.js",
+  "module": "fesm5/ust.js",
+  "es2015": "fesm2015/ust.js",
+  "esm5": "esm5/ust.js",
+  "esm2015": "esm2015/ust.js",
+  "fesm5": "fesm5/ust.js",
+  "fesm2015": "fesm2015/ust.js",
+  "typings": "ust.d.ts",
+  "metadata": "ust.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

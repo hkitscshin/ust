@@ -1,0 +1,39 @@
+<div class="main-section2-slide-box">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+      <div class="introduce-item-wrap type1">
+        <div class="introduce-item" routerLink="/product/summary">
+          <p class="title">{{ 'MAIN.SECTION3.FEATURE1.TITLE' | translate }}</p>
+          <p class="sub-title">{{ 'MAIN.SECTION3.FEATURE1.SUBTITLE' | translate }}</p>
+          <p class="description">{{ 'MAIN.SECTION3.FEATURE1.DESCRIPTION' | translate }}</p>
+
+          <img dnlSrc="/assets/images/icons/main-right-arrow-white.png" alt="icon" class="arrow-icon">
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <div class="introduce-item-wrap type2">
+        <div class="introduce-item" routerLink="/research/separation">
+          <p class="title">{{ 'MAIN.SECTION3.FEATURE2.TITLE' | translate }}</p>
+          <p class="sub-title">{{ 'MAIN.SECTION3.FEATURE2.SUBTITLE' | translate }}</p>
+          <p class="description">{{ 'MAIN.SECTION3.FEATURE2.DESCRIPTION' | translate }}</p>
+
+          <img dnlSrc="/assets/images/icons/main-right-arrow-white.png" alt="icon" class="arrow-icon">
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template carouselSlide>
+      <div class="introduce-item-wrap type3">
+        <div class="introduce-item" routerLink="/about/story">
+          <p class="title">{{ 'MAIN.SECTION3.FEATURE3.TITLE' | translate }}</p>
+          <p class="sub-title">{{ 'MAIN.SECTION3.FEATURE3.SUBTITLE' | translate }}</p>
+          <p class="description">{{ 'MAIN.SECTION3.FEATURE3.DESCRIPTION' | translate }}</p>
+
+          <img dnlSrc="/assets/images/icons/main-right-arrow-white.png" alt="icon" class="arrow-icon">
+        </div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>

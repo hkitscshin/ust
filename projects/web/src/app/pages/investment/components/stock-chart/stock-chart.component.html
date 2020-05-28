@@ -1,0 +1,49 @@
+<ng-container *ngIf="stocks && stocks.length > 0; else empty">
+  <div class="btn-group">
+    <button class="button"
+            [class.active]="(buttonIndex$ | async) === 0"
+            (click)="onButtonClick(0)"
+            mat-flat-button>{{ 'INVESTMENT.STOCK.BUTTONS.BUTTON1' | translate }}</button>
+
+    <button class="button"
+            [class.active]="(buttonIndex$ | async) === 1"
+            (click)="onButtonClick(1)"
+            mat-flat-button>{{ 'INVESTMENT.STOCK.BUTTONS.BUTTON2' | translate }}</button>
+
+    <button class="button"
+            [class.active]="(buttonIndex$ | async) === 2"
+            (click)="onButtonClick(2)"
+            mat-flat-button>{{ 'INVESTMENT.STOCK.BUTTONS.BUTTON3' | translate }}</button>
+
+    <button class="button"
+            [class.active]="(buttonIndex$ | async) === 3"
+            (click)="onButtonClick(3)"
+            mat-flat-button>{{ 'INVESTMENT.STOCK.BUTTONS.BUTTON4' | translate }}</button>
+  </div>
+
+  <ng-container *ngIf="(buttonIndex$ | async) === 1 || (buttonIndex$ | async) === 2; else lineChart">
+    <google-chart id="candlestickChart"
+                  [type]="candlestickChartConfig.type"
+                  [data]="candlestickChartData"
+                  [columnNames]="candlestickChartConfig.columnNames"
+                  [options]="candlestickChartConfig.options"
+                  [width]="candlestickChartConfig.width"
+                  [height]="candlestickChartConfig.height">
+    </google-chart>
+  </ng-container>
+
+  <ng-template #lineChart>
+    <google-chart id="lineChart"
+                  [type]="lineChartConfig.type"
+                  [data]="lineChartData"
+                  [columnNames]="lineChartConfig.columnNames"
+                  [options]="lineChartConfig.options"
+                  [width]="lineChartConfig.width"
+                  [height]="lineChartConfig.height">
+    </google-chart>
+  </ng-template>
+</ng-container>
+
+<ng-template #empty>
+  <div class="empty">데이터가 없습니다.</div>
+</ng-template>

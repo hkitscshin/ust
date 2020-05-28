@@ -1,0 +1,75 @@
+@import "core";
+
+ust-certification-page {
+
+  .certification-auth-list-box {
+    width: 956px;
+    margin: 0 auto;
+
+    @include lt-lg {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @include md {
+      padding: 0 24px;
+    }
+
+    @include sm {
+      padding: 0 16px;
+    }
+
+    .certification-list-box {
+
+      li {
+        width: 239px;
+        padding: 7px 11px;
+        margin-bottom: 24px;
+        text-align: center;
+        box-sizing: border-box;
+
+        img {
+          width: 100%;
+          max-width: 217px;
+        }
+
+        @include md {
+          width: 33.11%;
+        }
+
+        @include sm {
+          width: 50%;
+        }
+
+        .cord {
+          padding-top: 8px;
+          font-weight: 500;
+          line-height: 1.43;
+          letter-spacing: -0.7px;
+          text-align: left;
+          color: #7a7a7a;
+
+          span {
+            color: #000000;
+          }
+        }
+
+        .date {
+          padding-top: 8px;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 1.5;
+          letter-spacing: -0.6px;
+          text-align: left;
+          color: #7a7a7a;
+        }
+
+        &:hover {
+          background: #fff;
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        }
+      }
+    }
+  }
+
+}

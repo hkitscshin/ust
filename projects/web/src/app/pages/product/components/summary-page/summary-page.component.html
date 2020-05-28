@@ -1,0 +1,32 @@
+<div class="product-summary-box sub-responsive-box">
+  <h2 data-scroll>{{ 'PRODUCT.SUMMARY.TITLE' | translate }}</h2>
+
+  <ul fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign.lt-lg="center center" class="product-summary-list">
+    <li class="product-summary-item" data-scroll>
+      <div class="icon icon1"></div>
+      <p class="title">{{ 'PRODUCT.SUMMARY.FEATURES.FEATURE1.TITLE' | translate }}</p>
+      <p class="description">{{ 'PRODUCT.SUMMARY.FEATURES.FEATURE1.DESCRIPTION' | translate }}</p>
+    </li>
+
+    <li class="product-summary-item" data-scroll>
+      <div class="icon icon2"></div>
+      <p class="title">{{ 'PRODUCT.SUMMARY.FEATURES.FEATURE2.TITLE' | translate }}</p>
+      <p class="description">{{ 'PRODUCT.SUMMARY.FEATURES.FEATURE2.DESCRIPTION' | translate }}</p>
+    </li>
+
+    <li class="product-summary-item" data-scroll>
+      <div class="icon icon3"></div>
+      <p class="title">{{ 'PRODUCT.SUMMARY.FEATURES.FEATURE3.TITLE' | translate }}</p>
+      <p class="description">{{ 'PRODUCT.SUMMARY.FEATURES.FEATURE3.DESCRIPTION' | translate }}</p>
+    </li>
+  </ul>
+</div>
+
+<div fxLayout="row" class="product-summary-inquiry-box">
+  <div fxFlex="55" fxFlex.md="35" fxHide.sm class="bg"></div>
+
+  <div fxFlex="45" fxFlex.md="75" fxFlex.sm="100" class="text">
+    <p [innerHtml]="'PRODUCT.SUMMARY.INQUIRY.TEXT' | translate"></p>
+    <a routerLink="/about/location">{{ 'PRODUCT.SUMMARY.INQUIRY.BUTTON' | translate }}</a>
+  </div>
+</div>

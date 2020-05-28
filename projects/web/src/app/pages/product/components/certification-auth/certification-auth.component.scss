@@ -1,0 +1,13 @@
+@import "core";
+
+.certification-auth-box {
+  padding-top: 32px;
+  padding-bottom: 58px;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+
+  .tab-menu li {
+    @include inline-center;
+    padding: 0;
+  }
+}

@@ -1,0 +1,181 @@
+<ust-main-toolbar fxHide.lt-lg></ust-main-toolbar>
+
+<ust-mobile-toolbar></ust-mobile-toolbar>
+
+<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+  <div class="section section1">
+    <div class="responsive-box">
+      <h2 data-scroll><span>U</span>r <span>S</span>olution for <span>T</span>omorrow, <span>UST</span>.</h2>
+    </div>
+  </div>
+
+  <div class="section section2">
+    <div fxLayout.lt-lg="column" class="responsive-box">
+      <div fxFlex.lt-lg class="slide-box-wrap">
+        <h2 data-scroll>Best Quality <span>UST</span></h2>
+
+        <div data-scroll class="slide-box">
+          <ust-main-slide></ust-main-slide>
+        </div>
+      </div>
+
+      <div fxLayout="row" fxLayout.lt-lg="column" fxFlex.lt-lg fxLayoutAlign="space-between" fxLayoutAlign.lt-lg="center" class="description-box">
+        <div data-scroll class="description-item">
+          <i><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon" fxHide.sm fxHide.lg></i>
+          <p class="title">{{ 'MAIN.SECTION2.FEATURE1.TITLE' | translate }}</p>
+          <p>{{ 'MAIN.SECTION2.FEATURE1.DESCRIPTION' | translate }}</p>
+        </div>
+
+        <div data-scroll class="description-item">
+          <i><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon" fxHide.sm fxHide.lg></i>
+          <p class="title">{{ 'MAIN.SECTION2.FEATURE2.TITLE' | translate }}</p>
+          <p>{{ 'MAIN.SECTION2.FEATURE2.DESCRIPTION' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section3">
+    <div fxLayout="row" fxLayout.sm="column" fxLayoutAlign="space-between" fxHide.md class="introduce-box">
+      <div class="introduce-list">
+        <div class="introduce-item" routerLink="/product/summary">
+          <p class="title">{{ 'MAIN.SECTION3.FEATURE1.TITLE' | translate }}</p>
+          <p class="sub-title">{{ 'MAIN.SECTION3.FEATURE1.SUBTITLE' | translate }}</p>
+          <p class="description">{{ 'MAIN.SECTION3.FEATURE1.DESCRIPTION' | translate }}</p>
+
+          <img dnlSrc="/assets/images/icons/main-right-arrow-white.png" fxHide.lg alt="icon" class="arrow-icon">
+        </div>
+      </div>
+
+      <div class="introduce-list">
+        <div class="introduce-item" routerLink="/research/separation">
+          <p class="title">{{ 'MAIN.SECTION3.FEATURE2.TITLE' | translate }}</p>
+          <p class="sub-title">{{ 'MAIN.SECTION3.FEATURE2.SUBTITLE' | translate }}</p>
+          <p class="description">{{ 'MAIN.SECTION3.FEATURE2.DESCRIPTION' | translate }}</p>
+
+          <img dnlSrc="/assets/images/icons/main-right-arrow-white.png" fxHide.lg alt="icon" class="arrow-icon">
+        </div>
+      </div>
+
+      <div class="introduce-list">
+        <div class="introduce-item"  routerLink="/about/story">
+          <p class="title">{{ 'MAIN.SECTION3.FEATURE3.TITLE' | translate }}</p>
+          <p class="sub-title">{{ 'MAIN.SECTION3.FEATURE3.SUBTITLE' | translate }}</p>
+          <p class="description">{{ 'MAIN.SECTION3.FEATURE3.DESCRIPTION' | translate }}</p>
+
+          <img dnlSrc="/assets/images/icons/main-right-arrow-white.png" fxHide.lg alt="icon" class="arrow-icon">
+        </div>
+      </div>
+    </div>
+
+    <ust-main-section2-slide fxHide.lg fxHide.sm></ust-main-section2-slide>
+  </div>
+
+  <div class="section section4">
+    <ul fxLayout="row" fxLayout.lt-lg="row wrap" fxLayoutAlign="space-between">
+      <li>
+        <img dnlSrc="/assets/images/icons/main-sec4-icon1.png" alt="icon">
+        <p class="title">{{ 'MAIN.SECTION4.FEATURE1.TITLE' | translate }}</p>
+        <p>{{ 'MAIN.SECTION4.FEATURE1.DESCRIPTION' | translate }}</p>
+      </li>
+
+      <li data-scroll>
+        <img dnlSrc="/assets/images/icons/main-sec4-icon2.png" alt="icon">
+        <p class="title">{{ 'MAIN.SECTION4.FEATURE2.TITLE' | translate }}</p>
+        <p>{{ 'MAIN.SECTION4.FEATURE2.DESCRIPTION' | translate }}</p>
+      </li>
+
+      <li>
+        <img dnlSrc="/assets/images/icons/main-sec4-icon3.png" alt="icon">
+        <p class="title">{{ 'MAIN.SECTION4.FEATURE3.TITLE' | translate }}</p>
+        <p>{{ 'MAIN.SECTION4.FEATURE3.DESCRIPTION' | translate }}</p>
+      </li>
+
+      <li data-scroll>
+        <img dnlSrc="/assets/images/icons/main-sec4-icon4.png" alt="icon">
+        <p class="title">{{ 'MAIN.SECTION4.FEATURE4.TITLE' | translate }}</p>
+        <p>{{ 'MAIN.SECTION4.FEATURE4.DESCRIPTION' | translate }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section section5">
+    <div class="responsive-box">
+      <p data-scroll>Ur Solution for Tomorrow, UST</p>
+      <h2 data-scroll [innerHtml]="'MAIN.SECTION5.TEXT' | translate"></h2>
+      <a data-scroll routerLink="about/story">{{ 'MAIN.SECTION5.BUTTON' | translate }}</a>
+    </div>
+  </div>
+
+  <div class="section footer" >
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="responsive-box" fxHide.lt-lg>
+      <div class="info">
+        <h1>UST</h1>
+
+        <p>{{ 'FOOTER.COMPANY.TITLE' | translate }} : {{ 'FOOTER.COMPANY.CONTENT' | translate }}<br>
+          {{ 'FOOTER.ADDRESS.TITLE' | translate }} : {{ 'FOOTER.ADDRESS.CONTENT' | translate }}<br>
+          {{ 'FOOTER.PHONE.TITLE' | translate }} : 054 -278 - 0011 / {{ 'FOOTER.FAX.TITLE' | translate }} : 054 -278 - 0015<br>
+          <br>
+          {{ 'FOOTER.BUSINESS_NUMBER.TITLE' | translate }} : 274 - 88 - 00730<br>
+          {{ 'FOOTER.NAME.TITLE' | translate }} : {{ 'FOOTER.NAME.CONTENT' | translate }}<br>
+          Copyright {{ 'FOOTER.COMPANY.CONTENT' | translate }} All rights reserved</p>
+      </div>
+
+      <div fxLayout="row" class="menu">
+        <ul>
+          <li class="title" routerLink="/about">{{ 'TOOLBAR.MENU.NAV1' | translate }}</li>
+          <li routerLink="/about/story">{{ 'TOOLBAR.NAV1.SUB1' | translate }}</li>
+          <li routerLink="/about/group">{{ 'TOOLBAR.NAV1.SUB2' | translate }}</li>
+          <li routerLink="/about/location">{{ 'TOOLBAR.NAV1.SUB3' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li class="title" routerLink="/product">{{ 'TOOLBAR.MENU.NAV2' | translate }}</li>
+          <li routerLink="/product/summary">{{ 'TOOLBAR.NAV2.SUB1' | translate }}</li>
+          <li routerLink="/product/introduce">{{ 'TOOLBAR.NAV2.SUB2' | translate }}</li>
+          <li routerLink="/product/certification">{{ 'TOOLBAR.NAV2.SUB3' | translate }}</li>
+          <li routerLink="/product/system">{{ 'TOOLBAR.NAV2.SUB4' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li class="title" routerLink="/research">{{ 'TOOLBAR.MENU.NAV3' | translate }}</li>
+          <li routerLink="/research">{{ 'TOOLBAR.NAV3.SUB1' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li class="title" routerLink="/investment">{{ 'TOOLBAR.MENU.NAV4' | translate }}</li>
+          <li routerLink="/investment/finance">{{ 'TOOLBAR.NAV4.SUB1' | translate }}</li>
+          <li routerLink="/investment/stock">{{ 'TOOLBAR.NAV4.SUB2' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li class="title" routerLink="/data">{{ 'TOOLBAR.MENU.NAV5' | translate }}</li>
+          <li routerLink="/data/board">{{ 'TOOLBAR.NAV5.SUB1' | translate }}</li>
+          <li routerLink="/data/download">{{ 'TOOLBAR.NAV5.SUB2' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li class="title" routerLink="/recruit">{{ 'TOOLBAR.MENU.NAV6' | translate }}</li>
+          <li routerLink="/recruit">{{ 'TOOLBAR.NAV6.SUB1' | translate }}</li>
+        </ul>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center" class="call-center">
+        <p>{{ 'FOOTER.CONTACT.TEXT' | translate }} 09:00 ~ 18:00</p>
+        <a class="contact" routerLink="/about/location">
+          <img dnlSrc="/assets/images/icons/footer-call.png" alt="고객센터">
+          <span>{{ 'FOOTER.CONTACT.BUTTON' | translate }}</span>
+        </a>
+
+        <div class="sns-icon">
+          <a href="https://www.facebook.com/titamax4u" target="_blank">
+            <img dnlSrc="/assets/images/icons/sns-facebook.png" alt="facebook">
+          </a>
+          <a href="https://www.instagram.com/titamax_official/" target="_blank">
+            <img dnlSrc="/assets/images/icons/sns-instagram.png" alt="instagram">
+          </a>
+        </div>
+      </div>
+   </div>
+  </div>
+</div>

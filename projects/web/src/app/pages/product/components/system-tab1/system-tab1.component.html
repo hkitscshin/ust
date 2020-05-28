@@ -1,0 +1,24 @@
+<div class="system-tab-box">
+  <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-between">
+    <img dnlSrc="/assets/images/system-tab-main1.png" alt="16조관기관" width="466" height="298" class="img">
+
+    <div fxFlex class="info-box">
+      <p class="name">{{ 'PRODUCT.SYSTEM.SYSTEM1.NAME' | translate }}</p>
+      <p class="description" [innerHtml]="'PRODUCT.SYSTEM.SYSTEM1.DESCRIPTION' | translate"></p>
+
+      <div class="info-section size">
+        <p class="title">{{ 'PRODUCT.SYSTEM.SUBTITLE.SIZE' | translate }}</p>
+
+        <div class="size-box">
+          <span>{{ 'PRODUCT.SYSTEM.SYSTEM1.SIZE.SIZE1' | translate }}</span>
+          <span>{{ 'PRODUCT.SYSTEM.SYSTEM1.SIZE.SIZE2' | translate }}</span>
+        </div>
+      </div>
+
+      <div class="info-section use">
+        <p class="title">{{ 'PRODUCT.SYSTEM.SUBTITLE.STRENGTH' | translate }}</p>
+        <p [innerHtml]="'PRODUCT.SYSTEM.SYSTEM1.STRENGTH' | translate"></p>
+      </div>
+    </div>
+  </div>
+</div>

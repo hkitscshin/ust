@@ -1,0 +1,19 @@
+
+<div class="research-page-box">
+  <ul fxLayout="row" class="tab-menu">
+    <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+      {{ 'RESEARCH.RESEARCH1.TITLE' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+      {{ 'RESEARCH.RESEARCH2.TITLE' | translate }}
+    </li>
+  </ul>
+
+  <div class="tab-content" [class.active]="activeIndex === 0">
+    <ust-research-separation></ust-research-separation>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 1">
+    <ust-research-plan></ust-research-plan>
+  </div>
+</div>

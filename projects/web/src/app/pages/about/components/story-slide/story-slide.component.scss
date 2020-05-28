@@ -1,0 +1,22 @@
+@import "core";
+
+:host {
+  display: block;
+  padding: 74px 0 24px;
+  background: #f6f6f6;
+
+  @include lt-lg {
+    padding: 0;
+    background: #fff;
+  }
+}
+
+
+.story-slide-box {
+  width: 956px;
+  margin: 0 auto;
+
+  @include lt-lg {
+    width: 100%;
+  }
+}

@@ -1,0 +1,108 @@
+<div class="center-box">
+
+  <form class="login-form" [formGroup]="gradeDownloadForm" novalidate [hidden]="activeFormIndex !== 0">
+    <div>
+      <h3 class="sub-title">유에스티 성적서관리 로그인 </h3>
+      <mat-form-field appearance="outline">
+        <mat-label>사업자 등록번호</mat-label>
+
+        <input matInput formControlName="businessNumber" placeholder="사업자 등록번호" type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>비밀번호</mat-label>
+
+        <input matInput formControlName="password" placeholder="비밀번호" type="password">
+      </mat-form-field>
+
+      <div class="button-box">
+        <button (click)="login()" class="button" mat-flat-button color="primary"
+          [disabled]="gradeDownloadForm.invalid || isLoading" type="submit">로그인</button>
+        <button (click)="moveTabs(1)" class="button button-reg" mat-flat-button color="scondary" type="button"> 신규등록 </button>
+      </div>
+    </div>
+  </form>
+  
+  <form class="join-form" [formGroup]="joinForm" novalidate [hidden]="activeFormIndex !== 1">
+    <div>
+      <h3 class="sub-title"> 유에스티 성적서관리 신규가입 </h3>
+      <mat-form-field appearance="outline">
+        <mat-label>사업자 등록번호</mat-label>
+
+        <input matInput formControlName="regBusinessNumber" placeholder="사업자 등록번호" type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>인증코드</mat-label>
+
+        <input matInput formControlName="regCertiCode" placeholder="인증코드 - 유에스티에 문의하세요" type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>신규 비밀번호 입력 (최소 4자)</mat-label>
+
+        <input matInput formControlName="regPassword" placeholder="비밀번호" type="password" maxlength="20">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>비밀번호 확인</mat-label>
+
+        <input matInput formControlName="regConfirm" placeholder="비밀번호" type="password" maxlength="20">
+      </mat-form-field>
+
+      <div class="button-box">
+        <button (click)="clear()" class="button" mat-flat-button type="button" [ngStyle]="{'float':'left'}" > 초기화 </button>
+        <button (click)="join()" class="button" mat-flat-button color="primary"
+          [disabled]="joinForm.invalid || isLoading" type="submit">가입</button>
+        <button (click)="moveTabs(0)" class="button" mat-flat-button color="scondary" type="button"> 취소 </button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="grade-list-box" [hidden]="activeFormIndex !== 2">
+  <mat-form-field>
+    <mat-label> 발행년월</mat-label>
+    <input matInput [matDatepicker]="dp" [formControl]="date">
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp
+                    startView="year"
+                    (monthSelected)="chosenMonthHandler($event, dp)"
+                    panelClass="grade-month-picker">
+    </mat-datepicker>
+  </mat-form-field>
+  <p class="total">{{ 'RECRUIT.LIST.TABLE.TOTAL' | translate }} : {{ gradeList.length }}</p>
+  <table>
+    <tr>
+      <th>순번</th>
+      <th>증명서No.</th>
+      <th>규격</th>
+      <th>발행일자</th>
+      <th>강종</th>
+      <th>수량</th>
+      <th>다운로드</th>
+    </tr>
+    <ng-container *ngIf="gradeList && gradeList.length > 0; else empty">
+      <tr *ngFor="let list of gradeList; index as i">
+        <td>{{ i + 1 }}</td>
+        <td> {{ list.INC_CERTI_NO }}</td>
+        <td> {{ list.PST_NAME }}</td>
+        <td class="date"> {{ list.INC_ISSUE }}</td>
+        <td> {{ list.GRD_NAME }}</td>
+        <td> {{ list.INC_QTY }}</td>
+        <td [class.progress]="true">
+          <button type="button" (click)="downloadFile(list.INC_CERTI_NO)"  > 다운로드 </button>
+        </td>
+      </tr>
+    </ng-container>
+    <ng-template #empty>
+      <tr>
+        <td class="empty" colspan="7">검사증명서가 없습니다</td>
+      </tr>
+    </ng-template>
+  </table>
+
+  <div class="logout-box">
+    <button type="button" class="button" mat-raised-button (click)="logout()"> 로그아웃 </button>
+  </div>
+  
+</div>

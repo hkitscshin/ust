@@ -1,0 +1,22 @@
+<div class="file-input">
+  <div class="image-uploader-box"
+       [ngStyle]="{ width: width + 'px', height: height + 'px' }">
+    <img *ngIf="formCtrl.value" [src]="formCtrl.value" alt="image">
+  </div>
+
+  <div class="button-box">
+    <button class="button"
+            (click)="onButtonClick()"
+            mat-flat-button
+            color="primary"
+            type="button">이미지 선택</button>
+
+    <input matInput type="text" *ngIf="formCtrl.value" [value]="formCtrl.value || '이미지 없음'" readonly>
+  </div>
+
+  <input #fileInputRef
+         class="input"
+         type="file"
+         accept="image/*"
+         (change)="uploadFile($event.target.files[0])">
+</div>

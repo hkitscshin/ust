@@ -1,0 +1,47 @@
+<div class="story-page-box">
+  <ul fxLayout="row" class="tab-menu story" fxHide.sm fxHide.md data-scroll>
+    <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+      {{ 'ABOUT.STORY.STORY1.TITLE' | translate }}
+      <span>{{ 'ABOUT.STORY.STORY1.YEAR' | translate }}</span>
+    </li>
+    <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+      {{ 'ABOUT.STORY.STORY2.TITLE' | translate }}
+      <span>{{ 'ABOUT.STORY.STORY2.YEAR' | translate }}</span>
+    </li>
+    <li fxFlex [class.active]="activeIndex === 2" (click)="changeIndex(2)">
+      {{ 'ABOUT.STORY.STORY3.TITLE' | translate }}
+      <span>{{ 'ABOUT.STORY.STORY3.YEAR' | translate }}</span>
+    </li>
+  </ul>
+
+  <div class="selected-menu" fxHide.lg (click)="onClick()" [class.selected]="Opened">
+    <div class="selected-menu-list">
+      <a class="selected-item" [ngSwitch]="activeIndex">
+        <ng-container *ngSwitchCase="0">{{ 'ABOUT.STORY.STORY1.TITLE' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="1">{{ 'ABOUT.STORY.STORY2.TITLE' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="2">{{ 'ABOUT.STORY.STORY3.TITLE' | translate }}</ng-container>
+      </a>
+
+      <ul class="selected-menu-item">
+        <li [class.active]="activeIndex === 0" (click)="changeIndex(0)">{{ 'ABOUT.STORY.STORY1.TITLE' | translate }}</li>
+        <li [class.active]="activeIndex === 1" (click)="changeIndex(1)">{{ 'ABOUT.STORY.STORY2.TITLE' | translate }}</li>
+        <li [class.active]="activeIndex === 2" (click)="changeIndex(2)">{{ 'ABOUT.STORY.STORY3.TITLE' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 0" *ngIf="activeIndex === 0">
+    <ust-story-slide [tabIndex]="activeIndex" (changeSlide)="onSlideChange($event)"></ust-story-slide>
+    <ust-story-step [tabIndex]="activeIndex" [startPosition]="startPosition"></ust-story-step>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 1" *ngIf="activeIndex === 1">
+    <ust-story-slide [tabIndex]="activeIndex" (changeSlide)="onSlideChange($event)"></ust-story-slide>
+    <ust-story-step [tabIndex]="activeIndex" [startPosition]="startPosition"></ust-story-step>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 2" *ngIf="activeIndex === 2">
+    <ust-story-slide [tabIndex]="activeIndex" (changeSlide)="onSlideChange($event)"></ust-story-slide>
+    <ust-story-step [tabIndex]="activeIndex" [startPosition]="startPosition"></ust-story-step>
+  </div>
+</div>

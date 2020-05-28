@@ -1,0 +1,325 @@
+@import "core";
+
+ust-introduce-page {
+
+.product-introduce-box {
+  width: 1004px;
+  margin: 24px auto;
+
+  @include md {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  @include sm {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .banner {
+    @include lt-lg {
+      width: 100%;
+    }
+  }
+
+  .product-introduce-top {
+    margin: 32px 0 48px;
+
+    .title {
+      margin-bottom: 16px;
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1.48;
+      letter-spacing: -1.25px;
+      color: #ea4d07;
+
+      @include sm {
+       font-size: 16px;
+      }
+    }
+
+    .icons {
+      margin-right: 24px;
+
+      @include sm {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      div {
+        &:first-child {
+          margin-bottom: 54px;
+
+          @include md {
+            margin-bottom: 24px;
+          }
+
+          @include sm {
+            margin-bottom: 19px;
+          }
+        }
+      }
+
+      img {
+        margin-right: 35px;
+
+        @include sm {
+          margin-right: 0;
+          width: 58px;
+        }
+
+        &:nth-of-type(4n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .text {
+      .description {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.88;
+        letter-spacing: -0.4px;
+
+        @include lt-lg {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+.introduce-pipe-box {
+  margin-top: 40px;
+
+  .img {
+    @include lt-lg {
+      width: 100%;
+    }
+  }
+
+  .info-box {
+    margin-left: 24px;
+
+    @include lt-lg {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .name {
+      padding-bottom: 8px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: -1.1px;
+
+      @include lt-lg {
+        margin-top: 16px;
+        font-size: 16px;
+      }
+    }
+
+    .name-en {
+      padding-bottom: 16px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #ddd;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.45;
+      letter-spacing: normal;
+
+      @include lt-lg {
+        font-size: 16px;
+      }
+    }
+
+    .info-section {
+      .title {
+        margin-bottom: 13px;
+        font-weight: 300;
+        line-height: 1.43;
+        letter-spacing: -0.7px;
+      }
+
+      .size-box {
+        height: 76px;
+
+        span {
+          display: inline-block;
+          margin: 0 3px 4px 0;
+          width: 126px;
+          height: 32px;
+          border: 1px solid #dddddd;
+          text-align: center;
+          line-height: 32px;
+
+          &:nth-of-type(3n) {
+            margin-right: 0;
+
+            @include lt-lg {
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+
+      .use-box {
+        li {
+          width: 70px;
+          margin-right: 35px;
+          text-align: center;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 1.47;
+          letter-spacing: -0.75px;
+
+          img {
+            width: 64px;
+          }
+
+          @include lt-lg {
+            width: 64px;
+          }
+
+          @include sm {
+            margin-right: 24px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &.use {
+        .title {
+          margin-top: 13px;
+          margin-bottom: 5px;
+        }
+      }
+
+    }
+  }
+
+  .table-box {
+    margin-top: 39px;
+    overflow-x:auto;
+
+    .title {
+      margin-bottom: 19px;
+      font-size: 22px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -1.1px;
+    }
+
+    .table-wrap {
+      position: relative;
+      overflow-x: auto;
+
+      .fixed {
+        width: 1006px;
+        position: fixed;
+        top: 76px;
+        margin-top: 40px;
+
+        @include md {
+          width: calc( 100% - 46px );
+          top: 64px;
+          margin-top: 0;
+        }
+
+        @include sm {
+          position: relative;
+          width: auto;
+          top: 0;
+          margin-top: 0;
+        }
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+
+      &.margin-top {
+        margin-top: 176px;
+
+        @include sm {
+          margin-top: 0;
+        }
+      }
+
+      tr.top-th {
+        th {
+          min-width: 50px;
+          padding: 22px 0;
+          background: #ea4d07;
+          color: #fff;
+          border: 1px solid #fff;
+
+        }
+      }
+
+      tr.middle-th {
+        th {
+          min-width: 50px;
+          background-color: #dddddd;
+          border: 1px solid #fff;
+
+
+          &.type3 {
+            min-width: 100px;
+          }
+
+        }
+
+        td {
+          width: 7.6%;
+          min-width: 50px;
+          background-color: #dddddd;
+        }
+      }
+
+      th {
+        padding: 12px 0;
+        font-weight: 300;
+      }
+
+      td {
+        min-width: 50px;
+        padding: 12px 0;
+        border: 1px solid #ddd;
+        text-align: center;
+
+        &.type1 {
+          background: #c7ddee;
+        }
+
+        &.type2 {
+          background: #ffe7a6;
+        }
+
+        &.type3 {
+          min-width: 100px;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+}
+}

@@ -1,0 +1,33 @@
+<form [formGroup]="formGroup" novalidate>
+  <div class="form-field">
+    <h4>제목</h4>
+
+    <mat-form-field class="form-field">
+      <input matInput formControlName="title" type="text">
+    </mat-form-field>
+  </div>
+
+  <div class="form-field">
+    <h4>내용</h4>
+
+    <ust-tinymce name="data/notice" formControlName="content"></ust-tinymce>
+  </div>
+
+  <div class="form-field">
+    <h4>첨부파일</h4>
+
+      <mat-form-field class="form-field">
+        <h5>파일1</h5>
+        <input matInput type="text" [value]="fileTitle1 || '파일 없음'" readonly>
+      </mat-form-field>
+
+      <ust-file-uploader dnlFormGroupName="file1"></ust-file-uploader>
+
+    <mat-form-field class="form-field">
+      <h5>파일2</h5>
+      <input matInput type="text" [value]="fileTitle2 || '파일 없음'" readonly>
+    </mat-form-field>
+
+    <ust-file-uploader dnlFormGroupName="file2"></ust-file-uploader>
+  </div>
+</form>

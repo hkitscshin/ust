@@ -1,0 +1,71 @@
+<div class="footer">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="responsive-box">
+    <div class="info">
+      <h1>UST</h1>
+
+      <p>{{ 'FOOTER.COMPANY.TITLE' | translate }} : {{ 'FOOTER.COMPANY.CONTENT' | translate }}<br>
+        {{ 'FOOTER.ADDRESS.TITLE' | translate }} : {{ 'FOOTER.ADDRESS.CONTENT' | translate }}<br>
+        {{ 'FOOTER.PHONE.TITLE' | translate }} : 054 -278 - 0011 / {{ 'FOOTER.FAX.TITLE' | translate }} : 054 -278 - 0015<br>
+        <br>
+        {{ 'FOOTER.BUSINESS_NUMBER.TITLE' | translate }} : 274 - 88 - 00730<br>
+        {{ 'FOOTER.NAME.TITLE' | translate }} : {{ 'FOOTER.NAME.CONTENT' | translate }}<br>
+        Copyright {{ 'FOOTER.COMPANY.CONTENT' | translate }} All rights reserved</p>
+    </div>
+
+    <div fxLayout="row" class="menu">
+      <ul>
+        <li class="title" routerLink="/about">{{ 'TOOLBAR.MENU.NAV1' | translate }}</li>
+        <li routerLink="/about/story">{{ 'TOOLBAR.NAV1.SUB1' | translate }}</li>
+        <li routerLink="/about/group">{{ 'TOOLBAR.NAV1.SUB2' | translate }}</li>
+        <li routerLink="/about/location">{{ 'TOOLBAR.NAV1.SUB3' | translate }}</li>
+      </ul>
+
+      <ul>
+        <li class="title" routerLink="/product">{{ 'TOOLBAR.MENU.NAV2' | translate }}</li>
+        <li routerLink="/product/summary">{{ 'TOOLBAR.NAV2.SUB1' | translate }}</li>
+        <li routerLink="/product/introduce">{{ 'TOOLBAR.NAV2.SUB2' | translate }}</li>
+        <li routerLink="/product/certification">{{ 'TOOLBAR.NAV2.SUB3' | translate }}</li>
+        <li routerLink="/product/system">{{ 'TOOLBAR.NAV2.SUB4' | translate }}</li>
+      </ul>
+
+      <ul>
+        <li class="title" routerLink="/research">{{ 'TOOLBAR.MENU.NAV3' | translate }}</li>
+        <li routerLink="/research">{{ 'TOOLBAR.NAV3.SUB1' | translate }}</li>
+      </ul>
+
+      <ul>
+        <li class="title" routerLink="/investment">{{ 'TOOLBAR.MENU.NAV4' | translate }}</li>
+        <li routerLink="/investment/finance">{{ 'TOOLBAR.NAV4.SUB1' | translate }}</li>
+        <li routerLink="/investment/stock">{{ 'TOOLBAR.NAV4.SUB2' | translate }}</li>
+      </ul>
+
+      <ul>
+        <li class="title" routerLink="/data">{{ 'TOOLBAR.MENU.NAV5' | translate }}</li>
+        <li routerLink="/data/board">{{ 'TOOLBAR.NAV5.SUB1' | translate }}</li>
+        <li routerLink="/data/download">{{ 'TOOLBAR.NAV5.SUB2' | translate }}</li>
+      </ul>
+
+      <ul>
+        <li class="title" routerLink="/recruit">{{ 'TOOLBAR.MENU.NAV6' | translate }}</li>
+        <li routerLink="/recruit">{{ 'TOOLBAR.NAV6.SUB1' | translate }}</li>
+      </ul>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center" class="call-center">
+      <p>{{ 'FOOTER.CONTACT.TEXT' | translate }} 09:00 ~ 18:00</p>
+      <a class="contact" routerLink="/about/location">
+        <img dnlSrc="/assets/images/icons/footer-call.png" alt="고객센터">
+        <span>{{ 'FOOTER.CONTACT.BUTTON' | translate }}</span>
+      </a>
+
+      <div class="sns-icon">
+        <a href="https://www.facebook.com/ust.sts.pipe" target="_blank">
+          <img dnlSrc="/assets/images/icons/sns-facebook.png" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/ustpipe/" target="_blank">
+          <img dnlSrc="/assets/images/icons/sns-instagram.png" alt="instagram">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="grade-request-page-box">
+    
+    <div class="grade-step-box-wrap" fxHide.sm>
+        <div class="grade-step-box">
+            <p class="sub-title">성적서 요청 절차</p>
+            <ul fxLayout="row wrap" fxLayoutAlign="space-between" class="grade-step-list">
+                <li><img dnlSrc="/assets/images/grade-step1.png" alt="양식 작성 후 제출"></li>
+                <li><img dnlSrc="/assets/images/grade-step2.png" alt="UST 담당자 확인"></li>
+                <li><img dnlSrc="/assets/images/grade-step3.png" alt="업체 연락처로 연락"></li>
+            </ul>
+        </div>
+    </div>
+
+    <form class="form-box" [formGroup]="gradeForm" (ngSubmit)="submit()" novalidate>
+        <p class="valid">*표시는 필수 입력항목 입니다.</p>
+        <div class="form-field">
+            <label class="label">업체명 <span>*</span></label>
+            <input type="text" class="input value" formControlName="company">            
+        </div>
+        <div class="form-field">
+            <label class="label">사업자 등록번호 <span>*</span></label>
+            <input type="text" class="input value" formControlName="businessNumber">
+        </div>
+        <div class="form-field">
+            <label class="label">이메일 <span>*</span></label>
+            <input type="text" class="input value" formControlName="email">
+        </div>
+        <div class="form-field">
+            <label class="label">담당자 / 연락처 <span>*</span></label>
+            <input type="text" class="input value" formControlName="contact">
+        </div>
+        <div class="form-field" fxLayout="row">
+            <label class="label" fxFlex="30%">요청사이즈 <span>*</span></label>
+            <div class="value box" formArrayName="sizes" fxFlex="60%">
+                <div class="size-item" *ngFor="let sizeCtrl of sizesArray.controls; index as i" fxLayout="row">
+                    <input type="text" class="input" [formControlName]="i" placeholder="ex. 강종/외경/두께를 입력해 주세요" fxFlex="auto">
+                    <button class="delete-array-button button" (click)="deleteSize(i)" type="button" fxFlex="none">삭제</button>
+                </div>
+                <button class="add-array-button button" (click)="addSize()" type="button">사이즈 추가</button>
+            </div>            
+        </div>
+        <div class="form-field">
+            <label class="label">출고일</label>
+            <input type="text" class="input value" formControlName="shipDate">
+        </div>
+        <div class="form-field">
+            <label class="label">원본대조필 직인 여부</label>
+            <mat-radio-group aria-label="Select an option" class="value" formControlName="officialSeal">
+                <mat-radio-button [value]="true" disableRipple>여</mat-radio-button>
+                <mat-radio-button [value]="false" disableRipple>부</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="form-field" fxLayout="row">
+            <label class="label" fxFlex="30%">파일첨부</label>
+            <div class="value box" formArrayName="attachments" fxFlex="60%">
+                <div class="size-item" *ngFor="let attachmentGroup of attachmentsArray.controls; index as i" [formGroupName]="i" fxLayout="row">
+                    <input #fileInputRef class="input" formControlName="fileName" type="text" readonly fxFlex="auto">
+                    <button class="delete-array-button button" (click)="deleteAttachment(i)" type="button" fxFlex="none">삭제</button>
+                </div>
+                <input #fileInputRef type="file" (change)="addAttachment($event.target.files[0])" [hidden]="true">
+                <button class="add-array-button button" [disabled]="isUploading" (click)="fileInputRef.click()" type="button">파일추가</button>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="button" [disabled]="gradeForm.invalid || isLoading">제출하기</button>
+        </div>
+    </form>
+</div>

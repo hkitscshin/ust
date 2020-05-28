@@ -1,0 +1,31 @@
+<div class="board-press-list-box">
+  <ng-container *ngIf="entities && entities.length > 0; else empty">
+    <p class="total">{{ 'DATA.LIST.TOTAL' | translate }} : {{ count }}</p>
+
+    <ul class="board-press-list">
+      <li *ngFor="let pressRelease of entities"
+          fxLayout="row wrap"
+          fxLayoutAlign="space-between center"
+          [routerLink]="['/data/board/press-release', pressRelease.id]"
+          class="board-press-item"
+      >
+        <div class="subject">
+          <p class="title">{{ pressRelease.title }}</p>
+          <p class="description">{{ stripTag(pressRelease.content) }}</p>
+        </div>
+
+        <p class="date">{{ pressRelease.createdAt | timestamp: 'yyyy - MM - dd' }}</p>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-template #empty>
+    <div class="empty">보도자료가 없습니다</div>
+  </ng-template>
+</div>
+
+<ust-pagination *ngIf="count > 0"
+                [perPage]="perPage"
+                [perBlock]="perBlock"
+                [totalCount]="count"
+                (pageChange)="onPageChange($event)"></ust-pagination>

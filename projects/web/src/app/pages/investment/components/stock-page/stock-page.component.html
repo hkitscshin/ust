@@ -1,0 +1,35 @@
+<div class="stock-chart-wrap">
+  <div class="stock-chart-box">
+    <p class="title"><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon">
+      {{ 'INVESTMENT.STOCK.TITLE' | translate }}
+    </p>
+
+    <ust-stock-chart></ust-stock-chart>
+  </div>
+</div>
+
+<div class="table-box" *ngIf="stocks && stocks.length > 0">
+  <div class="table-list">
+    <table>
+      <tr>
+        <th>{{ 'INVESTMENT.STOCK.SECTION1.TABLE_HEADER1' | translate }}</th>
+        <th>{{ 'INVESTMENT.STOCK.SECTION1.TABLE_HEADER2' | translate }}</th>
+        <th>{{ 'INVESTMENT.STOCK.SECTION1.TABLE_HEADER3' | translate }}</th>
+        <th>{{ 'INVESTMENT.STOCK.SECTION1.TABLE_HEADER4' | translate }}</th>
+        <th>{{ 'INVESTMENT.STOCK.SECTION1.TABLE_HEADER5' | translate }}</th>
+        <th>{{ 'INVESTMENT.STOCK.SECTION1.TABLE_HEADER6' | translate }}</th>
+      </tr>
+
+      <tr *ngFor="let stock of stocks">
+          <td>{{ stock.date | timestamp: 'yyyy.MM.dd' }}</td>
+          <td>{{ stock.closingPrice | number }}</td>
+          <td>{{ stock.openingPrice | number }}</td>
+          <td>{{ stock.highPrice | number }}</td>
+          <td>{{ stock.lowPrice | number }}</td>
+          <td>{{ stock.tradingVolume | number }}</td>
+      </tr>
+    </table>
+
+    <mat-paginator [pageSize]="pageSize" [length]="totalCount" (page)="onPageChange($event)"></mat-paginator>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="grade-page-box">
+  <p class="title"><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon">유에스티 견적/제품문의</p>
+
+  <ul fxLayout="row" class="tab-menu" fxHide.sm fxHide.md>
+    <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+      견적문의
+    </li>
+    <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+      제품문의
+    </li>
+  </ul>
+
+  <div class="selected-menu" fxHide.lg (click)="onClick()" [class.selected]="Opened">
+    <div class="selected-menu-list">
+      <a class="selected-item" [ngSwitch]="activeIndex">
+        <ng-container *ngSwitchCase="0">견적문의</ng-container>
+        <ng-container *ngSwitchCase="1">제품문의</ng-container>
+      </a>
+
+      <ul class="selected-menu-item">
+        <li [class.active]="activeIndex === 0" (click)="changeIndex(0)">견적문의</li>
+        <li [class.active]="activeIndex === 1" (click)="changeIndex(1)">제품문의</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 0">
+    <ust-estimate-inquiry></ust-estimate-inquiry>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 1">
+    <ust-product-inquiry></ust-product-inquiry>
+  </div>
+
+</div>

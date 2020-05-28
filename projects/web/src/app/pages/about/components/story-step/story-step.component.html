@@ -1,0 +1,36 @@
+<div fxLayout="row" fxLayout.sm="column" fxLayoutAlign="center" class="story-step-box">
+  <div class="story-step-list" [class.on]="tabIndex === 0" data-scroll>
+    <p class="title">{{ 'ABOUT.STORY.STORY1.TITLE' | translate }}</p>
+
+    <ul>
+      <li [class.on]="startPosition === 0" [innerHtml]="'ABOUT.STORY.STORY1.HISTORY1' | translate"></li>
+      <li [class.on]="startPosition === 1" [innerHtml]="'ABOUT.STORY.STORY1.HISTORY2' | translate"></li>
+      <li [class.on]="startPosition === 2" [innerHtml]="'ABOUT.STORY.STORY1.HISTORY2-1' | translate"></li>
+      <li [class.on]="startPosition === 3" [innerHtml]="'ABOUT.STORY.STORY1.HISTORY2-2' | translate"></li>
+      <li [class.on]="startPosition === 4" [innerHtml]="'ABOUT.STORY.STORY1.HISTORY3' | translate"></li>
+      <li [class.on]="startPosition === 5" [innerHtml]="'ABOUT.STORY.STORY1.HISTORY4' | translate"></li>
+    </ul>
+  </div>
+
+  <div class="story-step-list" [class.on]="tabIndex === 1"  data-scroll>
+    <p class="title">{{ 'ABOUT.STORY.STORY2.TITLE' | translate }}</p>
+
+    <ul>
+      <li [class.on]="startPosition === 0" [innerHtml]="'ABOUT.STORY.STORY2.HISTORY1' | translate"></li>
+      <li [class.on]="startPosition === 1" [innerHtml]="'ABOUT.STORY.STORY2.HISTORY2' | translate"></li>
+      <li [class.on]="startPosition === 2" [innerHtml]="'ABOUT.STORY.STORY2.HISTORY3' | translate"></li>
+      <li [class.on]="startPosition === 3" [innerHtml]="'ABOUT.STORY.STORY2.HISTORY4' | translate"></li>
+    </ul>
+  </div>
+
+  <div class="story-step-list" [class.on]="tabIndex === 2"  data-scroll>
+    <p class="title">{{ 'ABOUT.STORY.STORY3.TITLE' | translate }}</p>
+
+    <ul>
+      <li [class.on]="startPosition === 0" [innerHtml]="'ABOUT.STORY.STORY3.HISTORY1' | translate"></li>
+      <li [class.on]="startPosition === 1" [innerHtml]="'ABOUT.STORY.STORY3.HISTORY2' | translate"></li>
+      <li [class.on]="startPosition === 2" [innerHtml]="'ABOUT.STORY.STORY3.HISTORY3' | translate"></li>
+      <li [class.on]="startPosition === 3" [innerHtml]="'ABOUT.STORY.STORY3.HISTORY4' | translate"></li>
+    </ul>
+  </div>
+</div>

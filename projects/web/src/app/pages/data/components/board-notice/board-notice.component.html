@@ -1,0 +1,39 @@
+<div class="board-list-box notice">
+  <ng-container *ngIf="entities && entities.length > 0; else empty">
+    <p class="total">{{ 'DATA.LIST.TOTAL' | translate }} : {{ count }}</p>
+
+    <table>
+      <colgroup>
+        <col width="10%">
+        <col width="50%">
+        <col width="25%">
+        <col width="15%">
+      </colgroup>
+
+      <tr>
+        <th>{{ 'DATA.LIST.TABLE.NO' | translate }}</th>
+        <th width="55%">{{ 'DATA.LIST.TABLE.TITLE' | translate }}</th>
+        <th>{{ 'DATA.LIST.TABLE.DATE' | translate }}</th>
+        <th>{{ 'DATA.LIST.TABLE.VIEW_COUNT' | translate }}</th>
+      </tr>
+
+      <tr *ngFor="let notice of entities; index as i"
+          [routerLink]="['/data/board/notice', notice.id]">
+        <td>{{ i + 1 }}</td>
+        <td class="subject">{{ notice.title }}</td>
+        <td>{{ notice.createdAt | timestamp: 'yyyy - MM - dd' }}</td>
+        <td>{{ notice.viewCount }}</td>
+      </tr>
+    </table>
+  </ng-container>
+
+  <ng-template #empty>
+    <div class="empty">공지사항이 없습니다</div>
+  </ng-template>
+</div>
+
+<ust-pagination *ngIf="count > 0"
+                [perPage]="perPage"
+                [perBlock]="perBlock"
+                [totalCount]="count"
+                (pageChange)="onPageChange($event)"></ust-pagination>

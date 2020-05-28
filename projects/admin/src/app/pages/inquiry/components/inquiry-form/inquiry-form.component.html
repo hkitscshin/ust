@@ -1,0 +1,40 @@
+<form *ngIf="doc" [formGroup]="formGroup" novalidate>
+  <div class="form-field">
+    <h4>이름</h4>
+
+    <p>{{ doc.name }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>이메일</h4>
+
+    <p>{{ doc.email }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>제목</h4>
+
+    <p>{{ doc.title }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>내용</h4>
+
+    <pre>{{ doc.content }}</pre>
+  </div>
+
+  <div class="form-field">
+    <h4>답변</h4>
+
+    <ust-tinymce name="inquiry/inquiry" formControlName="answer"></ust-tinymce>
+  </div>
+
+  <div class="form-field">
+    <h4>상태</h4>
+
+    <mat-radio-group formControlName="status">
+      <mat-radio-button value="제출">제출</mat-radio-button>
+      <mat-radio-button value="완료">완료</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</form>

@@ -1,0 +1,254 @@
+@import "core";
+@import "tab";
+@import "editor";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean');
+@import '~fullpage.js/dist/fullpage.min.css';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  margin: 0;
+  color: #000;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p, pre, label {
+  margin: 0;
+  font-weight: inherit;
+}
+
+body pre {
+  font-family: 'Noto Sans KR', sans-serif;
+  white-space: pre-wrap;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+img {
+  vertical-align: middle;
+}
+
+[routerlink] {
+  outline: none;
+  cursor: pointer;
+}
+
+a.inherit {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.responsive-box {
+  width: 1180px;
+  margin: 0 auto;
+
+  @include lt-lg {
+    width: 100%;
+  }
+}
+
+.sub-responsive-box {
+  width: 955px;
+  margin: 0 auto;
+
+  @include lt-lg {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+}
+
+.fp-table {
+   .fp-tableCell {
+    height: auto!important;
+  }
+}
+
+#fp-nav {
+  &.fp-right {
+    right: 50px;
+    ul {
+      li {
+        margin-bottom: 40px;
+
+        a {
+          span {
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  @include lt-lg {
+    &.fp-right {
+      width: 100%;
+      left: 0;
+      top: 64px;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          width: 25%;
+          margin: 0;
+          height: 4px;
+
+          a {
+            width: 100%;
+
+            span {
+              width: 100%;
+              background: #fff;
+              left: 0;
+              top: 0;
+              border-radius: 0;
+              margin: 0;
+            }
+
+            &.active {
+              span {
+                width: 100%;
+                background: #ea4d07;
+                left: 0;
+                top: 0;
+                border-radius: 0;
+                margin: 0;
+                height: 4px;
+              }
+            }
+          }
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.invisible {
+  transform: translate(0,100px);
+  opacity: 0;
+}
+
+.visible {
+  transform: translate(0,0);
+  opacity: 1;
+  transition: transform 1s, opacity 1s;
+}
+
+.owl-carousel{
+  margin: 0 auto;
+  position: relative;
+
+  .owl-nav {
+    @include lt-lg {
+      display: none;
+    }
+
+    .owl-prev {
+      position: absolute;
+      top: 45%;
+      left: -100px;
+
+      i {
+        @include background-image-magnification("/assets/images/icons/slide-left-btn.png");
+        display: block;
+        width: 63px;
+        height: 63px;
+
+        &.main-slide-left {
+          @include background-image-magnification("/assets/images/icons/slide-arrow-left.png");
+          display: block;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .owl-next {
+      position: absolute;
+      top: 45%;
+      right: -100px;
+
+      i {
+        display: block;
+        @include background-image-magnification("/assets/images/icons/slide-right-btn.png");
+        width: 63px;
+        height: 63px;
+
+        &.main-slide-right {
+          @include background-image-magnification("/assets/images/icons/slide-arrow-right.png");
+          display: block;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  .owl-dots {
+    text-align: center;
+
+    .owl-dot {
+      display: inline-block;
+      margin: 0 15px;
+      width: 40px;
+      height: 3px;
+      background: #ccc;
+      vertical-align: middle;
+
+      &.active {
+        background: #4c4c4c;
+        height: 5px;
+      }
+    }
+  }
+}
+
+.hidden-sm {
+  @include sm() {
+    display: none;
+  }
+}
+
+.mat-radio-button {
+
+  .mat-radio-ripple {
+    display: none;
+  }
+
+  .mat-radio-outer-circle {
+    border-width: 1px;
+  }
+
+  &.mat-radio-checked.mat-accent {
+    .mat-radio-outer-circle {
+      border-color: #979797;
+    }
+
+    .mat-radio-inner-circle {
+      background-color: #979797;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<form [formGroup]="formGroup" novalidate>
+  <div class="form-field">
+    <h4>항목</h4>
+
+    <mat-select formControlName="category">
+      <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
+    </mat-select>
+  </div>
+
+  <div class="form-field">
+    <h4>파일</h4>
+
+    <mat-form-field class="form-field">
+      <input matInput type="text" [value]="fileTitle || '파일 없음'" readonly>
+    </mat-form-field>
+
+    <ust-file-uploader dnlFormGroupName="file"></ust-file-uploader>
+  </div>
+</form>

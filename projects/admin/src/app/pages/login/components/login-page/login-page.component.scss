@@ -1,0 +1,55 @@
+@import "core";
+
+:host {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.center-box {
+  @include translate-center;
+  width: 330px;
+  text-align: center;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.logo-name {
+  font-size: 30px;
+  line-height: 41px;
+}
+
+.login-form {
+  margin-top: 60px;
+
+  .mat-form-field {
+    width: 100%;
+  }
+}
+
+.info {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+
+  h3 {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .info-box {
+    @include margin-bottom-without-last-child(5px);
+
+    .title {
+      margin-right: 5px;
+      font-weight: 600;
+    }
+  };
+}

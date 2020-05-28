@@ -1,0 +1,60 @@
+<div class="recruit-page-box">
+  <p class="title"><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon">
+    {{ 'RECRUIT.LIST.TITLE' | translate }}
+  </p>
+
+  <div class="recruit-step-box-wrap">
+    <div class="recruit-step-box">
+      <p class="sub-title">{{ 'RECRUIT.LIST.PROCEDURE.TITLE' | translate }}</p>
+
+      <ul fxLayout="row wrap" fxLayoutAlign="space-between" class="recruit-step-list">
+        <li><img dnlSrc="/assets/images/recruit-step1.png" alt="원서접수"></li>
+        <li><img dnlSrc="/assets/images/recruit-step2.png" alt="서류전형"></li>
+        <li><img dnlSrc="/assets/images/recruit-step3.png" alt="면접전형"></li>
+        <li><img dnlSrc="/assets/images/recruit-step4.png" alt="최종합격"></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="board-list-box">
+    <p class="sub-title">{{ 'RECRUIT.LIST.TABLE.TITLE' | translate }}</p>
+    <p class="total">{{ 'RECRUIT.LIST.TABLE.TOTAL' | translate }} : {{ count }}</p>
+
+    <table>
+      <tr>
+        <th>{{ 'RECRUIT.LIST.TABLE.HEADER.NO' | translate }}</th>
+        <th width="45%">{{ 'RECRUIT.LIST.TABLE.HEADER.TITLE' | translate }}</th>
+        <th class="date">{{ 'RECRUIT.LIST.TABLE.HEADER.DATE' | translate }}</th>
+        <th class="state">{{ 'RECRUIT.LIST.TABLE.HEADER.STATUS' | translate }}</th>
+        <th>{{ 'RECRUIT.LIST.TABLE.HEADER.APPLY' | translate }}</th>
+      </tr>
+
+      <ng-container *ngIf="entities && entities.length > 0; else empty">
+        <tr *ngFor="let recruitment of entities; index as i">
+          <td>{{ i + 1 }}</td>
+          <td class="subject">{{ recruitment.title }}</td>
+          <td class="date">
+            {{ recruitment.startAt | timestamp: 'yyyy - MM - dd' }} ~ {{ recruitment.endAt | timestamp: 'yyyy - MM - dd' }}
+          </td>
+          <td class="state" [class.progress]="recruitment.status === '진행중'">{{ recruitment.status }}</td>
+          <td [class.progress]="recruitment.status === '진행중'">
+            <button type="button" [routerLink]="['/recruit', recruitment.id]" [disabled]="recruitment.status === '모집마감'">
+              {{ 'RECRUIT.LIST.TABLE.BUTTON' | translate }}
+            </button>
+          </td>
+        </tr>
+      </ng-container>
+
+      <ng-template #empty>
+        <tr>
+          <td class="empty" colspan="5">채용 공고가 없습니다</td>
+        </tr>
+      </ng-template>
+    </table>
+  </div>
+
+  <ust-pagination *ngIf="count > 0"
+                  [perPage]="perPage"
+                  [perBlock]="perBlock"
+                  [totalCount]="count"
+                  (pageChange)="onPageChange($event)"></ust-pagination></div>

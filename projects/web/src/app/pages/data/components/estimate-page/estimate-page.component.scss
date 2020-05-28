@@ -1,0 +1,34 @@
+@import "core";
+
+.title {
+  width: 956px;
+  margin: 0 auto;
+  padding-top: 37px;
+  padding-bottom: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  box-sizing: border-box;
+
+  @include lt-lg {
+    width: 100%;
+    padding: 23px 24px 25px 24px;
+    font-size: 15px;
+    line-height: 1.47;
+    letter-spacing: -0.75px;
+  }
+
+  img {
+    margin-top: -3px;
+    margin-right: 15px;
+  }
+}
+
+.selected-menu {
+  margin: 0 24px;
+
+  @include sm {
+    margin: 0 16px;
+  }
+}

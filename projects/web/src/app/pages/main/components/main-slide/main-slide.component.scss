@@ -1,0 +1,11 @@
+@import "core";
+
+.main-slide-box {
+  width: 956px;
+  margin: 0 auto;
+
+  @include lt-lg {
+    width: 100%;
+    max-width: 956px;
+  }
+}

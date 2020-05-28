@@ -1,0 +1,56 @@
+<div class="board-detail-box" *ngIf="entity">
+  <div fxLayout="row" fxLayout.sm="column" fxLayoutAlign="space-between" class="board-detail-header">
+    <p class="subject">{{ entity.title }}</p>
+
+    <div class="info" fxLayout.sm="row" fxLayoutAlign.sm="space-between">
+      <p><span>{{ 'DATA.DETAIL.WRITER' | translate }}</span>{{ entity.writer }}</p>
+      <p><span>{{ 'DATA.DETAIL.DATE' | translate }}</span>{{ entity.createdAt | timestamp: 'yyyy - MM - dd' }}</p>
+      <p><span>{{ 'DATA.DETAIL.VIEW_COUNT' | translate }}</span>{{ entity.viewCount }}</p>
+    </div>
+  </div>
+
+  <div class="board-detail-content">
+    <div fxLayout="row" fxLayoutGap="56px" fxLayoutAlign="space-between" class="text">
+      <div class="editor-content" [innerHtml]="entity.content | safeHtml"></div>
+    </div>
+  </div>
+
+  <div class="board-detail-link" *ngIf="entity.file1 || entity.file2">
+    <p *ngIf="entity.file1 && entity.file1.title">
+      <span>{{ 'DATA.DETAIL.FILE' | translate }}</span>
+      <a [href]="entity.file1.url" target="_blank">{{ entity.file1.title }}</a>
+    </p>
+
+    <p *ngIf="entity.file2 && entity.file2.title">
+      <span>{{ 'DATA.DETAIL.FILE' | translate }}</span>
+      <a [href]="entity.file2.url" target="_blank">{{ entity.file2.title }}</a>
+    </p>
+  </div>
+
+  <ul class="next-page">
+    <li fxLayout="row">
+      <label class="label">{{ 'DATA.DETAIL.PREVIOUS' | translate }}</label>
+      <p class="value pointer" *ngIf="previous" [routerLink]="['/data/board/notice', previous.id]">
+        {{ previous.title }}
+      </p>
+      <p class="value" *ngIf="!previous">이전 글이 없습니다.</p>
+    </li>
+
+    <li fxLayout="row">
+      <label class="label">{{ 'DATA.DETAIL.NEXT' | translate }}</label>
+      <p class="value pointer" *ngIf="next" [routerLink]="['/data/board/notice', next.id]">
+        {{ next.title }}
+      </p>
+      <p class="value" *ngIf="!next">다음 글이 없습니다.</p>
+    </li>
+  </ul>
+
+  <div class="btn-group">
+    <button type="button" class="list-btn" routerLink="/data/board/notice">
+      <img dnlSrc="/assets/images/icons/slide-arrow-left.png" alt="icon">
+      {{ 'DATA.DETAIL.BUTTON' | translate }}
+    </button>
+  </div>
+</div>
+
+

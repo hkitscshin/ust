@@ -1,0 +1,106 @@
+<div class="finance-chart-wrap">
+  <div class="finance-chart-box">
+    <p class="title"><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon">
+      {{ 'INVESTMENT.FINANCE.SECTION1.TITLE' | translate }}
+    </p>
+
+    <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-between"
+         class="finance-chart-list" *ngIf="incomeStatement; else empty">
+      <div class="finance-chart-item">
+        <p class="sub-title">{{ 'INVESTMENT.FINANCE.SECTION1.SUBTITLE1' | translate }}</p>
+
+        <div class="chart-box">
+          <ust-finance-chart-sales [data]="salesChartData"></ust-finance-chart-sales>
+        </div>
+      </div>
+
+      <div class="finance-chart-item">
+        <p class="sub-title">{{ 'INVESTMENT.FINANCE.SECTION1.SUBTITLE3' | translate }}</p>
+
+        <div class="chart-box">
+          <ust-finance-chart-operating-profit [data]="operatingProfitChartData"></ust-finance-chart-operating-profit>
+        </div>
+      </div>
+
+      <div class="finance-chart-item">
+        <p class="sub-title">{{ 'INVESTMENT.FINANCE.SECTION1.SUBTITLE2' | translate }}</p>
+
+        <div class="chart-box">
+          <ust-finance-chart-net-profit [data]="netProfitChartData"></ust-finance-chart-net-profit>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="table-box">
+  <div class="table-list" *ngIf="incomeStatement">
+    <div fxLayout="row">
+      <p class="table-title" fxFlex="auto">{{ 'INVESTMENT.FINANCE.SECTION2.TITLE' | translate }}</p>
+
+      <p fxFlex="none">{{ 'INVESTMENT.FINANCE.UNIT' | translate }}</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>{{ 'INVESTMENT.FINANCE.SECTION2.TABLE_HEADER' | translate }}</th>
+          <th *ngFor="let data of incomeStatement.incomeStatementData">{{ data.year }}</th>
+        </tr>
+
+        <tr>
+          <td>{{ 'INVESTMENT.FINANCE.SECTION2.TABLE_ROW1' | translate }}</td>
+          <td *ngFor="let data of incomeStatement.incomeStatementData">{{ data.sales | number }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ 'INVESTMENT.FINANCE.SECTION2.TABLE_ROW3' | translate }}</td>
+          <td *ngFor="let data of incomeStatement.incomeStatementData">{{ data.operatingProfit | number }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ 'INVESTMENT.FINANCE.SECTION2.TABLE_ROW2' | translate }}</td>
+          <td *ngFor="let data of incomeStatement.incomeStatementData">{{ data.netProfit | number }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="table-list" *ngIf="financialStatement">
+    <div fxLayout="row">
+      <p class="table-title" fxFlex="auto">{{ 'INVESTMENT.FINANCE.SECTION3.TITLE' | translate }}</p>
+
+      <p fxFlex="none">{{ 'INVESTMENT.FINANCE.UNIT' | translate }}</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>{{ 'INVESTMENT.FINANCE.SECTION3.TABLE_HEADER' | translate }}</th>
+          <th *ngFor="let data of financialStatement.financialStatementData">{{ data.year }}</th>
+        </tr>
+
+        <tr>
+          <td>{{ 'INVESTMENT.FINANCE.SECTION3.TABLE_ROW1' | translate }}</td>
+          <td *ngFor="let data of financialStatement.financialStatementData">{{ data.totalAssets | number }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ 'INVESTMENT.FINANCE.SECTION3.TABLE_ROW2' | translate }}</td>
+          <td *ngFor="let data of financialStatement.financialStatementData">{{ data.totalLiabilities | number }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ 'INVESTMENT.FINANCE.SECTION3.TABLE_ROW3' | translate }}</td>
+          <td *ngFor="let data of financialStatement.financialStatementData">{{ data.totalCapital | number }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #empty>
+  <div class="empty">데이터가 없습니다.</div>
+</ng-template>

@@ -1,0 +1,150 @@
+@import "core";
+
+.download-page-box {
+  width: 956px;
+  margin: 0 auto;
+  padding: 35px 0 43px 0;
+
+  @include lt-lg {
+    width: 100%;
+  }
+
+  .title {
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    border-bottom: 1px solid #ddd;
+
+    @include lt-lg {
+      margin: 0 24px;
+      font-size: 15px;
+      line-height: 1.47;
+      letter-spacing: -0.75px;
+    }
+
+    @include sm {
+      margin: 0 16px;
+    }
+
+    img {
+      margin-top: -3px;
+      margin-right: 15px;
+    }
+  }
+
+  .adobe-reader {
+    padding: 24px 0 40px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: -0.6px;
+    color: #7a7a7a;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+  .download-list {
+
+    @include lt-lg {
+      padding-top: 32px;
+    }
+
+    li {
+      .name {
+        padding-left: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.88;
+        letter-spacing: -0.8px;
+
+        @include lt-lg {
+          padding-bottom: 10px;
+        }
+      }
+
+      .image {
+        position: relative;
+
+        @include sm {
+          text-align: center;
+
+          img {
+            width: 100%;
+            max-width: 220px;
+          }
+        }
+
+        .over {
+          display: none;
+        }
+
+        &:hover {
+          .over {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0, 0.6);
+            text-align: center;
+
+            .btn-group {
+              @include translate-center();
+
+              button {
+                width: 171px;
+                height: 40px;
+                border: 0;
+                background: #fff;
+                cursor: pointer;
+
+                a {
+                  display: block;
+                  text-decoration: none;
+                  color: inherit;
+                }
+
+                &.btn-down {
+                  margin-top: 15px;
+                  background: #ea4d07;
+                  color: #fff;
+                }
+              }
+
+            }
+          }
+        }
+        .mobile-btn-group {
+          text-align: center;
+
+          button {
+            width: 90%;
+            height: 40px;
+            border: 1px solid #c9c9c9;
+            background: #fff;
+            cursor: pointer;
+
+
+            a {
+              display: block;
+              text-decoration: none;
+              color: inherit;
+            }
+
+            &.btn-down {
+              margin-top: 15px;
+              background: #ea4d07;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

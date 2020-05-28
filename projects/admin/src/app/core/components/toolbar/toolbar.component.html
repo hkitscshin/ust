@@ -1,0 +1,12 @@
+<div fxLayout="row">
+  <h1 class="logo" fxFlex="none" routerLink="/">
+    <img dnlSrc="assets/images/logo-color.png" alt="logo">
+    <span class="logo-name">UST</span>
+  </h1>
+
+  <div fxFlex="auto">
+    <h2 class="title">{{ title }}</h2>
+  </div>
+
+  <button class="logout-button" mat-button (click)="logout()" type="button">로그아웃</button>
+</div>

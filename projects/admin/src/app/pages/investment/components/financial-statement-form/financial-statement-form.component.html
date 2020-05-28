@@ -1,0 +1,35 @@
+<form [formGroup]="formGroup">
+  <h4>재무상태표</h4>
+
+  <ng-container formArrayName="financialStatementData">
+      <ng-container *ngFor="let row of financialStatementData.controls; index as i" [formGroupName]="i">
+      <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+        <mat-form-field class="form-field"  fxFlex="10%">
+          <h5>연도</h5>
+          <input matInput formControlName="year" type="number">
+        </mat-form-field>
+
+        <mat-form-field class="form-field" fxFlex="30%">
+          <h5>자산총계</h5>
+          <input matInput formControlName="totalAssets" type="number">
+        </mat-form-field>
+
+        <mat-form-field class="form-field" fxFlex="30%">
+          <h5>부채총계</h5>
+          <input matInput formControlName="totalLiabilities" type="number">
+        </mat-form-field>
+
+        <mat-form-field class="form-field" fxFlex="30%">
+          <h5>자본총계</h5>
+          <input matInput formControlName="totalCapital" type="number">
+        </mat-form-field>
+
+        <button mat-icon-button type="button" (click)="deleteRow(i)">
+          <mat-icon>clear</mat-icon>
+        </button>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <button class="button" mat-flat-button color="primary" (click)="increaseRow()">+ 행추가</button>
+</form>

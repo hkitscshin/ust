@@ -1,0 +1,84 @@
+@import "core";
+
+.location-content-box {
+  width: 902px;
+  margin: 0 auto;
+
+
+  img {
+    @include lt-lg {
+     width: 100%;
+    }
+  }
+
+  @include lt-lg {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  @include sm {
+    padding: 0;
+  }
+
+  .location-info-box {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+
+    .name {
+      margin-bottom: 24px;
+      font-size: 16px;
+      font-weight: 500;
+
+      @include lt-lg {
+        padding-top: 24px;
+      }
+    }
+
+    .location-info-list {
+      padding-bottom: 16px;
+
+      .label {
+        @include inline-block;
+        padding-right: 16px;
+        color: #636363;
+      }
+
+      .value {
+        @include inline-block;
+      }
+
+      .bar {
+        display: inline-block;
+        padding: 0 16px;
+        color: #ddd;
+      }
+    }
+  }
+
+  .location-map-box {
+    padding-top: 20px;
+
+
+    .name {
+      margin-bottom: 24px;
+      font-size: 16px;
+      font-weight: 500;
+
+      @include lt-lg {
+        padding-top: 24px;
+      }
+    }
+
+    .map-view-list {
+      li {
+        padding-bottom: 20px;
+
+        p {
+          padding-bottom: 10px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

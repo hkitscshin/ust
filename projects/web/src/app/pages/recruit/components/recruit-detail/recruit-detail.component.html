@@ -1,0 +1,48 @@
+<div class="recruit-detail-page-box" *ngIf="entity">
+  <p class="title"><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon">
+    {{ 'RECRUIT.DETAIL.TITLE' | translate }}
+  </p>
+
+  <div fxLayout="row" fxLayoutAlign="space-between" class="recruit-detail-header">
+    <p class="subject">{{ entity.title }}</p>
+    <p class="date">{{ entity.createdAt | timestamp: 'yyyy - MM - dd' }}</p>
+  </div>
+
+  <div class="recruit-detail-content">
+    <div fxLayout="column" fxLayoutGap="56px" class="text">
+      <div class="editor-content" [innerHtml]="entity.content | safeHtml"></div>
+    </div>
+  </div>
+
+  <ul fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-between" fxLayoutAlign.lt-lg="center center" class="recruit-site-list">
+    <li *ngIf="entity.jobkoreaUrl">
+      <p class="name">{{ 'RECRUIT.DETAIL.BUTTON1' | translate }}</p>
+
+      <a [href]="entity.jobkoreaUrl" target="_blank">
+        <img dnlSrc="/assets/images/recruit-logo-jobkorea.png" alt="잡코리아" class="logo">
+        <span>{{ 'RECRUIT.DETAIL.BUTTON_TEXT' | translate }}</span>
+        <img dnlSrc="/assets/images/icons/slide-arrow-right.png" alt="go">
+      </a>
+    </li>
+
+    <li *ngIf="entity.saraminUrl">
+      <p class="name">{{ 'RECRUIT.DETAIL.BUTTON2' | translate }}</p>
+
+      <a [href]="entity.saraminUrl" target="_blank">
+        <img dnlSrc="/assets/images/recruit-logo-saramin.png" alt="사람인" class="logo">
+        <span>{{ 'RECRUIT.DETAIL.BUTTON_TEXT' | translate }}</span>
+        <img dnlSrc="/assets/images/icons/slide-arrow-right.png" alt="go">
+      </a>
+    </li>
+
+    <li *ngIf="entity.worknetUrl">
+      <p class="name">{{ 'RECRUIT.DETAIL.BUTTON3' | translate }}</p>
+
+      <a [href]="entity.worknetUrl" target="_blank">
+        <img dnlSrc="/assets/images/recruit-logo-worknet.png" alt="워크넷" class="logo">
+        <span>{{ 'RECRUIT.DETAIL.BUTTON_TEXT' | translate }}</span>
+        <img dnlSrc="/assets/images/icons/slide-arrow-right.png" alt="go">
+      </a>
+    </li>
+  </ul>
+</div>

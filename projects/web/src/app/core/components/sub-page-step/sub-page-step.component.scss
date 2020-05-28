@@ -1,0 +1,105 @@
+@import "core";
+
+.sub-page-step {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 14px 0;
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: -0.7px;
+  text-align: left;
+  color: #7a7a7a;
+  border-bottom: 1px solid #dddddd;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  @include md {
+    padding: 9px 24px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.46;
+    letter-spacing: -0.65px;
+    border-top: 1px solid #fff;
+  }
+
+  span {
+    display: inline-block;
+    margin: 0 16px;
+  }
+}
+
+
+.navigation {
+  margin: 25px auto 0 auto;
+  box-sizing: border-box;
+  position: relative;
+
+  .navigation-list {
+    margin: 0 auto;
+    padding: 0 32px;
+
+    .selected-item {
+      position: relative;
+      display: block;
+      padding: 15px 16px 14px 16px;
+      border-radius: 2px;
+      border: 1px solid #dddddd;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.46;
+      letter-spacing: -0.65px;
+      color: #fff;
+      text-align: left;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 11px;
+        right: 16px;
+        width: 24px;
+        height: 24px;
+        @include background-image-magnification("/assets/images/icons/arrow-down-white.png");
+      }
+    }
+
+    .navigation-item {
+      display: none;
+    }
+  }
+
+  &.selected {
+    .navigation-list {
+      .navigation-item {
+        width: calc( 100% - 64px );
+        display: block;
+        position: absolute;
+        top: 49px;
+        z-index: 100;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.17);
+        border: solid 1px #dddddd;
+        box-sizing: border-box;
+
+        li {
+          background-color: #fff;
+          text-align: left;
+          padding: 15px 16px 14px 16px;
+          border-bottom: solid 1px #dddddd;
+          box-sizing: border-box;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+
+          &.active {
+            color: #ea4d07;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "core";
+
+.story-page-box {
+  @include md {
+    padding: 0 24px;
+  }
+
+  @include sm {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,48 @@
+<ul class="nav-list">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+      <mat-icon>dashboard</mat-icon> 대시보드
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/investment" routerLinkActive="active">
+      <mat-icon>bar_chart</mat-icon> 투자 관리
+    </a>
+  </li>
+
+  <ol class="nav-sub-box" *ngIf="title === '투자 관리'">
+    <li class="nav-sub-link" routerLink="/investment/finance" routerLinkActive="active">재무 정보</li>
+  </ol>
+
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/data" routerLinkActive="active">
+      <mat-icon>file_copy</mat-icon> 자료실
+    </a>
+  </li>
+
+  <ol class="nav-sub-box" *ngIf="title === '자료실'">
+    <li class="nav-sub-link" routerLink="/data/notice" routerLinkActive="active">공지사항</li>
+    <li class="nav-sub-link" routerLink="/data/press-release" routerLinkActive="active">보도자료</li>
+    <li class="nav-sub-link" routerLink="/data/news" routerLinkActive="active">사내동정</li>
+    <li class="nav-sub-link" routerLink="/data/download" routerLinkActive="active">다운로드</li>
+  </ol>
+
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/inquiry" routerLinkActive="active">
+      <mat-icon>contact_mail</mat-icon> 문의 관리
+    </a>
+  </li>
+
+  <ol class="nav-sub-box" *ngIf="title === '문의 관리'">
+    <li class="nav-sub-link" routerLink="/inquiry/grade" routerLinkActive="active">성적서요청</li>
+    <li class="nav-sub-link" routerLink="/inquiry/estimate" routerLinkActive="active">견적문의</li>
+    <li class="nav-sub-link" routerLink="/inquiry/inquiry" routerLinkActive="active">제품문의</li>
+  </ol>
+
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/recruit" routerLinkActive="active">
+      <mat-icon>person</mat-icon> 채용 관리
+    </a>
+  </li>
+</ul>

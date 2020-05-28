@@ -1,0 +1,82 @@
+<div class="main-toolbar-wrap" [class.fixed]="navFixed" fxHide.lt-lg>
+  <div class="nav-option-box">
+    <div class="responsive-box">
+      <ul fxLayout="row" fxLayoutAlign="flex-end" fxLayoutGap="37px" class="nav-option">
+        <li (click)="toggleLanguage()">
+          {{ language === 'ko-KR' ? 'English' : 'Korean' }}
+        </li>
+        <li routerLink="/about/location">Contact Us</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="nav-menu-box">
+    <div class="responsive-box">
+      <div  fxLayout="row" fxLayoutAlign="space-between center" class="nav-menu">
+        <h1 routerLink="/"></h1>
+
+        <ul fxLayout="row" fxLayoutAlign="flex-end" class="nav-menu-list">
+          <li routerLink="/about">{{ 'TOOLBAR.MENU.NAV1' | translate }}</li>
+          <li routerLink="/product">{{ 'TOOLBAR.MENU.NAV2' | translate }}</li>
+          <li routerLink="/research">{{ 'TOOLBAR.MENU.NAV3' | translate }}</li>
+          <li routerLink="/investment">{{ 'TOOLBAR.MENU.NAV4' | translate }}</li>
+          <li routerLink="/data">{{ 'TOOLBAR.MENU.NAV5' | translate }}</li>
+          <li routerLink="/recruit">{{ 'TOOLBAR.MENU.NAV6' | translate }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-nav-menu">
+    <div fxLayout="row" class="responsive-box">
+      <div class="title">
+        <p>Ur Solution for Tomorrow, UST.</p>
+      </div>
+
+      <div fxLayout="row">
+        <ul>
+          <li routerLink="/about/story">{{ 'TOOLBAR.NAV1.SUB1' | translate }}</li>
+          <li routerLink="/about/group">{{ 'TOOLBAR.NAV1.SUB2' | translate }}</li>
+          <li routerLink="/about/location">{{ 'TOOLBAR.NAV1.SUB3' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li routerLink="/product/summary">{{ 'TOOLBAR.NAV2.SUB1' | translate }}</li>
+          <li routerLink="/product/introduce">{{ 'TOOLBAR.NAV2.SUB2' | translate }}</li>
+          <li routerLink="/product/certification">{{ 'TOOLBAR.NAV2.SUB3' | translate }}</li>
+          <li routerLink="/product/system">{{ 'TOOLBAR.NAV2.SUB4' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li routerLink="/research">{{ 'TOOLBAR.NAV3.SUB1' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li routerLink="/investment/finance">{{ 'TOOLBAR.NAV4.SUB1' | translate }}</li>
+          <li routerLink="/investment/stock">{{ 'TOOLBAR.NAV4.SUB2' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li routerLink="/data/board">{{ 'TOOLBAR.NAV5.SUB1' | translate }}</li>
+          <li routerLink="/data/download">{{ 'TOOLBAR.NAV5.SUB2' | translate }}</li>
+          <li routerLink="/data/grade">{{ 'TOOLBAR.NAV5.SUB3' | translate }}</li>
+          <li routerLink="/data/estimate">{{ 'TOOLBAR.NAV5.SUB4' | translate }}</li>
+        </ul>
+
+        <ul>
+          <li routerLink="/recruit">{{ 'TOOLBAR.NAV6.SUB1' | translate }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ust-mobile-toolbar></ust-mobile-toolbar>
+
+<div class="top-title">
+  <h2>{{ currentPage.translate | translate }}</h2>
+
+  <ust-sub-page-step></ust-sub-page-step>
+</div>
+
+

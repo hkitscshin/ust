@@ -1,0 +1,184 @@
+@import "core";
+
+:host {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.center-box {
+  @include translate-center;
+  display: block;
+  width: 330px;
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3.sub-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;     
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.8px;    
+  }
+
+  @include lg {
+    /*margin-top : 135px;*/
+    margin-top: 180px;
+  }
+}
+
+.logo-name {
+  font-size: 30px;
+  line-height: 41px;
+}
+
+.login-form {
+  // margin-top: 60px;
+  .mat-form-field {
+    width: 100%;
+  }
+}
+.join-form{
+  margin-top: 153px;
+  .mat-form-field {
+    width: 100%;
+  }
+}
+
+.info {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+
+  h3 {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .info-box {
+    @include margin-bottom-without-last-child(5px);
+
+    .title {
+      margin-right: 5px;
+      font-weight: 600;
+    }
+  };
+
+}
+
+button.button-clear {
+  float: left;
+}
+
+
+.grade-list-box {
+  width: 956px;
+  margin: 0 auto;
+  padding-top: 11px;
+  box-sizing: border-box;
+
+  @include lt-lg {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  @include sm {
+    padding: 0 16px;
+  }
+
+  .total {
+    margin-bottom: 8px;
+    font-weight: 300;
+    line-height: 1.43;
+    letter-spacing: -0.7px;
+    color: #7a7a7a;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid  #dddddd;
+
+    th, td {
+      text-align: center;
+      border-bottom: 1px solid  #dddddd;
+
+      &.date {
+        @include lt-lg {
+          display: none;
+        }
+      }
+
+      &.state {
+        @include sm {
+          display: none;
+        }
+      }
+    }
+
+    th {
+      padding: 16px 0;
+      background-color: #f2f2f2;
+      border-bottom: 2px solid  #dddddd;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.43;
+      letter-spacing: -0.7px;
+      color: #7a7a7a;
+    }
+
+    td {
+      padding: 7px 0;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.47;
+      letter-spacing: -0.75px;
+
+      &.subject {
+        padding-left: 20px;
+        text-align: left;
+      }
+
+      button {
+        width: 116px;
+        height: 40px;
+        border: 1px solid #dddddd;
+        background-color: #dddddd;
+        color: #fff;
+      }
+
+      &.progress {
+        color: #ea4d07;
+
+        button {
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+          border: 1px solid #dddddd;
+          background-color: #ffffff;
+          color: #000;
+        }
+      }
+
+      &.empty {
+        text-align: center;
+        color: inherit;
+        padding: 40px 0;
+      }
+    }
+  }
+}
+
+.logout-box{
+  margin-top: 25px;
+}

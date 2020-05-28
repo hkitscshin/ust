@@ -1,0 +1,121 @@
+@import "core";
+
+.separation-section1-wrap {
+  background: #f0f0f0;
+}
+
+.separation-box {
+  width: 956px;
+  margin: 0 auto;
+  padding: 87px 0 117px 0;
+
+  @include lt-lg {
+    width: 100%;
+    padding: 40px 79px 53px 79px;
+  }
+
+  @include sm {
+    padding: 16px 16px 20px 16px;
+  }
+
+  .text {
+    margin-right: 74px;
+
+    @include lt-lg {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 24px;
+    }
+
+
+    .title-icon {
+      margin-bottom: 16px;
+    }
+
+    .title {
+      margin-bottom: 24px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.36;
+      letter-spacing: -1.1px;
+
+      @include lt-lg {
+        font-size: 16px;
+      }
+
+      span {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: -0.8px;
+
+        @include lt-lg {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .description {
+      font-weight: 500;
+      line-height: 2.14;
+      letter-spacing: -0.7px;
+    }
+  }
+
+  .image {
+    width: 100%;
+    text-align: center;
+
+    &.type {
+      padding: 45px 0;
+    }
+  }
+
+  .image-box {
+    padding: 50px 50px 0 50px;
+
+    @include lt-lg {
+      padding:  50px 0 0 0;
+    }
+
+    li {
+      text-align: center;
+
+      @include lt-lg {
+        width: 49%;
+      }
+
+      p {
+        margin-top: 16px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.88;
+        letter-spacing: -0.8px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .sub-title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight:  700;
+    line-height: 1.88;
+    letter-spacing: -0.8px;
+    color: #ea4d07;
+  }
+
+  &.section2 {
+    box-sizing: border-box;
+    padding: 47px 80px 76px 80px;
+
+    @include sm {
+      padding: 0 16px 39px 16px;
+    }
+  }
+}
+

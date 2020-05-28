@@ -1,0 +1,137 @@
+@import "core";
+
+ust-data-page {
+  .form-box {
+    width: 956px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+
+    @include lt-lg {
+      width: 100%;
+    }
+
+    @include md {
+      padding: 10px 24px;
+    }
+
+    @include sm {
+      padding: 10px 16px;
+    }
+
+    .valid {
+      padding-bottom: 8px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #ea4d07;
+    }
+
+    .form-field {
+      border-bottom: 2px solid #ddd;
+
+      &:first-of-type {
+        border-top: 2px solid #ddd;
+      }
+
+      .label {
+        display: inline-block;
+        width: 30%;
+        padding: 23px 0 23px 32px;
+        background-color: #f2f2f2;
+        color: #7a7a7a;
+        box-sizing: border-box;
+
+        @include sm {
+          padding-left: 8px;
+          font-size: 13px;
+          letter-spacing: -0.65px;
+        }
+
+        span {
+          color: #ea4d07;
+        }
+      }
+
+      .input {
+        height: 40px;
+        padding: 0 10px;
+        border: 2px solid #bebebe;
+        font-size: 15px;
+      }
+
+      .value {
+        width: 60%;
+        margin-left: 20px;
+        box-sizing: border-box;
+      }
+
+      .mat-radio-group {
+        .mat-radio-button {
+          display: inline-block;
+          margin-right: 20px;
+          font-size: 14px;
+          color: #7a7a7a;
+        }
+      }
+
+      &.content {
+        .label {
+          height: 234px;
+        }
+      }
+    }
+
+    .btn-group {
+      padding-top: 32px;
+      text-align: right;
+
+      @include lt-lg {
+        text-align: center;
+      }
+
+      .button {
+        border: 0;
+        cursor: pointer;
+        width: 171px;
+        height: 40px;
+        background-color: #ea4d07;
+        color: #fff;
+
+        &:disabled {
+          background-color: #d2d2d2;
+        }
+      }
+    }
+  }
+
+  .intro-wrap {
+    padding: 25px 0;
+    background-color: #f6f6f6;
+
+    .intro-box {
+      width: 956px;
+      margin: 0 auto;
+
+      .sub-title {
+        padding-bottom: 16px;
+        font-size: 16px;
+        font-weight: bold;
+
+        span {
+          color: #ea4d07;
+        }
+      }
+
+      .description {
+        font-size: 14px;
+
+        span {
+          display: block;
+          color: #5d5d5d;
+
+        }
+      }
+    }
+  }
+
+}

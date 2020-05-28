@@ -1,0 +1,63 @@
+@import "core";
+
+.board-press-list-box {
+  .total {
+    margin-bottom: 8px;
+    font-weight: 300;
+    line-height: 1.43;
+    letter-spacing: -0.7px;
+    color: #7a7a7a;
+  }
+
+  .board-press-list {
+    border-top: 2px solid #ddd;
+  }
+
+  .board-press-item {
+    padding: 11px 20px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+
+    .subject {
+      width: 80%;
+
+      .title {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.47;
+        letter-spacing: -0.75px;
+      }
+
+      .description {
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        word-wrap: normal !important;
+        display: block;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.46;
+        letter-spacing: -0.65px;
+        text-align: left;
+        color: #7a7a7a;
+      }
+    }
+
+    .date {
+      width: 20%;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.47;
+      letter-spacing: -0.75px;
+      text-align: right;
+      color: #7a7a7a;
+    }
+  }
+
+  .empty {
+    text-align: center;
+    color: inherit;
+    padding: 20px 0;
+  }
+}

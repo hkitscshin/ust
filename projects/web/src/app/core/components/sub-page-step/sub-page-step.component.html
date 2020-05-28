@@ -1,0 +1,17 @@
+<div class="sub-page-step" fxHide.sm>
+  <div class="responsive-box">
+    HOME <span>&gt;</span> {{ currentPage.titleTranslate | translate }} <span>&gt;</span> {{ currentPage.subTitleTranslate | translate }}
+  </div>
+</div>
+
+<div class="navigation" fxHide.lg fxHide.md  (click)="onClick()" [class.selected]="opened">
+  <div class="navigation-list">
+    <a class="selected-item">{{ currentPage.subTitleTranslate | translate }}</a>
+
+    <ul class="navigation-item" *ngIf="relatedPages && relatedPages.length > 0">
+      <li *ngFor="let page of relatedPages"
+          [routerLink]="page.url"
+          routerLinkActive="active">{{ page.subTitleTranslate | translate }}</li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+<div class="system-page-box">
+  <p class="top-title">{{ 'PRODUCT.SYSTEM.TITLE' | translate }}</p>
+
+  <ul fxLayout="row" class="tab-menu" fxHide.sm fxHide.md>
+    <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+      {{ 'PRODUCT.SYSTEM.SYSTEM1.NAME' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+      {{ 'PRODUCT.SYSTEM.SYSTEM2.NAME' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 2" (click)="changeIndex(2)">
+      {{ 'PRODUCT.SYSTEM.SYSTEM3.NAME' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 3" (click)="changeIndex(3)">
+      {{ 'PRODUCT.SYSTEM.SYSTEM4.NAME' | translate }}
+    </li>
+
+    <li fxFlex [class.active]="activeIndex === 4" (click)="changeIndex(4)">
+      {{ 'PRODUCT.SYSTEM.SYSTEM5.NAME' | translate }}
+    </li>
+  </ul>
+
+  <div class="selected-menu" fxHide.lg (click)="onClick()" [class.selected]="Opened">
+    <div class="selected-menu-list">
+      <a class="selected-item" [ngSwitch]="activeIndex">
+        <ng-container *ngSwitchCase="0">{{ 'PRODUCT.SYSTEM.SYSTEM1.NAME' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="1">{{ 'PRODUCT.SYSTEM.SYSTEM2.NAME' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="2">{{ 'PRODUCT.SYSTEM.SYSTEM3.NAME' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="3">{{ 'PRODUCT.SYSTEM.SYSTEM4.NAME' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="4">{{ 'PRODUCT.SYSTEM.SYSTEM5.NAME' | translate }}</ng-container>
+      </a>
+
+      <ul class="selected-menu-item">
+        <li [class.active]="activeIndex === 0" (click)="changeIndex(0)">{{ 'PRODUCT.SYSTEM.SYSTEM1.NAME' | translate }}</li>
+        <li [class.active]="activeIndex === 1" (click)="changeIndex(1)">{{ 'PRODUCT.SYSTEM.SYSTEM2.NAME' | translate }}</li>
+        <li [class.active]="activeIndex === 2" (click)="changeIndex(2)">{{ 'PRODUCT.SYSTEM.SYSTEM3.NAME' | translate }}</li>
+        <li [class.active]="activeIndex === 3" (click)="changeIndex(3)">{{ 'PRODUCT.SYSTEM.SYSTEM4.NAME' | translate }}</li>
+        <li [class.active]="activeIndex === 4" (click)="changeIndex(4)">{{ 'PRODUCT.SYSTEM.SYSTEM5.NAME' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 0">
+    <ust-system-tab1></ust-system-tab1>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 1">
+    <ust-system-tab2></ust-system-tab2>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 2">
+    <ust-system-tab3></ust-system-tab3>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 3">
+    <ust-system-tab4></ust-system-tab4>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 4">
+    <ust-system-tab5></ust-system-tab5>
+  </div>
+
+
+  <!--
+  <mat-tab-group mat-stretch-tabs class="basic">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <p>{{ 'PRODUCT.SYSTEM.SYSTEM1.NAME' | translate }}</p>
+      </ng-template>
+
+      <ng-template matTabContent>
+        <ust-system-tab1></ust-system-tab1>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <p>{{ 'PRODUCT.SYSTEM.SYSTEM2.NAME' | translate }}</p>
+      </ng-template>
+
+      <ng-template matTabContent>
+        <ust-system-tab2></ust-system-tab2>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <p>{{ 'PRODUCT.SYSTEM.SYSTEM3.NAME' | translate }}</p>
+      </ng-template>
+
+      <ng-template matTabContent>
+        <ust-system-tab3></ust-system-tab3>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <p>{{ 'PRODUCT.SYSTEM.SYSTEM4.NAME' | translate }}</p>
+      </ng-template>
+
+      <ng-template matTabContent>
+        <ust-system-tab4></ust-system-tab4>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <p>{{ 'PRODUCT.SYSTEM.SYSTEM5.NAME' | translate }}</p>
+      </ng-template>
+
+      <ng-template matTabContent>
+        <ust-system-tab5></ust-system-tab5>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+
+ -->
+</div>

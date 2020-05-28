@@ -1,0 +1,74 @@
+@import "core";
+
+.board-company-list-box {
+  .total {
+    margin-bottom: 8px;
+    font-weight: 300;
+    line-height: 1.43;
+    letter-spacing: -0.7px;
+    color: #7a7a7a;
+  }
+
+  .board-company-list {
+    li {
+      margin-right: 37px;
+      margin-bottom: 37px;
+      cursor: pointer;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      img {
+        width: 294px;
+        height: 211px;
+      }
+
+      @include lt-lg {
+        width: 45%;
+        margin-right: 5%;
+        text-align: center;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 5%;
+        }
+
+      }
+
+      @include sm {
+        width: 100%;
+        margin-right: 0;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+
+      .title {
+        padding: 8px 0;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.47;
+        letter-spacing: -0.75px;
+      }
+
+      .description {
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: -0.6px;
+        color: #7a7a7a;
+      }
+    }
+  }
+
+  .empty {
+    text-align: center;
+    color: inherit;
+    padding: 20px 0;
+  }
+}

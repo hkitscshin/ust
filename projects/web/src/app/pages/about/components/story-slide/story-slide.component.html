@@ -1,0 +1,71 @@
+<div class="story-slide-box" data-scroll>
+    <div [ngSwitch]="tabIndex">
+      <ng-container *ngSwitchCase="0">
+        <owl-carousel-o [options]="customOptions" (changed)="slideChange($event)">
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-1.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-2.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-2-1.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-2-2.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-3.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-4.jpg">
+          </ng-template>
+        </owl-carousel-o>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="1">
+        <owl-carousel-o [options]="customOptions" (changed)="slideChange($event)">
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-8.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-5.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-6.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-7.jpg">
+          </ng-template>
+        </owl-carousel-o>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="2">
+        <owl-carousel-o [options]="customOptions" (changed)="slideChange($event)">
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-9.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-10.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-11.jpg">
+          </ng-template>
+
+          <ng-template carouselSlide>
+            <img src="/assets/images/story-slide-12.jpg">
+          </ng-template>
+        </owl-carousel-o>
+      </ng-container>
+    </div>
+</div>

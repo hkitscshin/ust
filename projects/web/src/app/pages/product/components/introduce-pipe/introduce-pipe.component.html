@@ -1,0 +1,392 @@
+<div class="introduce-pipe-box">
+  <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-between flex-start">
+    <img dnlSrc="/assets/images/introduce-pipe-main1.png" alt="배관용 스테인리스 강관" class="img">
+
+    <div fxFlex class="info-box">
+      <p class="name">{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.NAME' | translate }}</p>
+      <p class="name-en">STAINLESS STEEL PIPES</p>
+
+      <div class="info-section size">
+        <p class="title">{{ 'PRODUCT.INTRODUCE.SUBTITLE.SIZE' | translate }}</p>
+        <div class="size-box">
+          <span>KS D 3576</span><span>JIS G 3459</span><span>ASTM A 312</span>
+        </div>
+      </div>
+
+      <div class="info-section use">
+        <p class="title">{{ 'PRODUCT.INTRODUCE.SUBTITLE.USE' | translate }}</p>
+
+        <ul fxLayout="row" class="use-box">
+          <li>
+            <img dnlSrc="/assets/images/icons/product-introduce-use-icon1.png" alt="내식용">
+            <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.USE1' | translate }}</p>
+          </li>
+
+          <li>
+            <img dnlSrc="/assets/images/icons/product-introduce-use-icon2.png" alt="저온용">
+            <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.USE2' | translate }}</p>
+          </li>
+
+          <li>
+            <img dnlSrc="/assets/images/icons/product-introduce-use-icon3.png" alt="고온용">
+            <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.USE3' | translate }}</p>
+          </li>
+
+          <li>
+            <img dnlSrc="/assets/images/icons/product-introduce-use-icon4.png" alt="수도용">
+            <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.USE4' | translate }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="table-box">
+    <p class="title">KS D 3576 / JIS G 3459 / ASTM A 312</p>
+
+    <div class="table-wrap" #tableRef>
+      <div [class.fixed]="headerFixed">
+        <table>
+          <tr class="top-th">
+            <th rowspan="2" colspan="2" width="15%">
+              {{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.TABLE_HEADERS.HEADER1' | translate }}
+            </th>
+            <th rowspan="2" colspan="2" width="15%">
+              {{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.TABLE_HEADERS.HEADER2' | translate }}
+            </th>
+            <th colspan="9">SCH</th>
+          </tr>
+
+          <tr class="top-th">
+            <th colspan="5" width="35%">KS/JIS</th>
+            <th colspan="4" width="35%">ASTM</th>
+          </tr>
+
+          <tr class="middle-th">
+            <td>A</td>
+            <td>B</td>
+            <td>KS/JIS</td>
+            <td>ASTM</td>
+            <td>5S</td>
+            <td>10S</td>
+            <td>20S</td>
+            <td>40</td>
+            <td>80</td>
+            <td>5S</td>
+            <td>10S</td>
+            <td>40S</td>
+            <td>80S</td>
+          </tr>
+        </table>
+      </div>
+
+      <table [class.margin-top]="headerFixed">
+        <tr>
+          <td class="type1">8</td>
+          <td class="type1">¼</td>
+          <td class="type2">13.8</td>
+          <td class="type2">13.72</td>
+          <td>1.20</td>
+          <td>1.65</td>
+          <td>2.00</td>
+          <td>2.20</td>
+          <td>3.00</td>
+          <td>-</td>
+          <td>1.65</td>
+          <td>2.24</td>
+          <td>3.02</td>
+        </tr>
+
+        <tr>
+          <td class="type1">10</td>
+          <td class="type1">⅜</td>
+          <td class="type2">17.3</td>
+          <td class="type2">17.15</td>
+          <td>1.20</td>
+          <td>1.65</td>
+          <td>2.00</td>
+          <td>2.30</td>
+          <td>3.20</td>
+          <td>-</td>
+          <td>1.65</td>
+          <td>2.31</td>
+          <td>3.20</td>
+        </tr>
+
+        <tr>
+          <td class="type1">15</td>
+          <td class="type1">½</td>
+          <td class="type2">21.7</td>
+          <td class="type2">21.34</td>
+          <td>1.65</td>
+          <td>2.10</td>
+          <td>2.50</td>
+          <td>2.80</td>
+          <td>3.70</td>
+          <td>1.65</td>
+          <td>2.11</td>
+          <td>2.77</td>
+          <td>3.73</td>
+        </tr>
+
+        <tr>
+          <td class="type1">20</td>
+          <td class="type1">¾</td>
+          <td class="type2">27.2</td>
+          <td class="type2">26.67</td>
+          <td>1.65</td>
+          <td>2.10</td>
+          <td>2.50</td>
+          <td>2.90</td>
+          <td>3.90</td>
+          <td>1.65</td>
+          <td>2.11</td>
+          <td>2.87</td>
+          <td>3.91</td>
+        </tr>
+
+        <tr>
+          <td class="type1">25</td>
+          <td class="type1">1</td>
+          <td class="type2">34</td>
+          <td class="type2">33.4</td>
+          <td>1.65</td>
+          <td>2.80</td>
+          <td>3.00</td>
+          <td>3.40</td>
+          <td>4.50</td>
+          <td>1.65</td>
+          <td>2.77</td>
+          <td>3.38</td>
+          <td>4.55</td>
+        </tr>
+
+        <tr>
+          <td class="type1">32</td>
+          <td class="type1">1 ¼</td>
+          <td class="type2">42.7</td>
+          <td class="type2">42.16</td>
+          <td>1.65</td>
+          <td>2.80</td>
+          <td>3.00</td>
+          <td>3.60</td>
+          <td>4.90</td>
+          <td>1.65</td>
+          <td>2.77</td>
+          <td>3.56</td>
+          <td>4.85</td>
+        </tr>
+
+        <tr>
+          <td class="type1">40</td>
+          <td class="type1">1 ½</td>
+          <td class="type2">48.6</td>
+          <td class="type2">48.26</td>
+          <td>1.65</td>
+          <td>2.80</td>
+          <td>3.00</td>
+          <td>3.70</td>
+          <td>5.10</td>
+          <td>1.65</td>
+          <td>2.77</td>
+          <td>3.91</td>
+          <td>5.08</td>
+        </tr>
+
+        <tr>
+          <td class="type1">50</td>
+          <td class="type1">2</td>
+          <td class="type2">60.5</td>
+          <td class="type2">60.33</td>
+          <td>1.65</td>
+          <td>2.80</td>
+          <td>3.50</td>
+          <td>3.90</td>
+          <td>5.50</td>
+          <td>1.65</td>
+          <td>2.77</td>
+          <td>3.91</td>
+          <td>5.54</td>
+        </tr>
+
+        <tr>
+          <td class="type1">65</td>
+          <td class="type1">2 ½</td>
+          <td class="type2">76.3</td>
+          <td class="type2">73.03</td>
+          <td>2.10</td>
+          <td>3.00</td>
+          <td>3.50</td>
+          <td>5.20</td>
+          <td>7.00</td>
+          <td>2.11</td>
+          <td>3.05</td>
+          <td>5.16</td>
+          <td>7.01</td>
+        </tr>
+
+        <tr>
+          <td class="type1">80</td>
+          <td class="type1">3</td>
+          <td class="type2">89.1</td>
+          <td class="type2">88.9</td>
+          <td>2.10</td>
+          <td>3.00</td>
+          <td>4.00</td>
+          <td>5.50</td>
+          <td>7.60</td>
+          <td>2.11</td>
+          <td>3.05</td>
+          <td>5.49</td>
+          <td>7.62</td>
+        </tr>
+
+        <tr>
+          <td class="type1">90</td>
+          <td class="type1">3 ½</td>
+          <td class="type2">101.6</td>
+          <td class="type2">101.6</td>
+          <td>2.10</td>
+          <td>3.00</td>
+          <td>4.00</td>
+          <td>5.70</td>
+          <td>8.10</td>
+          <td>2.11</td>
+          <td>3.05</td>
+          <td>5.74</td>
+          <td>8.08</td>
+        </tr>
+
+        <tr>
+          <td class="type1">100</td>
+          <td class="type1">4</td>
+          <td class="type2">114.3</td>
+          <td class="type2">114.3</td>
+          <td>2.10</td>
+          <td>3.00</td>
+          <td>4.00</td>
+          <td>6.00</td>
+          <td>8.60</td>
+          <td>2.11</td>
+          <td>3.05</td>
+          <td>6.02</td>
+          <td>8.56</td>
+        </tr>
+
+        <tr>
+          <td class="type1">125</td>
+          <td class="type1">5</td>
+          <td class="type2">139.8</td>
+          <td class="type2">141.3</td>
+          <td>2.80</td>
+          <td>3.40</td>
+          <td>5.00</td>
+          <td>6.60</td>
+          <td>9.50</td>
+          <td>2.77</td>
+          <td>3.40</td>
+          <td>6.55</td>
+          <td>9.52</td>
+        </tr>
+
+        <tr>
+          <td class="type1">150</td>
+          <td class="type1">6</td>
+          <td class="type2">165.2</td>
+          <td class="type2">168.28</td>
+          <td>2.80</td>
+          <td>3.40</td>
+          <td>5.00</td>
+          <td>7.10</td>
+          <td>11.09</td>
+          <td>2.77</td>
+          <td>3.40</td>
+          <td>7.11</td>
+          <td>10.97</td>
+        </tr>
+
+        <tr>
+          <td class="type1">200</td>
+          <td class="type1">8</td>
+          <td class="type2">216.3</td>
+          <td class="type2">219.08</td>
+          <td>2.80</td>
+          <td>4.00</td>
+          <td>6.50</td>
+          <td>8.20</td>
+          <td>12.70</td>
+          <td>2.77</td>
+          <td>3.76</td>
+          <td>8.18</td>
+          <td>12.70</td>
+        </tr>
+
+        <tr>
+          <td class="type1">250</td>
+          <td class="type1">10</td>
+          <td class="type2">267.4</td>
+          <td class="type2">273.05</td>
+          <td>3.40</td>
+          <td>4.00</td>
+          <td>6.50</td>
+          <td>9.30</td>
+          <td>15.10</td>
+          <td>3.40</td>
+          <td>4.19</td>
+          <td>9.27</td>
+          <td>12.70</td>
+        </tr>
+
+        <tr>
+          <td class="type1">300</td>
+          <td class="type1">12</td>
+          <td class="type2">318.5</td>
+          <td class="type2">323.85</td>
+          <td>4.00</td>
+          <td>4.50</td>
+          <td>6.50</td>
+          <td>10.30</td>
+          <td>17.40</td>
+          <td>3.96</td>
+          <td>4.57</td>
+          <td>9.52</td>
+          <td>12.70</td>
+        </tr>
+
+        <tr>
+          <td class="type1">350</td>
+          <td class="type1">14</td>
+          <td class="type2">355.6</td>
+          <td class="type2">355.6</td>
+          <td>4.00</td>
+          <td>5.00</td>
+          <td>8.00</td>
+          <td>11.10</td>
+          <td>19.00</td>
+          <td>3.96</td>
+          <td>4.78</td>
+          <td>9.52</td>
+          <td>12.70</td>
+        </tr>
+
+        <tr>
+          <td class="type1">400</td>
+          <td class="type1">16</td>
+          <td class="type2">406.4</td>
+          <td class="type2">406.4</td>
+          <td>4.50</td>
+          <td>5.00</td>
+          <td>8.00</td>
+          <td>12.70</td>
+          <td>21.40</td>
+          <td>4.19</td>
+          <td>4.78</td>
+          <td>9.52</td>
+          <td>12.70</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>

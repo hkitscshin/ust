@@ -1,0 +1,12 @@
+<div class="list-header" fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+  <div class="action-box" fxFlex="none">
+  </div>
+
+  <div class="total-count" fxFlex="auto">
+    <p>총 게시글 수 : <span class="color-primary">{{ totalCount | number }}</span></p>
+  </div>
+</div>
+
+<ust-grade-table [entities]="entities"></ust-grade-table>
+
+<mat-paginator [pageSize]="pageSize" [length]="totalCount" (page)="onPageChange($event)"></mat-paginator>

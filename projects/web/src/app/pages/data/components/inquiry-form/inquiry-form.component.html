@@ -1,0 +1,65 @@
+<form class="form-box" [formGroup]="inquiryForm" (ngSubmit)="submit()" novalidate>
+  <p class="valid">*표시는 필수 입력항목 입니다.</p>
+
+  <div class="form-field">
+    <label class="label">성명 <span>*</span></label>
+
+    <input type="text" class="input value" formControlName="name">
+  </div>
+
+  <div class="form-field">
+    <label class="label">이메일 <span>*</span></label>
+
+    <input type="text" class="input value" formControlName="email">
+  </div>
+
+  <div class="form-field">
+    <label class="label">제목</label>
+
+    <input type="text" class="input value" formControlName="title">
+  </div>
+
+  <div class="form-field content">
+    <label class="label">내용</label>
+
+    <textarea class="textarea value" formControlName="content"></textarea>
+  </div>
+
+  <div class="form-field" fxLayout="row">
+    <label class="label" fxFlex="30%">파일첨부</label>
+
+    <div class="value box" formArrayName="attachments" fxFlex="60%">
+      <div
+        class="size-item"
+        *ngFor="let attachmentGroup of attachmentsArray.controls; index as i"
+        [formGroupName]="i"
+        fxLayout="row"
+      >
+        <input
+          #fileInputRef
+          class="input"
+          formControlName="fileName"
+          type="text"
+          readonly
+          fxFlex="auto"
+        >
+
+        <button class="delete-array-button button" (click)="deleteAttachment(i)" type="button" fxFlex="none">삭제</button>
+      </div>
+
+      <input
+        #fileInputRef
+        type="file"
+        (change)="addAttachment($event.target.files[0])"
+        [hidden]="true"
+      >
+
+      <button class="add-array-button button" [disabled]="isUploading" (click)="fileInputRef.click()" type="button">파일 추가</button>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button type="submit" class="button" [disabled]="inquiryForm.invalid || isLoading">제출하기</button>
+  </div>
+
+</form>

@@ -1,0 +1,40 @@
+<div class="grade-page-box">
+  <p class="title"><img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon">
+    {{ 'DATA.GRADE.TITLE' | translate }}
+  </p>
+<!--
+  <ul fxLayout="row" class="tab-menu" fxHide.sm fxHide.md>
+    <li fxFlex [class.active]="activeIndex === 0" routerLink="/data/grade/request">{{ 'DATA.GRADE.TAB.TAB1' | translate }}</li>
+    <li fxFlex [class.active]="activeIndex === 1" routerLink="/data/grade/download">{{ 'DATA.GRADE.TAB.TAB2' | translate }}</li>
+  </ul>
+-->
+  <ul fxLayout="row" class="tab-menu" fxHide.sm fxHide.md>
+    <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">{{ 'DATA.GRADE.TAB.TAB1' | translate }}</li>
+    <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">{{ 'DATA.GRADE.TAB.TAB2' | translate }}</li>
+  </ul>
+  <!-- <div class="selected-menu" fxHide.lg (click)="onClick()" [class.selected]="Opened">  -->
+  <div class="selected-menu" fxHide.lg (click)="onClick()" [class.selected]="Opened">
+    <div class="selected-menu-list">
+      <a class="selected-item" [ngSwitch]="activeIndex">
+        <ng-container *ngSwitchCase="0">{{ 'DATA.GRADE.TAB.TAB1' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="1">{{ 'DATA.GRADE.TAB.TAB2' | translate }}</ng-container>
+      </a>
+
+      <ul class="selected-menu-item">
+        <li [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+          {{ 'DATA.GRADE.TAB.TAB1' | translate }}
+        </li>
+        <li [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+          {{ 'DATA.GRADE.TAB.TAB2' | translate }}
+        </li>        
+      </ul>
+    </div>
+  </div>
+  <div class="tab-content" [class.active]="activeIndex === 0">
+    <ust-grade-request></ust-grade-request>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 1">
+    <ust-grade-download></ust-grade-download>
+  </div>    
+</div>

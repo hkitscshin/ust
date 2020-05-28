@@ -1,0 +1,69 @@
+<form [formGroup]="formGroup" novalidate>
+  <div class="form-field">
+    <h4>제목</h4>
+    <mat-form-field class="form-field">
+      <input matInput formControlName="title" type="text">
+    </mat-form-field>
+  </div>
+
+  <h4>모집 기간</h4>
+
+  <div fxLayout="row" fxLayoutGap="16px">
+    <ust-datepicker fxFlex="25%" placeholder="시작 날짜" formControlName="startAt"></ust-datepicker>
+    <ust-datepicker fxFlex="25%" placeholder="끝 날짜" formControlName="endAt"></ust-datepicker>
+  </div>
+
+  <div class="form-field">
+    <h4>모집 상태</h4>
+
+    <mat-select formControlName="status">
+      <mat-option *ngFor="let status of statuses" [value]="status">{{ status }}</mat-option>
+    </mat-select>
+  </div>
+
+  <div class="form-field">
+    <h4>내용</h4>
+
+    <ust-tinymce name="data/recruit" formControlName="content"></ust-tinymce>
+  </div>
+
+  <div class="form-field">
+    <h4>채용공고 링크</h4>
+
+    <mat-form-field class="form-field">
+      <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+        <h5>잡코리아</h5>
+        <button class="button small inline-button"
+                type="button"
+                (click)="moveToUrl(jobkoreaUrl)"
+                [disabled]="!jobkoreaUrl">바로가기</button>
+      </div>
+
+      <input matInput formControlName="jobkoreaUrl" type="text">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+        <h5>사람인</h5>
+        <button class="button small inline-button"
+                type="button"
+                (click)="moveToUrl(saraminUrl)"
+                [disabled]="!saraminUrl">바로가기</button>
+      </div>
+
+      <input matInput formControlName="saraminUrl" type="text">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+        <h5>워크넷</h5>
+        <button class="button small inline-button"
+                type="button"
+                (click)="moveToUrl(worknetUrl)"
+                [disabled]="!worknetUrl">바로가기</button>
+      </div>
+
+      <input matInput formControlName="worknetUrl" type="text">
+    </mat-form-field>
+  </div>
+</form>

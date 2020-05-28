@@ -1,0 +1,12 @@
+<div class="file-input" fxFlex fxLayoutAlign="start end">
+  <button class="button"
+          (click)="onButtonClick()"
+          mat-flat-button
+          color="primary"
+          type="button">파일 선택</button>
+
+
+  <input #fileInputRef
+         type="file"
+         (change)="uploadFile($event.target.files[0])">
+</div>

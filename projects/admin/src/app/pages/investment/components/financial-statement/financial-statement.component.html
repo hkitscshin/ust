@@ -1,0 +1,27 @@
+<div class="detail-content">
+  <ust-financial-statement-form
+    [doc]="financialStatement"
+    (valueChange)="formValue = $event"
+    (statusChange)="invalid = $event !== 'VALID'"
+  ></ust-financial-statement-form>
+
+  <div class="action-box">
+    <button
+      *ngIf="financialStatement"
+      class="button"
+      mat-flat-button color="primary"
+      (click)="modify()"
+      [disabled]="invalid || isLoading"
+      type="button"
+    >수정</button>
+
+    <button
+      *ngIf="!financialStatement"
+      class="button"
+      mat-flat-button color="primary"
+      (click)="add()"
+      [disabled]="invalid || isLoading"
+      type="button"
+    >등록</button>
+  </div>
+</div>

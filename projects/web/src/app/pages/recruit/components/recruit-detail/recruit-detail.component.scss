@@ -1,0 +1,122 @@
+@import "core";
+
+.recruit-detail-page-box {
+  width: 956px;
+  margin: 0 auto;
+
+  @include lt-lg {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .title {
+    padding-top: 37px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    border-bottom: 1px solid #ddd;
+
+    @include lt-lg {
+      font-size: 15px;
+      line-height: 1.47;
+      letter-spacing: -0.75px;
+    }
+
+    img {
+      margin-top: -3px;
+      margin-right: 15px;
+    }
+  }
+
+  .recruit-detail-header {
+    padding: 18px 0 16px;
+    border-bottom: 1px solid #ea4d07;
+
+    .subject {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: -0.8px;
+
+      @include lt-lg {
+        font-size: 14px;
+      }
+    }
+
+    .date {
+      font-weight: 500;
+      line-height: 1.43;
+      letter-spacing: -0.7px;
+
+      @include lt-lg {
+        font-size: 10px;
+        line-height: 2;
+      }
+    }
+  }
+
+  .recruit-detail-content {
+    padding: 32px 0 66px;
+    border-bottom: 1px solid #ddd;
+
+    .text {
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.75;
+        letter-spacing: -0.8px;
+      }
+    }
+  }
+
+  .recruit-site-list {
+    padding: 32px 0 100px;
+
+    li {
+      width: 270px;
+
+      @include lt-lg {
+        margin-bottom: 20px;
+      }
+
+      .name {
+        margin-bottom: 16px;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: -0.75px;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 56px;
+        line-height: 56px;
+        border-radius: 4px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        border: solid 1px #dddddd;
+        background-color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+
+        img {
+          display: inline-block;
+
+          &.logo {
+            margin-top: -7px;
+          }
+        }
+
+        span {
+          display: inline-block;
+          padding: 0 8px;
+        }
+      }
+    }
+  }
+}

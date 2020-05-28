@@ -1,0 +1,145 @@
+@import "core";
+
+.grade-page-box {
+  padding-bottom: 50px;
+
+  .title {
+    width: 956px;
+    margin: 0 auto;
+    padding-top: 37px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+
+    @include lt-lg {
+      width: 100%;
+      padding: 23px 24px 25px 24px;
+      font-size: 15px;
+      line-height: 1.47;
+      letter-spacing: -0.75px;
+    }
+
+    img {
+      margin-top: -3px;
+      margin-right: 15px;
+    }
+  }
+
+  .sub-title {
+    margin-bottom: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+  }
+
+  .grade-step-box-wrap {
+    padding: 34px 0;
+    background-color: #f6f6f6;
+
+    @include lt-lg {
+      padding: 34px 24px;
+      box-sizing: border-box;
+    }
+
+    @include sm {
+      padding: 34px 16px;
+    }
+
+    .grade-step-box {
+      width: 956px;
+      margin: 0 auto;
+
+      @include lt-lg {
+        width: 100%;
+      }
+
+      .grade-step-list {
+        li {
+          position: relative;
+          text-align: center;
+
+          @include md {
+            width: 25%;
+          }
+
+          @include sm {
+            width: 50%;
+          }
+
+          img {
+            width: 100%;
+            max-width: 183px;
+          }
+
+          &::after {
+            @include background-image-magnification("/assets/images/icons/recruit-step-icon.png");
+            content: '';
+            position: absolute;
+            top: 62px;
+            right: -132px;
+            width: 49px;
+            height: 49px;
+
+            @include lt-lg {
+              display: none;
+            }
+          }
+
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-field {
+  .value.box {
+    display: inline-block;
+    padding: 23px 0;
+  }
+}
+
+.size-item {
+  margin-top: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.delete-array-button {
+  color: #ccc;
+  background-color: $color-white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.add-array-button {
+  margin-top: 10px;
+  color: $color-primary;
+  background-color: $color-white;
+  border: 1px solid $color-primary;
+  cursor: pointer;
+
+  &:disabled {
+    color: #999;
+    border: 1px solid #999;
+  }
+}
+
+.selected-menu {
+  margin: 0 24px;
+
+  @include sm {
+    margin: 0 16px;
+  }
+}

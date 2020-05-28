@@ -1,0 +1,20 @@
+<div class="detail-box">
+  <div class="detail-header">
+    <button class="back-button" mat-icon-button routerLink="../" type="button">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <h3>제품문의 상세</h3>
+
+    <div class="action-box">
+      <button class="button delete-button" mat-stroked-button (click)="delete()" [disabled]="isLoading" type="button">삭제</button>
+
+      <button class="button complete-button" mat-flat-button color="primary" (click)="modify()" [disabled]="invalid || isLoading" type="button">저장</button>
+    </div>
+  </div>
+
+  <div class="detail-content">
+    <ust-inquiry-form [doc]="entity" (valueChange)="formValue = $event" (statusChange)="invalid = $event !== 'VALID'"></ust-inquiry-form>
+  </div>
+</div>
+

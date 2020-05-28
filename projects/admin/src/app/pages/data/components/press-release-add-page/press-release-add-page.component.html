@@ -1,0 +1,17 @@
+<div class="detail-box">
+  <div class="detail-header">
+    <button class="back-button" mat-icon-button routerLink="../" type="button">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <h3>보도자료 추가</h3>
+
+    <div class="action-box">
+      <button class="button complete-button" mat-flat-button color="primary" (click)="add()" [disabled]="invalid || isLoading" type="button">추가</button>
+    </div>
+  </div>
+
+  <div class="detail-content">
+    <ust-press-release-form (valueChange)="formValue = $event" (statusChange)="invalid = $event !== 'VALID'"></ust-press-release-form>
+  </div>
+</div>

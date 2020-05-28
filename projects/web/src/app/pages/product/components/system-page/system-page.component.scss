@@ -1,0 +1,102 @@
+@import "core";
+
+ust-system-page {
+  .system-page-box {
+    width: 956px;
+    margin: 47px auto 110px;
+
+    @include lt-lg {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @include md {
+      padding: 0 24px;
+    }
+
+    @include sm {
+      padding: 0 16px;
+    }
+
+    .top-title {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -0.8px;
+    }
+  }
+
+  .system-tab-box {
+    padding-top: 52px;
+
+    @include lt-lg {
+      padding-top: 0;
+    }
+
+    .img {
+
+      @include lt-lg {
+        width: 100%;
+      }
+    }
+
+    .info-box {
+      margin-left: 28px;
+
+      @include lt-lg {
+        margin-left: 0;
+      }
+
+      .name {
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: -1.1px;
+
+        @include lt-lg {
+          padding-top: 24px;
+          font-size: 16px;
+        }
+      }
+
+      .description {
+        padding: 16px 0;
+        font-weight: 300;
+        line-height: 1.43;
+        letter-spacing: -0.7px;
+      }
+
+      .info-section {
+        .title {
+          margin-bottom: 8px;
+          font-weight: 300;
+          line-height: 1.43;
+          letter-spacing: -0.7px;
+        }
+
+        .size-box {
+          padding-bottom: 10px;
+
+          span {
+            display: inline-block;
+            margin: 0 3px 4px 0;
+            width: 126px;
+            height: 32px;
+            border: 1px solid #dddddd;
+            text-align: center;
+            line-height: 32px;
+
+            &:nth-of-type(3n) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

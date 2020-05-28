@@ -1,0 +1,85 @@
+<div class="story-location-box sub-responsive-box">
+  <h2 data-scroll>
+    <img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon">
+    {{ 'ABOUT.LOCATION.TITLE' | translate }}
+  </h2>
+
+  <ul fxLayout="row" class="tab-menu" fxHide.sm fxHide.md data-scroll>
+    <li fxFlex [class.active]="activeIndex === 4" (click)="changeIndex(4)">
+      {{ 'ABOUT.LOCATION.LOCATION5.TAB' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+      {{ 'ABOUT.LOCATION.LOCATION1.TAB' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 5" (click)="changeIndex(5)">
+      {{ 'ABOUT.LOCATION.LOCATION6.TAB' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+      {{ 'ABOUT.LOCATION.LOCATION2.TAB' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 2" (click)="changeIndex(2)">
+      {{ 'ABOUT.LOCATION.LOCATION3.TAB' | translate }}
+    </li>
+    <li fxFlex [class.active]="activeIndex === 3" (click)="changeIndex(3)">
+      {{ 'ABOUT.LOCATION.LOCATION4.TAB' | translate }}
+    </li>
+  </ul>
+
+  <div class="selected-menu" fxHide.lg (click)="onClick()" [class.selected]="Opened">
+    <div class="selected-menu-list">
+      <a class="selected-item" [ngSwitch]="activeIndex">
+        <ng-container *ngSwitchCase="4">{{ 'ABOUT.LOCATION.LOCATION5.TAB' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="0">{{ 'ABOUT.LOCATION.LOCATION1.TAB' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="5">{{ 'ABOUT.LOCATION.LOCATION6.TAB' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="1">{{ 'ABOUT.LOCATION.LOCATION2.TAB' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="2">{{ 'ABOUT.LOCATION.LOCATION3.TAB' | translate }}</ng-container>
+        <ng-container *ngSwitchCase="3">{{ 'ABOUT.LOCATION.LOCATION4.TAB' | translate }}</ng-container>
+      </a>
+
+      <ul class="selected-menu-item" >
+        <li [class.active]="activeIndex === 4" (click)="changeIndex(4)">
+          {{ 'ABOUT.LOCATION.LOCATION5.TAB' | translate }}
+        </li>
+        <li [class.active]="activeIndex === 0" (click)="changeIndex(0)">
+          {{ 'ABOUT.LOCATION.LOCATION1.TAB' | translate }}
+        </li>
+        <li [class.active]="activeIndex === 5" (click)="changeIndex(5)">
+          {{ 'ABOUT.LOCATION.LOCATION6.TAB' | translate }}
+        </li>
+        <li [class.active]="activeIndex === 1" (click)="changeIndex(1)">
+          {{ 'ABOUT.LOCATION.LOCATION2.TAB' | translate }}
+        </li>
+        <li [class.active]="activeIndex === 2" (click)="changeIndex(2)">
+          {{ 'ABOUT.LOCATION.LOCATION3.TAB' | translate }}
+        </li>
+        <li [class.active]="activeIndex === 3" (click)="changeIndex(3)">
+          {{ 'ABOUT.LOCATION.LOCATION4.TAB' | translate }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 0" data-scroll>
+    <ust-location-content [tabIndex]="activeIndex"></ust-location-content>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 1" data-scroll>
+    <ust-location-content [tabIndex]="activeIndex"></ust-location-content>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 2" data-scroll>
+    <ust-location-content [tabIndex]="activeIndex"></ust-location-content>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 3" data-scroll>
+    <ust-location-content [tabIndex]="activeIndex"></ust-location-content>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 4" data-scroll>
+    <ust-location-content [tabIndex]="activeIndex" ></ust-location-content>
+  </div>
+
+  <div class="tab-content" [class.active]="activeIndex === 5" data-scroll>
+    <ust-location-content [tabIndex]="activeIndex"></ust-location-content>
+  </div>
+</div>

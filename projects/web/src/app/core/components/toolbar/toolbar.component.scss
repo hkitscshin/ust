@@ -1,0 +1,212 @@
+@import "core";
+
+.main-toolbar-wrap {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+
+  .nav-option-box {
+    background-color: rgba(0, 0, 0, 0.65);
+
+    .nav-option {
+      height: 40px;
+      margin-right: 47px;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 40px;
+      letter-spacing: 0.3px;
+      color: #fff;
+
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .nav-menu-box {
+    background-color: rgba(0, 0, 0, 0.65);
+
+    .nav-menu {
+      height: 76px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -0.8px;
+      text-align: center;
+      color: #ffffff;
+
+      h1 {
+        @include background-image-magnification("/assets/images/logo-white.png");
+        background-repeat: no-repeat;
+        width: 74px;
+        height: 58px;
+      }
+
+      .nav-menu-list {
+        li {
+          width: 159px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .sub-nav-menu {
+    height: 0;
+    bottom: 100%;
+    overflow: hidden;
+    transition: .5s ease;
+
+    .title {
+      @include background-image-magnification("/assets/images/backgrounds/nav-title-bg.png");
+      background-size: cover;
+      position: relative;
+      width: 226px;
+      height: 237px;
+
+      p {
+        @include translate-center();
+        color: #fff;
+        width: 80%;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.88;
+        letter-spacing: 0.4px;
+      }
+    }
+
+    ul {
+      width: 159px;
+      margin: 10px 0;
+
+      li {
+        padding: 15px 0;
+        font-size: 16px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: -0.8px;
+        text-align: center;
+
+        &:hover {
+          font-size: 17px;
+          font-weight: bold;
+        }
+      }
+    }
+
+  }
+
+  &.fixed {
+    background: #fff;
+
+    .nav-option-box {
+      background: #eee;
+
+      .nav-option {
+        color: #000;
+      }
+    }
+
+    .nav-menu-box {
+      background: #fff;
+
+      .nav-menu {
+        color: $color-black;
+
+        h1 {
+          @include background-image-magnification("/assets/images/logo-color.png");
+        }
+      }
+    }
+
+    &:hover {
+      .nav-option-box {
+        background: #eee;
+
+        .nav-option {
+          color: #000;
+        }
+      }
+
+      .nav-menu-box {
+        background-color: #fff;
+        border-bottom: 1px solid #cecece;
+      }
+
+      .sub-nav-menu {
+        bottom: 0;
+        height: 237px;
+        background-color: #fff;
+        color: #3b4757;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+      }
+    }
+
+  }
+
+  &:hover {
+    .nav-option-box {
+      background: #eee;
+
+      .nav-option {
+        color: #000;
+      }
+    }
+
+    .nav-menu-box {
+      background-color: rgba(0, 0, 0, 0.65);
+      border-bottom: 1px solid #cecece;
+    }
+
+    .sub-nav-menu {
+      bottom: 0;
+      height: 237px;
+      background-color: rgba(0, 0, 0, 0.65);
+      color: #ffffff;
+    }
+  }
+}
+
+
+.top-title {
+  @include background-image-magnification("/assets/images/backgrounds/sub-top-title1.jpg");
+  background-size: cover;
+  position: relative;
+  height: 411px;
+  padding-top: 221px;
+  text-align: center;
+  box-sizing: border-box;
+
+  @include md {
+    padding-top: 145px;
+    height: 260px;
+  }
+
+  @include sm {
+    padding-top: 97px;
+    height: 223px;
+  }
+
+  h2 {
+
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+
+    @include md {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    @include sm {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<form *ngIf="doc" [formGroup]="formGroup" novalidate>
+  <div class="form-field">
+    <h4>이메일</h4>
+
+    <p>{{ doc.email }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>품명</h4>
+
+    <p>{{ doc.goods }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>강종</h4>
+
+    <p>{{ doc.steelType }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>규격</h4>
+
+    <p>{{ doc.standard }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>출하장소</h4>
+
+    <p>{{ doc.location }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>답변</h4>
+
+    <ust-tinymce name="inquiry/estimate" formControlName="answer"></ust-tinymce>
+  </div>
+
+  <div class="form-field">
+    <h4>상태</h4>
+
+    <mat-radio-group formControlName="status">
+      <mat-radio-button value="제출">제출</mat-radio-button>
+      <mat-radio-button value="완료">완료</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</form>

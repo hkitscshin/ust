@@ -1,0 +1,25 @@
+<div class="detail-content">
+  <ust-income-statement-form
+    [doc]="incomeStatement"
+    (valueChange)="formValue = $event"
+    (statusChange)="invalid = $event !== 'VALID'"
+  ></ust-income-statement-form>
+
+  <div class="action-box">
+    <button
+      *ngIf="incomeStatement"
+      class="button"
+      mat-flat-button color="primary"
+      (click)="modify()"
+      [disabled]="invalid || isLoading" type="button"
+    >수정</button>
+
+    <button
+      *ngIf="!incomeStatement"
+      class="button"
+      mat-flat-button color="primary"
+      (click)="add()"
+      [disabled]="invalid || isLoading" type="button"
+    >등록</button>
+  </div>
+</div>

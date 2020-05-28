@@ -1,0 +1,544 @@
+﻿{
+  "TOOLBAR":{
+    "MOBILE": {
+      "MENU": "MENU",
+      "CLOSE": "CLOSE"
+    },
+    "MENU":{
+      "NAV1": "Company",
+      "NAV2": "Products",
+      "NAV3": "R&D",
+      "NAV4": "Investment",
+      "NAV5": "Community",
+      "NAV6": "Rrecruit"
+    },
+    "NAV1": {
+      "SUB1": "History",
+      "SUB2": "Our Family",
+      "SUB3": "Contact"
+    },
+    "NAV2": {
+      "SUB1": "Overview",
+      "SUB2": "Introduction",
+      "SUB3": "Certificate",
+      "SUB4": "Production Facilities"
+    },
+    "NAV3": {
+      "SUB1": "Secondary Battery Cell"
+    },
+    "NAV4": {
+      "SUB1": "Financial Information",
+      "SUB2": "Stock Information"
+    },
+    "NAV5": {
+      "SUB1": "Community board",
+      "SUB2": "Download",
+      "SUB3": "Grade Certificate",
+      "SUB4": "Inquiry",
+      "SUB5": "Inspection Certificate"
+    },
+    "NAV6": {
+      "SUB1": "Recruit"
+    }
+  },
+  "MAIN": {
+    "SECTION1": "Ur Solution for Tommorrow, UST",
+    "SECTION2": {
+      "FEATURE1": {
+        "TITLE": "The best service UST",
+        "DESCRIPTION": "We serve clients to the best of our abilities with strict quality assurance and perfect product management in every step of manufacturing."
+      },
+      "FEATURE2": {
+        "TITLE": "The best quality UST",
+        "DESCRIPTION": "We have received ISO 9001 and ISO 14001 certifications, which are quality and environment management system standards, to practice our own quality assurance system."
+      }
+    },
+    "SECTION3": {
+      "FEATURE1": {
+        "TITLE": "Products Overview",
+        "SUBTITLE": "Various sizes and high quality",
+        "DESCRIPTION": "UST provides the best pipes in every size to serve our clients"
+      },
+      "FEATURE2": {
+        "TITLE": "R&D",
+        "SUBTITLE": "UST secondary battery separation membrane vision and plan",
+        "DESCRIPTION": "UST has combined the advantages of both dry and wet processes in order to develop its hybrid separation membrane."
+      },
+      "FEATURE3": {
+        "TITLE": "UST history",
+        "SUBTITLE": "UST expanding business area ",
+        "DESCRIPTION": "UST hopes for a better future, with 40 years of pride."
+      }
+    },
+    "SECTION4": {
+      "FEATURE1": {
+        "TITLE": "Production",
+        "DESCRIPTION": "Manufacture high-quality products based on quality assurance"
+      },
+      "FEATURE2": {
+        "TITLE": "Raising competitiveness",
+        "DESCRIPTION": "Strengthen Competitiveness through improvement of quality and process"
+      },
+      "FEATURE3": {
+        "TITLE": "Fulfilling requirements",
+        "DESCRIPTION": "Fulfilling every requirement regarding production"
+      },
+      "FEATURE4": {
+        "TITLE": "Maximizing satisfaction",
+        "DESCRIPTION": "Minimizing defective products to maximize clients' satisfaction"
+      }
+    },
+    "SECTION5": {
+      "TEXT": "<span>Ur Solution</span> for Tomorrow<br>UST",
+      "BUTTON": "Link to Company Instruction"
+    }
+  },
+  "ABOUT": {
+    "STORY": {
+      "STORY1": {
+        "TITLE": "Early Period",
+        "YEAR": "foundation ~ 2008",
+        "HISTORY1": "- 1990 Completed construction of POSCO stainless steel pipe plant",
+        "HISTORY2": "- ~1995 KS; JIS Certification acquired",
+        "HISTORY2-1": "- 1995 Introduced tube mills(1\"~4\")",
+        "HISTORY2-2": "- 1998 Introduced ROLL BENDER(14\"~42\")",
+        "HISTORY3": "- ~2002 LR, DNV Certification acquired",
+        "HISTORY4": "- ~2007 BV, RNA, NK, ABS<br>Certification acquired"
+      },
+      "STORY2": {
+        "TITLE": "Growth Period",
+        "YEAR": "2009 ~ 2016",
+        "HISTORY1": "- 2009 Changed the largest shareholder to Hwankum Steel&Technology Co., Ltd",
+        "HISTORY2": "- 2010 Changed company name to U-steel Co.,Ltd",
+        "HISTORY3": "- 2013 Installed Dajeon and Daegu business office",
+        "HISTORY4": "- 2015 Installed 16\" tube mill"
+      },
+      "STORY3": {
+        "TITLE": "Recent Period",
+        "YEAR": "Present ~",
+        "HISTORY1": "- 2017 Changed company name to UST Co.,Ltd",
+        "HISTORY2": "- 2017 Completed construction of UST Pohang 2nd plant",
+        "HISTORY3": "- 2018 Listed on the KOSDAQ stock exchange",
+        "HISTORY4": "- 2018 Installed ROLL BENDER"
+      }
+    },
+    "GROUP": {
+      "TITLE": "ES Group Overview",
+      "SUBTITLE": {
+        "SUB1": "Foundation date",
+        "SUB2": "CEO",
+        "SUB3": "Business Field",
+        "SUB4": "Site"
+      },
+      "GROUP1": {
+        "COMPANY": "Hwangkum Steel & Technology Co., Ltd",
+        "YEAR": "1986",
+        "NAME": "Kim, JongHyun",
+        "BUSINESS": "Stainless Steel Pipe<br>TITAMAX",
+        "DESCRIPTION": ""
+      },
+      "GROUP2": {
+        "COMPANY": "Goodsteel",
+        "YEAR": "2006",
+        "NAME": "Kim, JongWook",
+        "BUSINESS": "Manufacture<br> stainless steel &<br>metal working",
+        "DESCRIPTION": ""
+      },
+      "GROUP3": {
+        "COMPANY": "Interconstech",
+        "YEAR": "1999",
+        "NAME": "",
+        "BUSINESS": "Bridge, tunnel,<br>railroad Construction",
+        "DESCRIPTION": ""
+      },
+      "GROUP4": {
+        "COMPANY": "Esang Networks",
+        "YEAR": "2000",
+        "NAME": "Jo, WonPyo",
+        "BUSINESS": "Venture Capital<br>Investment<br>Management",
+        "DESCRIPTION": ""
+      }
+    },
+    "LOCATION": {
+      "TITLE": "",
+      "SUBTITLE": {
+        "ADDRESS": "ADDRESS",
+        "MAP": "SEE MAP",
+        "KAKAO": "KAKAO MAP",
+        "GOOGLE": "GOOGLE MAP"
+      },
+      "LOCATION1": {
+        "TAB": "Seoul Branch",
+        "NAME": "Seoul Branch",
+        "ADDRESS": "9, World Cup buk-ro 58-gil, Mapo-gu, Seoul, Republic of Korea"
+      },
+      "LOCATION2": {
+        "TAB": "Daejeon Branch",
+        "NAME": "Daejeon Sales Office / Daejeon Storage",
+        "ADDRESS": "2, Sinilseo-ro, Daedeok-gu, Daejeon, Republic of Korea"
+      },
+      "LOCATION3": {
+        "TAB": "Daegu Branch",
+        "NAME": "Daegu Sales Office / Daegu Storage",
+        "ADDRESS": "102-7, Yutongdanji-ro 7-gil, Buk-gu, Daegu, Republic of Korea"
+      },
+      "LOCATION4": {
+        "TAB": "Busan Branch",
+        "NAME": "Youngnam office / Busan Storage",
+        "ADDRESS": "850, Nakdong-daero, Sasang-gu, Busan, Republic of Korea"
+      },
+      "LOCATION5": {
+        "TAB": "Pohang Factory",
+        "NAME": "Pohang Head office & Factory",
+        "ADDRESS": "290, Cheolgang-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do, Republic of Korea"
+      },
+      "LOCATION6": {
+        "TAB": "Sihwa Storage",
+        "NAME": "Sihwa Storage",
+        "ADDRESS": "25, MTV 1-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Republic of Korea"
+      }
+    }
+  },
+  "PRODUCT": {
+    "SUMMARY": {
+      "TITLE": "The leader of stainless pipes, UST",
+      "FEATURES": {
+        "FEATURE1": {
+          "TITLE": "Various sizes",
+          "DESCRIPTION": "UST manufactures pipes in every size from 1\" to 54\""
+        },
+        "FEATURE2": {
+          "TITLE": "Outstanding Quality",
+          "DESCRIPTION": "UST manufactures outstanding pipes by combining 40 years of know-how and installation experience with new facilities and machines."
+        },
+        "FEATURE3": {
+          "TITLE": "Excellent Packing",
+          "DESCRIPTION": "UST provides perfect packages for the best pipes with its automatic packing machine."
+        }
+      },
+      "INQUIRY": {
+        "TEXT": "Experience top-quality pipes and prompt delivery from our branches across different regions!",
+        "BUTTON": "Inquiry"
+      }
+    },
+    "INTRODUCE": {
+      "HEADER": {
+        "TITLE": "Pride in Best Quality UST",
+        "CONTENT": "UST is available for every pipe size. We have received various forms of certification to manufacture high-level stainless pipes. We provide perfectly packed pipes with an automatic wrapping machine."
+      },
+      "SUBTITLE": {
+        "SIZE": "Productible Size",
+        "USE": "Usage"
+      },
+      "PRODUCTS": {
+        "PRODUCT1": {
+          "TAB": "For Piping",
+          "NAME": "Stainless steel pipes",
+          "USE1": "Corrosion resistant",
+          "USE2": "Low temperature",
+          "USE3": "Heat resistant",
+          "USE4": "Waterworks",
+          "TABLE_HEADERS": {
+            "HEADER1": "Nominal Pipe Size",
+            "HEADER2": "Outer Diameter"
+          }
+        },
+        "PRODUCT2": {
+          "TAB": "Large diameter stainless steel pipes",
+          "NAME": "Large diameter welded stainless steel pipes",
+          "USE1": "Corrosion resistant",
+          "USE2": "Low temperature",
+          "USE3": "Heat resistant",
+          "TABLE_HEADERS": {
+            "HEADER1": "Nominal pipe size",
+            "HEADER2": "External diameter"
+          }
+        },
+        "PRODUCT3": {
+          "TAB": "For general piping",
+          "NAME": "General stainless steel pipe",
+          "USE1": "Water supply",
+          "USE2": "Hot water supply",
+          "USE3": "Underground pipelines",
+          "USE4": "Floor heating system",
+          "TABLE_HEADERS": {
+            "HEADER1": "Nominal diameter",
+            "HEADER2": "External diameter",
+            "HEADER3": "External diameter tolerance",
+            "HEADER3_1": "Outer diameter",
+            "HEADER3_2": "Outer length",
+            "HEADER4": "Thickness",
+            "HEADER5": "Thickness tolerance"
+          }
+        },
+        "PRODUCT4": {
+          "TAB": "For boilers, Heat exchangers ",
+          "NAME": "Stainless steel pipes for boilers and heat exchangers",
+          "USE1": "Boiler heating system",
+          "USE2": "Heat exchangers in chemical industry",
+          "USE3": "Condenser",
+          "USE4": "Catalyst"
+        }
+      }
+    },
+    "CERTIFICATION": {
+      "TAB": {
+        "TAB1": "TEST REPORT",
+        "TAB2": "Standard Certificate"
+      },
+      "SUBTITLE": {
+        "SUB1": "Product Certification",
+        "SUB2": "Test report",
+        "SUB3": "Certified date"
+      },
+      "CATEGORY": {
+        "CATEGORY1": "Total",
+        "CATEGORY2": {
+          "NAME": "KS Standard",
+          "DESCRIPTION": "Certificate issued by Korean Standards Association"
+        },
+        "CATEGORY3": {
+          "NAME": "JIS Standard",
+          "DESCRIPTION": "Japanese national technology standard"
+        },
+        "CATEGORY4": {
+          "NAME": "ISO Standard",
+          "DESCRIPTION": "Certificate issued by International Organization for Standardization."
+        },
+        "CATEGORY5": {
+          "NAME": "Shipyard Classification Standard",
+          "DESCRIPTION": "Certificate issued for materials used in vessel manufacturing."
+        },
+        "CATEGORY6": {
+          "NAME": "Other Standard",
+          "DESCRIPTION": "Other Standards"
+        }
+      }
+    },
+    "SYSTEM": {
+      "TITLE": "Manufactuing Facilities",
+      "SUBTITLE": {
+        "SIZE": "Productible Size",
+        "STRENGTH": "Strength"
+      },
+      "SYSTEM1": {
+        "NAME": "16\" Tube Mill Machine",
+        "DESCRIPTION": "A tube mill produces the greatest size, which improves productivity and quality, replacing the roll bender size.",
+        "SIZE": {
+          "SIZE1": "External diameter 12\"~16\"",
+          "SIZE2": "Thickness 3mm~12mm"
+        },
+        "STRENGTH": "Producing uniform products through a continuous rolling system."
+      },
+      "SYSTEM2": {
+        "NAME": "In-line Calibrator",
+        "DESCRIPTION": "It is able to rectify roundness and straightness at a time in tube mill line after in-line heat treatment. It is the most advanced equipment available to rectify roundness an outside diameter within ±0.1~0.2%.",
+        "SIZE": {
+          "SIZE1": "External diameter 12\"~16\"",
+          "SIZE2": "Thickness 3mm~12mm"
+        },
+        "STRENGTH": "Shortened correction time, unique applications, simplified factory lay-out, reduced costs"
+      },
+      "SYSTEM3": {
+        "NAME": "Roll bender",
+        "DESCRIPTION": "A machine that manufactures large-diameter stainless steel pipes including both external and internal welding processes. "
+      },
+      "SYSTEM4": {
+        "NAME": "In-line heating system",
+        "DESCRIPTION": "It makes pipes complete heat treatment at a time in tube mills. We can produce from 10A to 400A with this heating system.",
+        "STRENGTH": "Minimize pipe corrosion"
+      },
+      "SYSTEM5": {
+        "NAME": "Automatic packing machine",
+        "DESCRIPTION": "It can quickly pack any size of pipe and prevents defilement.",
+        "STRENGTH": "Protects pipes from defilement, can be stored for a long period of time, increases wrapping productivity."
+      }
+    }
+  },
+  "RESEARCH": {
+    "RESEARCH1": {
+      "TITLE": "UST Hybrid Membrane",
+      "SECTION1": {
+        "TITLE": "R&D",
+        "SUBTITLE": "UST Membrane",
+        "DESCRIPTION": "Newest secondary battery market requires quick charging, high capacity, and heat stability for battery cells to be used in electric cars, energy storage, etc."
+      },
+      "SECTION2": {
+        "TITLE": "Secondary cell membrane manufacturing",
+        "SUBTITLE": "Hybrid method",
+        "FEATURE1": "The separator membrane also requires special property, in accordance to changes in market conditions. UST combines the advantages of both dry and wet processes for its hybrid membrane manufacturing.",
+        "IMAGE": "/assets/images/research-separation2-en.png",
+        "IMAGE-M": "/assets/images/research-separation2-m-en.png",
+        "FEATURE2": {
+          "TITLE": "UST Hybrid Membrane is EXCELLENT.",
+          "CONTENT": "In the way that we combine the advantages of two different processes, the hybrid membrane provides expansion of pores through biaxial stretching which fulfills the requirements of the secondary battery market."
+        }
+      },
+      "IMAGE": {
+        "SIDE": "SIDE",
+        "FRONT": "FRONT"
+      }
+    },
+    "RESEARCH2": {
+      "TITLE": "Business Vision & Plan",
+      "SECTION1": {
+        "TITLE": "Business Vision & Plan",
+        "SUBTITLE": "Seperator for electric vehicles",
+        "CONTENT1": "The separator of electric vehicles requires high output, high capacity, low cost, and high temperature stability.",
+        "CONTENT2": {
+          "HEADER": "UST Hybrid Membrane",
+          "ITEM1": "High output at hight pore size",
+          "ITEM2": "High capacity at low thickness",
+          "ITEM3": "Low cost of production with low prices",
+          "ITEM4": "Process stability which avoids ignition"
+        },
+        "CONTENT3": "The electric car market, which entered its fully-fledged growth phase in 2016, is expected to grow at a CAGR of over 25% over the next 10 years and to double by 2025. The electric vehicle battery market and separator market will expand at the same rate."
+      },
+      "SECTION2": "The hybrid membrane will grow to be one of the best products to rival competitors’ products in the rapidly growing electrolyte separator market."
+    }
+  },
+  "INVESTMENT": {
+    "FINANCE": {
+      "UNIT": "(Unit: billion KRW)",
+      "SECTION1": {
+        "TITLE": "Financial Information",
+        "SUBTITLE1": "Sales",
+        "SUBTITLE2": "Net Income",
+        "SUBTITLE3": "Sales Income"
+      },
+      "SECTION2": {
+        "TITLE": "Income Statement",
+        "TABLE_HEADER": "Category",
+        "TABLE_ROW1": "Sales",
+        "TABLE_ROW2": "Net Income",
+        "TABLE_ROW3": "Sales Income"
+      },
+      "SECTION3": {
+        "TITLE": "Balance Sheet",
+        "TABLE_HEADER": "Category",
+        "TABLE_ROW1": "Total assets",
+        "TABLE_ROW2": "Total liabilities",
+        "TABLE_ROW3": "Total capital"
+      }
+    },
+    "STOCK": {
+      "TITLE": "Stock Information",
+      "BUTTONS": {
+        "BUTTON1": "TOTAL",
+        "BUTTON2": "WEEK",
+        "BUTTON3": "MONTH",
+        "BUTTON4": "YEAR"
+      },
+      "SECTION1": {
+        "TABLE_HEADER1": "Date",
+        "TABLE_HEADER2": "Open",
+        "TABLE_HEADER3": "Close",
+        "TABLE_HEADER4": "High",
+        "TABLE_HEADER5": "Low",
+        "TABLE_HEADER6": "Volume"
+      }
+    }
+  },
+  "DATA": {
+    "TITLE": "Community",
+    "TAB": {
+      "TAB1": "Notice",
+      "TAB2": "Press Release",
+      "TAB3": "Community board"
+    },
+    "LIST": {
+      "TOTAL": "TOTALl",
+      "TABLE": {
+        "NO": "NUMBER",
+        "TITLE": "TITLE",
+        "DATE": "DATE",
+        "VIEW_COUNT": "VIEWS"
+      }
+    },
+    "DETAIL": {
+      "WRITER": "WRITER",
+      "DATE": "DATE",
+      "VIEW_COUNT": "VIEWS",
+      "FILE": "FILE",
+      "URL": "URL",
+      "PREVIOUS": "PREVIOUS",
+      "NEXT": "NEXT",
+      "BUTTON": "LIST"
+    },
+    "DOWNLOAD": {
+      "TITLE": "UST Download",
+      "PDF": "Install Acrobat Reader to open PDF files",
+      "BROCHURE": "UST Broshure",
+      "FORM": "UST Material application for approval",
+      "BUTTONS": {
+        "BUTTON1": "click",
+        "BUTTON2": "download"
+      }
+    },
+    "GRADE": {
+      "TITLE":"UST INSPECTION CERTIFICATE",
+      "TAB":{
+        "TAB1": "Request",
+        "TAB2": "Download"
+      }
+    }
+  },
+  "RECRUIT": {
+    "LIST": {
+      "TITLE": "UST Recruit",
+      "PROCEDURE": {
+        "TITLE": "How to",
+        "STEP1": "Apply",
+        "STEP2": "Paper work",
+        "STEP3": "Interview",
+        "STEP4": "Pass"
+      },
+      "TABLE": {
+        "TITLE": "Apply",
+        "TOTAL": "TOTAL",
+        "HEADER": {
+          "NO": "NO",
+          "TITLE": "TITLE",
+          "DATE": "DATE",
+          "STATUS": "STATUS",
+          "APPLY": "APPLY"
+        },
+        "BUTTON": "Apply"
+      }
+    },
+    "DETAIL": {
+      "TITLE": "Apply",
+      "BUTTON_TEXT": "Apply",
+      "BUTTON1": "JOBKOREA",
+      "BUTTON2": "saramin",
+      "BUTTON3": "WORKNET"
+    }
+  },
+  "FOOTER":{
+    "COMPANY": {
+      "TITLE": "Company Name",
+      "CONTENT": "UST Co.,Ltd"
+    },
+    "ADDRESS": {
+      "TITLE": "Address",
+      "CONTENT": "290, Cheolgang-ro, Nam-gu, Pohang-si. Gyeongsanbuk-do, Korea"
+    },
+    "PHONE": {
+      "TITLE": "Telephone"
+    },
+    "FAX": {
+      "TITLE": "Fax"
+    },
+    "BUSINESS_NUMBER": {
+      "TITLE": "Business Registration No."
+    },
+    "NAME": {
+      "TITLE": "CEO",
+      "CONTENT": "Kim, Jong Shik"
+    },
+    "CONTACT": {
+      "TEXT": "Contact Hour",
+      "BUTTON": "Contact"
+    }
+  }
+}

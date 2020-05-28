@@ -1,0 +1,74 @@
+<form *ngIf="doc" [formGroup]="formGroup" novalidate>
+  <div class="form-field">
+    <h4>업체명</h4>
+
+    <p>{{ doc.company }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>사업자 등록번호</h4>
+
+    <p>{{ doc.businessNumber }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>이메일</h4>
+
+    <p>{{ doc.email }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>담당자 / 연락처</h4>
+
+    <p>{{ doc.contact }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>품명</h4>
+
+    <p>{{ doc.goods }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>규격</h4>
+
+    <p>{{ doc.standard }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>수량</h4>
+
+    <p>{{ doc.quantity }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>출고일</h4>
+
+    <p>{{ doc.shipDate }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>원본대조필 직인 여부</h4>
+
+    <p>{{ doc.officialSeal ? '여' : '부' }}</p>
+  </div>
+
+  <div class="form-field">
+    <h4>성적서</h4>
+
+    <mat-form-field class="form-field">
+      <input matInput type="text" [value]="certificationTitle || '파일 없음'" readonly>
+    </mat-form-field>
+
+    <ust-file-uploader dnlFormGroupName="certification"></ust-file-uploader>
+  </div>
+
+  <div class="form-field">
+    <h4>상태</h4>
+
+    <mat-radio-group formControlName="status">
+      <mat-radio-button value="제출">제출</mat-radio-button>
+      <mat-radio-button value="완료">완료</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</form>

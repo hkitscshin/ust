@@ -1,0 +1,13 @@
+<div class="list-header" fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+  <div class="action-box" fxFlex="none">
+    <button class="button" mat-flat-button color="primary" routerLink="add" type="button">추가</button>
+  </div>
+
+  <div class="total-count" fxFlex="auto">
+    <p>총 게시글 수 : <span class="color-primary">{{ totalCount | number }}</span></p>
+  </div>
+</div>
+
+<ust-data-table [entities]="entities"></ust-data-table>
+
+<mat-paginator [pageSize]="pageSize" [length]="totalCount" (page)="onPageChange($event)"></mat-paginator>

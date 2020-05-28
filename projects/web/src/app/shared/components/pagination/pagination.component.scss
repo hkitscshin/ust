@@ -1,0 +1,69 @@
+@import "core";
+
+.pagination-box {
+  margin-top: 40px;
+
+  button {
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+
+    @include sm {
+      width: 32px;
+      height: 32px;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .page-list, .page-item {
+    @include inline-block;
+  }
+
+  .page-list {
+    background: #fff;
+    border-top: 1px solid #eaedf3;
+    border-bottom: 1px solid #eaedf3;
+  }
+
+  .page-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .page-link {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.17);
+    text-align: center;
+    padding-top: 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+    cursor: pointer;
+
+    @include sm {
+      width: 32px;
+      height: 32px;
+      padding-top: 10px;
+      font-size: 9px;
+      font-weight: 300;
+      line-height: 1.44;
+      letter-spacing: -0.45px;
+    }
+
+    &.active {
+      font-weight: 500;
+    }
+  }
+}

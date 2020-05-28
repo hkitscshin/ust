@@ -1,0 +1,18 @@
+@import "core";
+
+img {
+  width: 100%;
+}
+
+.close-btn {
+  text-align: right;
+  padding-bottom: 20px;
+
+  button {
+    justify-content: flex-end;
+    border: 0;
+    background: none;
+    outline: none;
+    cursor: pointer;
+  }
+}

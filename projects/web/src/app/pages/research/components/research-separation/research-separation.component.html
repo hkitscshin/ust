@@ -1,0 +1,47 @@
+<div class="separation-section1-wrap">
+  <div fxLayout="row" fxLayout.lt-lg="column-reverse" fxLayoutAlign="space-between center" class="separation-box section1">
+    <div class="text">
+      <img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon" class="title-icon">
+
+      <p class="title">{{ 'RESEARCH.RESEARCH1.SECTION1.TITLE' | translate }}
+        <span>{{ 'RESEARCH.RESEARCH1.SECTION1.SUBTITLE' | translate }}</span>
+      </p>
+
+      <p class="description" [innerHtml]="'RESEARCH.RESEARCH1.SECTION1.DESCRIPTION' | translate"></p>
+    </div>
+
+    <img dnlSrc="/assets/images/research-separation1.png" alt="연구개발" class="image">
+  </div>
+</div>
+
+<div class="separation-box section2">
+  <div class="text">
+    <img dnlSrc="/assets/images/icons/story-step-on.png" alt="icon" class="title-icon">
+
+    <p class="title">{{ 'RESEARCH.RESEARCH1.SECTION2.TITLE' | translate }}
+      <span>{{ 'RESEARCH.RESEARCH1.SECTION2.SUBTITLE' | translate }}</span>
+    </p>
+
+    <p class="description" [innerHtml]="'RESEARCH.RESEARCH1.SECTION2.FEATURE1' | translate"></p>
+
+    <div class="image">
+      <img [src]="'RESEARCH.RESEARCH1.SECTION2.IMAGE' | translate" alt="분리막 제조" class="image type" fxHide.lt-lg>
+      <img [src]="'RESEARCH.RESEARCH1.SECTION2.IMAGE-M' | translate" alt="분리막 제조" class="image type" fxHide.lg>
+    </div>
+
+    <p class="sub-title" [innerHtml]="'RESEARCH.RESEARCH1.SECTION2.FEATURE2.TITLE' | translate"></p>
+    <p class="description" [innerHtml]="'RESEARCH.RESEARCH1.SECTION2.FEATURE2.CONTENT' | translate"></p>
+
+    <ul fxLayout="row" fxLayoutAlign="space-between center" class="image-box">
+      <li>
+        <img dnlSrc="/assets/images/research-separation3.png" alt="측면">
+        <p>&lt; {{ 'RESEARCH.RESEARCH1.IMAGE.SIDE' | translate }} &gt;</p>
+      </li>
+
+      <li>
+        <img dnlSrc="/assets/images/research-separation4.png" alt="정면">
+        <p>&lt; {{ 'RESEARCH.RESEARCH1.IMAGE.FRONT' | translate }} &gt;</p>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="introduce-pipe-box">
+  <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-between flex-start" >
+    <img dnlSrc="/assets/images/introduce-pipe-main2.png" alt="배관용 용접 대구경 스테인리스 강관" class="img">
+
+    <div fxFlex class="info-box">
+      <p class="name">{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT2.NAME' | translate }}</p>
+      <p class="name-en">LARGE DIAMETER WELDED STAINLESS STEEL PIPES</p>
+
+      <div class="info-section size">
+        <p class="title">{{ 'PRODUCT.INTRODUCE.SUBTITLE.SIZE' | translate }}</p>
+        <div class="size-box">
+          <span>KS D 3588</span><span>JIS G 3468</span><span>ASTM A 358</span><span>ASTM A 409</span>
+        </div>
+      </div>
+
+      <div class="info-section use">
+        <p class="title">{{ 'PRODUCT.INTRODUCE.SUBTITLE.USE' | translate }}</p>
+
+        <ul fxLayout="row" class="use-box">
+          <li>
+            <img dnlSrc="/assets/images/icons/product-introduce-use-icon1.png" alt="내식용">
+            <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.USE1' | translate }}</p>
+          </li>
+
+          <li>
+            <img dnlSrc="/assets/images/icons/product-introduce-use-icon2.png" alt="저온용">
+            <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.USE2' | translate }}</p>
+          </li>
+
+          <li>
+            <img dnlSrc="/assets/images/icons/product-introduce-use-icon3.png" alt="고온용">
+            <p>{{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT1.USE3' | translate }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="table-box">
+    <p class="title">KS D 3588 / JIS G 3468 / ASTM A 358 / ASTM A 409</p>
+
+    <div class="table-wrap" #tableRef>
+      <div [class.fixed]="headerFixed">
+        <table>
+          <tr class="top-th">
+            <th rowspan="2" colspan="2" width="15%">
+              {{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT2.TABLE_HEADERS.HEADER1' | translate }}
+            </th>
+            <th rowspan="2" colspan="2" width="15%">
+              {{ 'PRODUCT.INTRODUCE.PRODUCTS.PRODUCT2.TABLE_HEADERS.HEADER2' | translate }}
+            </th>
+            <th colspan="9">SCH</th>
+          </tr>
+
+          <tr class="top-th">
+            <th colspan="4" width="35%">JIS</th>
+            <th colspan="4" width="35%">ASTM</th>
+          </tr>
+
+          <tr class="middle-th">
+            <td>A</td>
+            <td>B</td>
+            <td>JIS</td>
+            <td>ASTM</td>
+            <td>5S</td>
+            <td>10S</td>
+            <td>20S</td>
+            <td>40</td>
+            <td>5S</td>
+            <td>10S</td>
+            <td>40S</td>
+            <td>80S</td>
+          </tr>
+        </table>
+      </div>
+
+      <table [class.margin-top]="headerFixed">
+        <tr *ngFor="let data of pipeData">
+          <td class="type1">{{ data.a }}</td>
+          <td class="type1">{{ data.b }}</td>
+          <td class="type2">{{ data.ksjis | number: '1.1' }}</td>
+          <td class="type2">{{ data.astm | number: '1.1' }}</td>
+          <td>{{ data.ks_5 | number: '1.1' }}</td>
+          <td>{{ data.ks_10 | number: '1.1' }}</td>
+          <td>{{ data.ks_20 | number: '1.1' }}</td>
+          <td>{{ data.ks_40 | number: '1.1' }}</td>
+          <td>{{ data.astm_5 | number: '1.1' }}</td>
+          <td>{{ data.astm_10 | number: '1.1' }}</td>
+          <td>{{ data.astm_40 | number: '1.1' }}</td>
+          <td>{{ data.astm_80 | number: '1.1' }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

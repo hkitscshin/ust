@@ -1,0 +1,291 @@
+@import '~@angular/material/theming';
+@import "core";
+@import "editor";
+
+$typography: mat-typography-config(
+  $font-family: 'Noto Sans KR, sans-serif'
+);
+@include mat-core($typography);
+
+
+$color: (
+  100: $color-orangish-red,
+  200: lighten($color-orangish-red, 20%),
+  300: darken($color-orangish-red, 20%),
+
+  400: $color-secondary,
+  500: lighten($color-secondary, 20%),
+  600: darken($color-secondary, 20%),
+
+  700: $color-water-blue,
+  800: lighten($color-water-blue, 10%),
+  900: darken($color-water-blue, 10%),
+
+  contrast: (
+    100: $color-white,
+    200: $color-white,
+    300: $color-white,
+
+    400: $color-white,
+    500: $color-white,
+    600: $color-white,
+
+    700: $color-white,
+    800: $color-white,
+    900: $color-white
+  )
+);
+
+$app-primary: mat-palette($color, 100, 200, 300);
+$app-accent: mat-palette($color, 400, 500, 600);
+$app-warn: mat-palette($color, 700, 800, 900);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Noto Sans KR, sans-serif;
+  color: $color-black;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, pre {
+  margin: 0;
+  padding: 0;
+}
+
+body pre {
+  font-family: Noto Sans KR, sans-serif;
+  white-space: pre-wrap;
+}
+ul {
+  list-style: none;
+}
+
+
+a {
+  color: $color-primary;
+}
+
+.color-primary {
+  color: $color-primary;
+}
+
+.button {
+  &.full {
+    width: 100%;
+    height: 48px;
+  }
+
+  &.small {
+    height: 25px;
+  }
+}
+
+.mat-snack-bar-container {
+  &.info {
+    color: #323232;
+    border: 1px solid #323232;
+    background-color: $color-white;
+  }
+
+  &.success {
+    color: $color-white;
+    background-color: $color-orangish-red;
+  }
+
+  &.warning {
+    color: $color-white;
+    background-color: #f3b96b;
+  }
+
+  &.error {
+    color: $color-white;
+    background-color: $color-secondary;
+  }
+}
+
+img {
+  vertical-align: top;
+}
+
+.logo-name {
+  margin-left: 8px;
+  color: $color-orangish-red;
+  font-family: Impact, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.6px;
+  vertical-align: top;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+.mat-cell {
+  color: $color-black;
+
+  &.button-cell {
+    width: 64px;
+  }
+}
+
+.list-header {
+  margin-bottom: 30px;
+  padding: 24px 16px;
+  background-color: $color-white;
+
+  .total-count {
+    color: #999;
+    font-size: 12px;
+  }
+
+  .search-form {
+    color: #999;
+    font-size: 14px;
+
+    & > * {
+      @include margin-right-without-last-child(16px);
+    }
+  }
+}
+
+.input {
+  padding: 8px;
+  height: 36px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.textarea {
+  padding: 8px;
+  height: auto;
+  min-height: 250px;
+}
+
+.detail-box {
+  background-color: $color-white;
+}
+
+.detail-header {
+  position: absolute;
+  padding: 32px 56px;
+  width: 1032px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: $color-white;
+  box-sizing: border-box;
+  z-index: 99;
+
+  .back-button {
+    position: absolute;
+    top: 30px;
+    left: 16px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+
+  .action-box {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+
+    .button {
+      @include margin-right-without-last-child(16px);
+      min-width: 120px;
+    }
+  }
+}
+
+.detail-header + .detail-content {
+  padding-top: 132px;
+}
+
+.detail-content {
+  padding: 32px 56px;
+
+  h4, h5 {
+    color: #999;
+    font-size: 14px;
+    letter-spacing: -0.7px;
+  }
+
+  h4 {
+    margin-top: 32px;
+    font-weight: 700;
+  }
+
+  h5 {
+    margin: 16px 0 8px;
+    font-weight: 400;
+  }
+
+  .action-box {
+    position: absolute;
+    top: 32px;
+    right: 56px;
+
+    .button {
+      @include margin-right-without-last-child(16px);
+      min-width: 120px;
+    }
+  }
+
+  .inline-button {
+    margin: 16px 0 8px;
+  }
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-dialog-actions {
+  justify-content: flex-end;
+}
+
+mat-tab-group {
+  .mat-tab-labels {
+    padding: 0 16px;
+  }
+
+  .mat-tab-list {
+    background-color: #fff;
+
+    .mat-tab-label {
+      padding: 0 12px;
+
+      .mat-tab-label-content {
+        font-weight: 500;
+        font-size: 15px;
+      }
+
+      .mat-ripple-element {
+        display: none;
+      }
+    }
+
+    .mat-tab-label-active {
+      color: $color-orangish-red;
+    }
+  }
+
+  .mat-tab-body-wrapper {
+    margin-top: 10px;
+    background-color: #fff;
+  }
+
+  .mat-ink-bar {
+    background-color: $color-orangish-red;;
+  }
+}

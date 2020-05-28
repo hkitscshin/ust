@@ -1,0 +1,25 @@
+<div class="board-company-list-box">
+  <ng-container *ngIf="entities && entities.length > 0; else empty">
+    <p class="total">{{ 'DATA.LIST.TOTAL' | translate }} : {{ count }}</p>
+
+    <ul fxLayout="row wrap" class="board-company-list">
+      <li *ngFor="let news of entities"
+          [routerLink]="['/data/board/news', news.id]">
+        <img *ngIf="news.imageUrl" [src]="news.imageUrl" alt="thumbnail">
+        <img *ngIf="!news.imageUrl" src="/assets/images/board-no-image.png" alt="thumbnail">
+        <p class="title">{{ news.title }}</p>
+        <p class="description">{{ news.createdAt | timestamp: 'yyyy - MM - dd' }}</p>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-template #empty>
+    <div class="empty">게시글이 없습니다</div>
+  </ng-template>
+</div>
+
+<ust-pagination *ngIf="count > 0"
+                [perPage]="perPage"
+                [perBlock]="perBlock"
+                [totalCount]="count"
+                (pageChange)="onPageChange($event)"></ust-pagination>

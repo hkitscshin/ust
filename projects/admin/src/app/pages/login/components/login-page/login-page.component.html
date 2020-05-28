@@ -1,0 +1,45 @@
+<div class="center-box">
+  <h1>
+    <img dnlSrc="assets/images/logo-color.png" alt="logo">
+    <span class="logo-name">UST</span>
+  </h1>
+
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+    <mat-form-field appearance="outline">
+      <mat-label>이메일</mat-label>
+
+      <input matInput formControlName="email" placeholder="이메일" type="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>비밀번호</mat-label>
+
+      <input matInput formControlName="password" placeholder="비밀번호" type="password">
+    </mat-form-field>
+
+    <div class="button-box">
+      <button
+        (click)="login()"
+        class="button full"
+        mat-flat-button color="primary"
+        [disabled]="loginForm.invalid || isLoading"
+        type="submit"
+      >로그인</button>
+    </div>
+  </form>
+
+  <div class="info">
+    <h3>서울 사무소</h3>
+    <div class="info-box">
+      <span class="title">주소</span>
+      <span>서울특별시 마포구 월드컵북로 58길 9 ES타워 10층</span>
+    </div>
+
+    <div class="info-box">
+      <span class="title">TEL</span>
+      <span>02) 6121-6770</span>
+    </div>
+  </div>
+</div>
+
+
